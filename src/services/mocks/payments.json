@@ -1,0 +1,18 @@
+[
+  {
+    "id": "pay-001",
+    "description": "Anticipo - Remodelación Cocina",
+    "amount": 25000,
+    "status": "received",
+    "date": "12 Oct 2023",
+    "transactionId": "TXN-847291A"
+  },
+  {
+    "id": "pay-002",
+    "description": "Finiquito - Auditoría Fiscal",
+    "amount": 8500,
+    "status": "pending",
+    "date": "24 Oct 2023",
+    "transactionId": "TXN-918237B"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "cat-01",
+    "name": "Mantenimiento",
+    "description": "Técnicos certificados para el hogar e industria con seguro de responsabilidad civil.",
+    "icon": "handyman",
+    "expertCount": 1200
+  },
+  {
+    "id": "cat-02",
+    "name": "Salud",
+    "description": "Médicos, fisioterapeutas y especialistas con cédula profesional validada ante SEP.",
+    "icon": "medical_services",
+    "expertCount": 850
+  },
+  {
+    "id": "cat-03",
+    "name": "Servicios Digitales",
+    "description": "Desarrollo, diseño y marketing digital con entregas garantizadas vía smart contract.",
+    "icon": "devices",
+    "expertCount": 2400
+  },
+  {
+    "id": "cat-04",
+    "name": "Educación",
+    "description": "Tutores y profesores con metodologías certificadas y evaluaciones de desempeño.",
+    "icon": "school",
+    "expertCount": 560
+  }
+]

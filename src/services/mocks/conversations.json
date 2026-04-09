@@ -1,0 +1,34 @@
+[
+  {
+    "id": "conv-001",
+    "participant": {
+      "id": "pro-001",
+      "name": "Arq. Ricardo Salinas",
+      "avatarUrl": "/images/featured-provider.png",
+      "role": "professional",
+      "location": "CDMX",
+      "isVerified": true,
+      "verificationLevel": "premium"
+    },
+    "lastMessage": "Envió una propuesta",
+    "lastMessageTime": "10:45 AM",
+    "isActive": true,
+    "unreadCount": 1
+  },
+  {
+    "id": "conv-002",
+    "participant": {
+      "id": "pro-002",
+      "name": "Lic. Elena Gomez",
+      "avatarUrl": "/images/featured-provider.png",
+      "role": "professional",
+      "location": "CDMX",
+      "isVerified": true,
+      "verificationLevel": "standard"
+    },
+    "lastMessage": "Gracias por la información, quedo atento.",
+    "lastMessageTime": "Ayer",
+    "isActive": false,
+    "unreadCount": 0
+  }
+]

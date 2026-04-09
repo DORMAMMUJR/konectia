@@ -1,0 +1,34 @@
+[
+  {
+    "id": "proj-001",
+    "title": "Remodelación de Cocina Premium",
+    "professional": {
+      "id": "pro-001",
+      "name": "Arq. Ricardo Salinas",
+      "avatarUrl": "/images/featured-provider.png",
+      "role": "professional",
+      "location": "CDMX",
+      "isVerified": true,
+      "verificationLevel": "premium"
+    },
+    "progress": 65,
+    "status": "active",
+    "imageUrl": "/images/hero-bg.png"
+  },
+  {
+    "id": "proj-002",
+    "title": "Auditoría Fiscal Anual",
+    "professional": {
+      "id": "pro-002",
+      "name": "Lic. Ana Gabriela Ruiz",
+      "avatarUrl": "/images/featured-provider.png",
+      "role": "professional",
+      "location": "CDMX",
+      "isVerified": true,
+      "verificationLevel": "standard"
+    },
+    "progress": 20,
+    "status": "active",
+    "imageUrl": "/images/pro-dashboard.png"
+  }
+]

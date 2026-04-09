@@ -1,0 +1,68 @@
+[
+  {
+    "id": "req-001",
+    "client": {
+      "id": "client-001",
+      "name": "Sofía Martínez",
+      "avatarUrl": "/images/featured-provider.png",
+      "role": "client",
+      "location": "Polanco, CDMX",
+      "isVerified": true,
+      "verificationLevel": "standard"
+    },
+    "title": "Reparación de filtración urgente",
+    "description": "Necesito un plomero certificado para arreglar una fuga importante en el baño principal. El agua está filtrando al piso de abajo. Se requiere atención inmediata hoy mismo.",
+    "budgetMin": 2500,
+    "budgetMax": 4000,
+    "budgetUnit": "fixed",
+    "urgency": "urgent",
+    "category": "Plomería",
+    "categoryIcon": "plumbing",
+    "location": "Polanco, CDMX",
+    "createdAt": "Hace 2 horas"
+  },
+  {
+    "id": "req-002",
+    "client": {
+      "id": "client-002",
+      "name": "Ricardo G.",
+      "avatarUrl": "/images/featured-provider.png",
+      "role": "client",
+      "location": "Santa Fe, CDMX",
+      "isVerified": false,
+      "verificationLevel": "none"
+    },
+    "title": "Cuidar a mis perros (Fin de semana)",
+    "description": "Busco a alguien con experiencia previa y referencias para cuidar a dos Golden Retrievers durante el fin de semana del 15 de Octubre. Deben ser paseados 3 veces al día.",
+    "budgetMin": 1200,
+    "budgetMax": 1200,
+    "budgetUnit": "daily",
+    "urgency": "new",
+    "category": "Mascotas",
+    "categoryIcon": "pets",
+    "location": "Santa Fe, CDMX",
+    "createdAt": "Hace 5 horas"
+  },
+  {
+    "id": "req-003",
+    "client": {
+      "id": "client-003",
+      "name": "Dra. Elena Ruiz",
+      "avatarUrl": "/images/featured-provider.png",
+      "role": "client",
+      "location": "Condesa, CDMX",
+      "isVerified": true,
+      "verificationLevel": "standard"
+    },
+    "title": "Clases de regularización matemáticas",
+    "description": "Solicito profesor de matemáticas para nivel preparatoria (Cálculo Integral). Las sesiones pueden ser presenciales o vía remota. Se requiere plan de estudio semanal.",
+    "budgetMin": 450,
+    "budgetMax": 450,
+    "budgetUnit": "hourly",
+    "urgency": "standard",
+    "category": "Educación",
+    "categoryIcon": "school",
+    "location": "Condesa, CDMX",
+    "createdAt": "Ayer"
+  }
+]

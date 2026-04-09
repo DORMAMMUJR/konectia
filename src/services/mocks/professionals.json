@@ -1,0 +1,142 @@
+[
+  {
+    "id": "pro-001",
+    "name": "Roberto Méndez",
+    "avatarUrl": "/images/featured-provider.png",
+    "role": "professional",
+    "location": "Zapopan, JAL",
+    "isVerified": true,
+    "verificationLevel": "premium",
+    "title": "Maestro Plomero",
+    "specialty": "Sistemas Hidroneumáticos",
+    "rating": 4.9,
+    "reviewCount": 142,
+    "yearsExperience": 8,
+    "completedJobs": 142,
+    "recurringClients": 38,
+    "responseTime": "< 2 horas",
+    "hourlyRate": 650,
+    "badges": [
+      { "type": "biometric", "label": "Identidad Biométrica", "sublabel": "Verificada", "status": "verified", "icon": "fingerprint" },
+      { "type": "conocer", "label": "CONOCER", "sublabel": "Certificado", "status": "verified", "icon": "card_membership" },
+      { "type": "sat", "label": "Cumplimiento SAT", "sublabel": "Profesional Verificado", "status": "verified", "icon": "account_balance" }
+    ],
+    "education": [
+      { "institution": "IPN", "degree": "Técnico en Instalaciones Hidráulicas", "year": "2014" }
+    ],
+    "experience": [
+      { "company": "Contratista Independiente", "position": "Maestro Plomero Senior", "period": "2016 - Presente" },
+      { "company": "Grupo Hídrico MX", "position": "Técnico Especialista", "period": "2012 - 2016" }
+    ],
+    "portfolio": [
+      { "id": "p1", "title": "Instalación Industrial", "imageUrl": "/images/hero-bg.png", "span": "large" },
+      { "id": "p2", "title": "Hogar Inteligente", "imageUrl": "/images/client-workflow.png", "span": "normal" },
+      { "id": "p3", "title": "Mantenimiento Comercial", "imageUrl": "/images/pro-dashboard.png", "span": "normal" },
+      { "id": "p4", "title": "Red Solar", "imageUrl": "/images/hero-bg.png", "span": "wide" }
+    ]
+  },
+  {
+    "id": "pro-002",
+    "name": "Ing. Ricardo Mendoza",
+    "avatarUrl": "/images/featured-provider.png",
+    "role": "professional",
+    "location": "Ciudad de México, MX",
+    "isVerified": true,
+    "verificationLevel": "premium",
+    "title": "Ingeniero Electricista Certificado",
+    "specialty": "Instalaciones Industriales",
+    "rating": 4.9,
+    "reviewCount": 124,
+    "yearsExperience": 12,
+    "completedJobs": 342,
+    "recurringClients": 42,
+    "responseTime": "< 2 horas",
+    "hourlyRate": 850,
+    "badges": [
+      { "type": "biometric", "label": "Identidad Biométrica", "sublabel": "Verificada", "status": "verified", "icon": "fingerprint" },
+      { "type": "conocer", "label": "CONOCER", "sublabel": "Certificado", "status": "verified", "icon": "card_membership" },
+      { "type": "sat", "label": "Cumplimiento SAT", "sublabel": "Profesional Verificado", "status": "verified", "icon": "account_balance" }
+    ],
+    "education": [
+      { "institution": "UNAM", "degree": "Licenciatura en Ingeniería Eléctrica", "year": "2006 - 2011" },
+      { "institution": "ITESM", "degree": "Especialidad en Sistemas Industriales", "year": "2013" }
+    ],
+    "experience": [
+      { "company": "Contratista Independiente", "position": "Consultor Técnico Líder", "period": "2018 - Presente" },
+      { "company": "Siemens México", "position": "Ingeniero de Campo Senior", "period": "2012 - 2018" }
+    ],
+    "portfolio": [
+      { "id": "p1", "title": "Configuración de Red Eléctrica Industrial", "imageUrl": "/images/pro-dashboard.png", "span": "large" },
+      { "id": "p2", "title": "Hogar Inteligente", "imageUrl": "/images/client-workflow.png", "span": "normal" },
+      { "id": "p3", "title": "Mantenimiento Comercial", "imageUrl": "/images/hero-bg.png", "span": "normal" },
+      { "id": "p4", "title": "Paneles Solares Comerciales", "imageUrl": "/images/hero-bg.png", "span": "wide" }
+    ]
+  },
+  {
+    "id": "pro-003",
+    "name": "Lucía Gutiérrez",
+    "avatarUrl": "/images/featured-provider.png",
+    "role": "professional",
+    "location": "Zapopan, JAL",
+    "isVerified": true,
+    "verificationLevel": "standard",
+    "title": "Instalaciones Sanitarias",
+    "specialty": "Remodelaciones de Baños y Cocinas",
+    "rating": 4.7,
+    "reviewCount": 89,
+    "yearsExperience": 5,
+    "completedJobs": 89,
+    "recurringClients": 28,
+    "responseTime": "< 4 horas",
+    "hourlyRate": 500,
+    "badges": [
+      { "type": "biometric", "label": "Identidad Biométrica", "sublabel": "Verificada", "status": "verified", "icon": "fingerprint" },
+      { "type": "sat", "label": "Cumplimiento SAT", "sublabel": "Profesional Verificado", "status": "verified", "icon": "account_balance" }
+    ],
+    "education": [
+      { "institution": "CONALEP", "degree": "Técnico en Instalaciones Sanitarias", "year": "2017" }
+    ],
+    "experience": [
+      { "company": "Independiente", "position": "Especialista en Remodelaciones", "period": "2019 - Presente" }
+    ],
+    "portfolio": [
+      { "id": "p1", "title": "Remodelación de Baño Premium", "imageUrl": "/images/client-workflow.png", "span": "large" },
+      { "id": "p2", "title": "Cocina Integral", "imageUrl": "/images/pro-dashboard.png", "span": "normal" }
+    ]
+  },
+  {
+    "id": "pro-004",
+    "name": "Jorge Hernández",
+    "avatarUrl": "/images/featured-provider.png",
+    "role": "professional",
+    "location": "Zapopan, JAL",
+    "isVerified": true,
+    "verificationLevel": "premium",
+    "title": "Plomería Industrial",
+    "specialty": "Calderas y Sistemas de Presión",
+    "rating": 5.0,
+    "reviewCount": 210,
+    "yearsExperience": 15,
+    "completedJobs": 210,
+    "recurringClients": 55,
+    "responseTime": "< 1 hora",
+    "hourlyRate": 900,
+    "badges": [
+      { "type": "biometric", "label": "Identidad Biométrica", "sublabel": "Verificada", "status": "verified", "icon": "fingerprint" },
+      { "type": "conocer", "label": "CONOCER", "sublabel": "Certificado", "status": "verified", "icon": "card_membership" },
+      { "type": "sat", "label": "Cumplimiento SAT", "sublabel": "Profesional Verificado", "status": "verified", "icon": "account_balance" }
+    ],
+    "education": [
+      { "institution": "ITESM", "degree": "Ingeniería Mecánica", "year": "2005 - 2010" }
+    ],
+    "experience": [
+      { "company": "Contratista Independiente", "position": "Consultor Industrial Senior", "period": "2015 - Presente" },
+      { "company": "PEMEX Subcontratista", "position": "Ingeniero de Planta", "period": "2010 - 2015" }
+    ],
+    "portfolio": [
+      { "id": "p1", "title": "Sistema Industrial Completo", "imageUrl": "/images/hero-bg.png", "span": "large" },
+      { "id": "p2", "title": "Calderas Comerciales", "imageUrl": "/images/pro-dashboard.png", "span": "normal" },
+      { "id": "p3", "title": "Presión Constante Residencial", "imageUrl": "/images/client-workflow.png", "span": "normal" }
+    ]
+  }
+]

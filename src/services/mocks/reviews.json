@@ -1,0 +1,29 @@
+[
+  {
+    "id": "rev-001",
+    "authorInitials": "LM",
+    "authorName": "Lucía Martínez",
+    "rating": 5,
+    "text": "Ricardo fue sumamente profesional. Identificó el problema de balanceo de cargas en nuestra instalación que otros tres electricistas pasaron por alto. Su documentación para el cumplimiento del SAT fue perfecta.",
+    "projectType": "Proyecto Residencial",
+    "date": "Oct 2023"
+  },
+  {
+    "id": "rev-002",
+    "authorInitials": "GR",
+    "authorName": "Grupo Refmex",
+    "rating": 4.5,
+    "text": "Servicio institucional excepcional. Trabajo limpio y programación muy confiable. Altamente recomendado para contratos comerciales.",
+    "projectType": "Mantenimiento Industrial",
+    "date": "Ago 2023"
+  },
+  {
+    "id": "rev-003",
+    "authorInitials": "CM",
+    "authorName": "Carlos Mendoza",
+    "rating": 5,
+    "text": "Excelente trabajo en la instalación de todo el sistema eléctrico de nuestra nueva oficina. Cumplió con todos los estándares de seguridad y entregó antes del plazo.",
+    "projectType": "Instalación Comercial",
+    "date": "Sep 2023"
+  }
+]
