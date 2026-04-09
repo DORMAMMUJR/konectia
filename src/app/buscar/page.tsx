@@ -1,7 +1,7 @@
 import TopNav from "@/components/layout/TopNav";
 import Footer from "@/components/layout/Footer";
 import FilterSidebar from "@/components/search/FilterSidebar";
-import ProfessionalCard from "@/components/search/ProfessionalCard";
+import ServiceCard from "@/components/search/ServiceCard";
 import { getProfessionals } from "@/services/professionals";
 import type { Professional } from "@/types";
 import Image from "next/image";
@@ -42,10 +42,10 @@ export default async function BuscarPage() {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div>
               <h1 className="text-2xl sm:text-3xl font-bold text-primary tracking-tight font-[var(--font-headline)]">
-                Profesionales verificados cerca de ti
+                Servicios disponibles cerca de ti
               </h1>
               <p className="text-on-surface-variant mt-1">
-                {professionals.length} profesionales verificados encontrados
+                {professionals.length * 2} servicios encontrados
               </p>
             </div>
             <div className="flex items-center gap-2 bg-surface-container px-3 py-2 rounded-lg">
@@ -102,11 +102,26 @@ export default async function BuscarPage() {
               </button>
             </div>
 
-            {/* Professional Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-              {professionals.map((pro: Professional) => (
-                <ProfessionalCard key={pro.id} pro={pro} />
-              ))}
+            {/* Service Cards Grid - 3 columns for Fiverr style */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+              {professionals.map((pro: Professional) => {
+                // Mock a service from the professional data
+                const fakeService = {
+                  id: `srv-${pro.id}`,
+                  title: `${pro.specialty} garantizado en ${pro.location}`,
+                  imageUrl: pro.portfolio?.[0]?.imageUrl || "/images/hero-bg.png",
+                  startingPrice: pro.hourlyRate,
+                  rating: pro.rating,
+                  reviewCount: pro.reviewCount,
+                  provider: {
+                    id: pro.id,
+                    name: pro.name,
+                    avatarUrl: pro.avatarUrl,
+                    isVerified: pro.isVerified
+                  }
+                };
+                return <ServiceCard key={fakeService.id} service={fakeService} />;
+              })}
             </div>
 
             {/* Pagination */}

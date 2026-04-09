@@ -13,11 +13,10 @@ export default async function CategoryGrid() {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 lg:mb-16 gap-6">
             <div className="max-w-2xl">
               <h2 className="text-3xl sm:text-4xl font-bold text-primary tracking-tighter mb-4 font-[var(--font-headline)]">
-                Explora Categorías Profesionales
+                Explora el marketplace por categoría
               </h2>
               <p className="text-base sm:text-lg text-on-surface-variant">
-                Directorio especializado con expertos verificados por nuestro
-                comité de calidad y cumplimiento institucional.
+                Encuentra el talento perfecto para cualquier proyecto, desde diseño hasta reparaciones locales.
               </p>
             </div>
             <Link
@@ -30,27 +29,23 @@ export default async function CategoryGrid() {
           </div>
         </FadeInUp>
 
-        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6" staggerDelay={0.12}>
-          {categories.map((cat: Category) => (
+        <StaggerContainer className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4" staggerDelay={0.08}>
+          {categories.slice(0, 10).map((cat: Category) => (
             <StaggerItem key={cat.id}>
-              <div
-                className="group bg-surface-container-lowest p-6 sm:p-8 rounded-xl hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(45,188,254,0.12)] transition-all duration-300 border-b-4 border-transparent hover:border-secondary-container cursor-pointer"
-              >
-                <div className="w-14 h-14 bg-surface-container rounded-xl flex items-center justify-center mb-6 group-hover:bg-secondary-container transition-colors">
-                  <span className="material-symbols-outlined text-3xl text-secondary group-hover:text-white">
-                    {cat.icon}
-                  </span>
+              <Link href={`/buscar?category=${cat.id}`} className="block h-full">
+                <div
+                  className="group bg-white p-6 rounded-2xl hover:shadow-[0_10px_25px_rgba(11,31,58,0.06)] transition-all duration-300 border border-surface-container flex flex-col items-center text-center hover:border-tertiary/30 hover:-translate-y-1"
+                >
+                  <div className="w-16 h-16 bg-surface-container-low rounded-full flex items-center justify-center mb-4 group-hover:bg-tertiary-fixed transition-colors">
+                    <span className="material-symbols-outlined text-3xl text-on-surface-variant group-hover:text-tertiary">
+                      {cat.icon}
+                    </span>
+                  </div>
+                  <h3 className="text-base font-bold text-primary mb-1 font-[var(--font-headline)] group-hover:text-tertiary transition-colors">
+                    {cat.name}
+                  </h3>
                 </div>
-                <h3 className="text-xl font-bold text-primary mb-2 font-[var(--font-headline)] transition-colors group-hover:text-secondary">
-                  {cat.name}
-                </h3>
-                <p className="text-on-surface-variant text-sm mb-4">
-                  {cat.description}
-                </p>
-                <span className="text-xs font-bold text-secondary uppercase tracking-widest">
-                  {cat.expertCount.toLocaleString()} Expertos
-                </span>
-              </div>
+              </Link>
             </StaggerItem>
           ))}
         </StaggerContainer>
