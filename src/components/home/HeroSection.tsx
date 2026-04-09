@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function HeroSection() {
   const [searchService, setSearchService] = useState("");
@@ -24,19 +25,34 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center py-12 lg:py-0">
         {/* Left: Copy + Search */}
         <div className="lg:col-span-7">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tighter mb-6 leading-tight font-[var(--font-headline)]">
+          <motion.h1
+            initial={{ opacity: 0, x: -40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tighter mb-6 leading-tight font-[var(--font-headline)]"
+          >
             Servicios Profesionales de{" "}
             <span className="text-secondary-container">Confianza</span> en
             México
-          </h1>
-          <p className="text-lg sm:text-xl text-on-primary-container mb-8 lg:mb-10 max-w-xl">
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+            className="text-lg sm:text-xl text-on-primary-container mb-8 lg:mb-10 max-w-xl"
+          >
             La primera plataforma institucional que conecta expertos
             certificados con empresas y particulares bajo los más altos
             estándares de seguridad y cumplimiento.
-          </p>
+          </motion.p>
 
           {/* Search Box */}
-          <div className="bg-surface-container-lowest/10 p-2 rounded-2xl lg:rounded-full glass-effect max-w-3xl">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
+            className="bg-surface-container-lowest/10 p-2 rounded-2xl lg:rounded-full glass-effect max-w-3xl"
+          >
             <div className="flex flex-col md:flex-row items-center gap-2">
               <div className="flex-1 w-full bg-white rounded-xl md:rounded-full px-4 sm:px-6 py-3 sm:py-4 flex items-center gap-3">
                 <span className="material-symbols-outlined text-slate-400">
@@ -66,11 +82,16 @@ export default function HeroSection() {
                 Buscar
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Right: Featured Card */}
-        <div className="lg:col-span-5 hidden lg:block">
+        <motion.div
+          initial={{ opacity: 0, x: 60 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
+          className="lg:col-span-5 hidden lg:block"
+        >
           <div className="bg-surface-container-lowest p-6 rounded-xl shadow-[0_20px_40px_rgba(8,28,54,0.12)] border border-white/20 relative">
             <div className="absolute -top-4 -right-4 bg-tertiary-container text-on-tertiary-container px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
               Proveedor Destacado
@@ -123,7 +144,7 @@ export default function HeroSection() {
               Ver Perfil Institucional
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,10 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 
 export default function AIAssistant() {
   const [isOpen, setIsOpen] = useState(false);
+  const [spotPos, setSpotPos] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    setSpotPos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+  };
 
   return (
     <>
@@ -18,9 +23,19 @@ export default function AIAssistant() {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-6 right-6 w-[350px] max-w-[calc(100vw-48px)] h-[500px] max-h-[calc(100vh-100px)] bg-white rounded-2xl shadow-[0_20px_40px_rgba(8,28,54,0.15)] flex flex-col overflow-hidden z-50 border border-outline-variant/20 animate-[slideUp_0.3s_ease]">
-          
-          <div className="bg-primary-container p-4 text-white flex justify-between items-center">
+        <div
+          onMouseMove={handleMouseMove}
+          className="fixed bottom-6 right-6 w-[350px] max-w-[calc(100vw-48px)] h-[500px] max-h-[calc(100vh-100px)] bg-white rounded-2xl shadow-[0_20px_40px_rgba(8,28,54,0.15)] flex flex-col overflow-hidden z-50 border border-outline-variant/20 animate-[slideUp_0.3s_ease]"
+        >
+          {/* Spotlight effect that follows cursor */}
+          <div
+            className="pointer-events-none absolute inset-0 z-0 opacity-30 transition-opacity duration-300"
+            style={{
+              background: `radial-gradient(400px circle at ${spotPos.x}px ${spotPos.y}px, rgba(45,188,254,0.08), transparent 50%)`
+            }}
+          />
+
+          <div className="bg-primary-container p-4 text-white flex justify-between items-center relative z-10">
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center">
                 <span className="material-symbols-outlined text-sm">smart_toy</span>
@@ -35,7 +50,7 @@ export default function AIAssistant() {
             </button>
           </div>
 
-          <div className="flex-1 p-4 overflow-y-auto bg-surface-container-lowest space-y-4">
+          <div className="flex-1 p-4 overflow-y-auto bg-surface-container-lowest space-y-4 relative z-10">
              <div className="flex items-start gap-2">
                  <div className="w-6 h-6 rounded-full bg-secondary-container text-white flex items-center justify-center flex-shrink-0 mt-1">
                    <span className="material-symbols-outlined text-[12px]">smart_toy</span>
@@ -47,19 +62,19 @@ export default function AIAssistant() {
              
              {/* Quick chips */}
              <div className="flex flex-wrap gap-2 pl-8 pt-2">
-               <button className="text-[10px] sm:text-xs bg-white border border-outline-variant/30 px-3 py-1.5 rounded-full hover:bg-surface-container transition-colors font-medium">
+               <button className="text-[10px] sm:text-xs bg-white border border-outline-variant/30 px-3 py-1.5 rounded-full hover:bg-surface-container hover:border-secondary/30 transition-all font-medium active:scale-95">
                  ¿Cómo funciona el Escrow?
                </button>
-               <button className="text-[10px] sm:text-xs bg-white border border-outline-variant/30 px-3 py-1.5 rounded-full hover:bg-surface-container transition-colors font-medium">
+               <button className="text-[10px] sm:text-xs bg-white border border-outline-variant/30 px-3 py-1.5 rounded-full hover:bg-surface-container hover:border-secondary/30 transition-all font-medium active:scale-95">
                  Busco un electricista
                </button>
              </div>
           </div>
 
-          <div className="p-3 border-t border-outline-variant/20 bg-white">
+          <div className="p-3 border-t border-outline-variant/20 bg-white relative z-10">
             <div className="bg-surface-container-low rounded-full flex items-center px-4 py-2">
               <input type="text" placeholder="Escribe tu consulta..." className="flex-1 bg-transparent border-none text-sm py-1 focus:ring-0 px-0" />
-              <button className="text-secondary hover:text-primary transition-colors pl-2">
+              <button className="text-secondary hover:text-primary transition-colors pl-2 active:scale-90 transition-transform">
                 <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>send</span>
               </button>
             </div>

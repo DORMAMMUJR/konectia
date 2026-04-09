@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Professional, Review, VerificationBadge } from "@/types";
+import TiltBadgeRow from "@/components/shared/TiltBadgeRow";
 
 // Generate static params for all professionals
 export async function generateStaticParams() {
@@ -142,8 +143,8 @@ export default async function PerfilPage({ params }: { params: Promise<{ id: str
               </div>
             </section>
 
-            {/* Badges */}
-            <BadgeRow badges={pro.badges} />
+            {/* Badges — 3D Tilt effect */}
+            <TiltBadgeRow badges={pro.badges} />
 
             {/* Portfolio */}
             <section className="space-y-4">

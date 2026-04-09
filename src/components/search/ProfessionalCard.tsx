@@ -6,7 +6,7 @@ export default function ProfessionalCard({ pro }: { pro: Professional }) {
   const isPremium = pro.verificationLevel === "premium";
 
   return (
-    <div className="group bg-surface-container-lowest p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:shadow-[0_20px_40px_rgba(8,28,54,0.06)] border border-transparent hover:border-secondary/10">
+    <div className="group bg-surface-container-lowest p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(45,188,254,0.15)] border border-transparent hover:border-secondary/20">
       <div className="flex gap-4 items-start mb-4">
         <div className="relative flex-shrink-0">
           <Image
@@ -37,7 +37,7 @@ export default function ProfessionalCard({ pro }: { pro: Professional }) {
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex justify-between items-start">
-            <h4 className="font-[var(--font-headline)] font-bold text-primary text-base sm:text-lg truncate">
+            <h4 className="font-[var(--font-headline)] font-bold text-primary text-base sm:text-lg truncate transition-colors group-hover:text-secondary">
               {pro.name}
             </h4>
             <div className="flex items-center gap-1 text-on-tertiary-container font-bold flex-shrink-0 ml-2">
