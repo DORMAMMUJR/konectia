@@ -25,7 +25,7 @@ export const registerSchema = z.object({
     .regex(/[A-Z]/, "Debe contener al menos una mayúscula")
     .regex(/[0-9]/, "Debe contener al menos un número"),
   role: z.enum(["client", "professional"], {
-    required_error: "Selecciona un tipo de cuenta",
+    message: "Selecciona un tipo de cuenta",
   }),
 });
 

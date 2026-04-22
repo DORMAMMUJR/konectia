@@ -1,0 +1,62 @@
+﻿
+> konectia-app@0.1.0 build
+> next build
+
+node.exe : ÔÜá Warning: Next.js inferred your workspace root, but it may not be correct.
+En línea: 1 Carácter: 1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (ÔÜá Warning: Ne...not be correct.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+ We detected multiple lockfiles and selected the directory of 
+C:\Users\dragn\Downloads\ProyectosAntigravity\CONECTIA\package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if 
+it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\dragn\Downloads\ProyectosAntigravity\CONECTIA\konectia-app\package-lock.json
+
+Ôû▓ Next.js 16.2.3 (Turbopack)
+- Environments: .env.local
+
+ÔÜá The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: 
+https://nextjs.org/docs/messages/middleware-to-proxy
+  Creating an optimized production build ...
+Ô£ô Compiled successfully in 8.8s
+  Running TypeScript ...
+  Finished TypeScript in 7.9s ...
+  Collecting page data using 7 workers ...
+  Generating static pages using 7 workers (0/17) ...
+  Generating static pages using 7 workers (4/17) 
+  Generating static pages using 7 workers (8/17) 
+  Generating static pages using 7 workers (12/17) 
+Error occurred prerendering page "/perfil/1bc1f51e-1554-48b8-a3da-6306007dbe0f". Read more: 
+https://nextjs.org/docs/messages/prerender-error
+Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.user.findUnique()` invocation:
+
+
+Too many database connections opened: too many connections for role "db_dvk76pmcco2e"
+    at async g (C:\Users\dragn\Downloads\ProyectosAntigravity\CONECTIA\konectia-app\.next\server\chunks\ssr\konectia-ap
+p_src_033c3bx._.js:1:3421)
+    at async Module.o [as generateMetadata] (C:\Users\dragn\Downloads\ProyectosAntigravity\CONECTIA\konectia-app\.next\
+server\chunks\ssr\konectia-app_src_0mj6g-1._.js:1:6538) {
+  code: 'P2037',
+  meta: {
+    modelName: 'User',
+    driverAdapterError: Error [DriverAdapterError]: TooManyConnections
+        at F.onError (C:\Users\dragn\Downloads\ProyectosAntigravity\CONECTIA\konectia-app\.next\server\chunks\ssr\konec
+tia-app_09zwiu9._.js:1:11639)
+        at F.performIO (C:\Users\dragn\Downloads\ProyectosAntigravity\CONECTIA\konectia-app\.next\server\chunks\ssr\kon
+ectia-app_09zwiu9._.js:1:11580)
+        at async F.queryRaw (C:\Users\dragn\Downloads\ProyectosAntigravity\CONECTIA\konectia-app\.next\server\chunks\ss
+r\konectia-app_09zwiu9._.js:1:8166) {
+      [cause]: [Object]
+    }
+  },
+  clientVersion: '7.7.0',
+  digest: '3059816207'
+}
+Export encountered an error on /perfil/[id]/page: /perfil/1bc1f51e-1554-48b8-a3da-6306007dbe0f, exiting the build.
+Ô¿» Next.js build worker exited with code: 1 and signal: null

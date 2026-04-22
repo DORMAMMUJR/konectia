@@ -1,0 +1,49 @@
+﻿
+> konectia-app@0.1.0 build
+> next build
+
+node.exe : ÔÜá Warning: Next.js inferred your workspace root, but it may not be correct.
+En línea: 1 Carácter: 1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (ÔÜá Warning: Ne...not be correct.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+ We detected multiple lockfiles and selected the directory of 
+C:\Users\dragn\Downloads\ProyectosAntigravity\CONECTIA\package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if 
+it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\dragn\Downloads\ProyectosAntigravity\CONECTIA\konectia-app\package-lock.json
+
+Ôû▓ Next.js 16.2.3 (Turbopack)
+- Environments: .env.local
+
+ÔÜá The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: 
+https://nextjs.org/docs/messages/middleware-to-proxy
+  Creating an optimized production build ...
+Ô£ô Compiled successfully in 12.7s
+  Running TypeScript ...
+Failed to type check.
+
+./src/app/buscar/page.tsx:107:34
+Type error: Argument of type '(pro: Professional) => JSX.Element' is not assignable to parameter of type '(value: { 
+id: string; name: string | null; avatarUrl: string; role: string; location: string | null; isVerified: boolean; 
+verificationLevel: string; title: string; specialty: string; rating: number; ... 9 more ...; portfolio: { ...; }[]; }, 
+index: number, array: { ...; }[]) => Element'.
+  Types of parameters 'pro' and 'value' are incompatible.
+    Type '{ id: string; name: string | null; avatarUrl: string; role: string; location: string | null; isVerified: 
+boolean; verificationLevel: string; title: string; specialty: string; rating: number; ... 9 more ...; portfolio: { 
+...; }[]; }' is not assignable to type 'Professional'.
+      Types of property 'role' are incompatible.
+        Type 'string' is not assignable to type '"professional"'.
+
+  [90m105 |[0m             {[90m/* Service Cards Grid - 3 columns for Fiverr style */[0m}
+  [90m106 |[0m             <div className=[32m"grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6"[0m>
+[31m[1m>[0m [90m107 |[0m               {professionals.map((pro: [33mProfessional[0m) => {
+  [90m    |[0m                                  [31m[1m^[0m
+  [90m108 |[0m                 [90m// Mock a service from the professional data[0m
+  [90m109 |[0m                 [36mconst[0m fakeService = {
+  [90m110 |[0m                   id: [32m`srv-[0m${pro.id[32m}`[0m,
+Next.js build worker exited with code: 1 and signal: null

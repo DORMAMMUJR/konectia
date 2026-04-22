@@ -14,10 +14,10 @@ export async function getRequests(): Promise<ServiceRequest[]> {
     id: req.id,
     client: {
       id: req.client.id,
-      name: req.client.name,
+      name: req.client.name || "Usuario",
       avatarUrl: req.client.avatarUrl || "/images/featured-provider.png",
       role: req.client.role as "client",
-      location: req.client.location,
+      location: req.client.location || "Ubicación no especificada",
       isVerified: req.client.isVerified,
       verificationLevel: req.client.verificationLevel as "premium" | "standard" | "none",
     },

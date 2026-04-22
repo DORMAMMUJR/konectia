@@ -28,10 +28,10 @@ export async function getConversations(userId?: string): Promise<Conversation[]>
       id: conv.id,
       participant: {
         id: participant.id,
-        name: participant.name,
+        name: participant.name || "Usuario",
         avatarUrl: participant.avatarUrl || "/images/featured-provider.png",
         role: participant.role as "client" | "professional" | "guest",
-        location: participant.location,
+        location: participant.location || "Ubicación no especificada",
         isVerified: participant.isVerified,
         verificationLevel: participant.verificationLevel as "premium" | "standard" | "none",
       },

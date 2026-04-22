@@ -1,0 +1,41 @@
+﻿
+> konectia-app@0.1.0 build
+> next build
+
+node.exe : ÔÜá Warning: Next.js inferred your workspace root, but it may not be correct.
+En línea: 1 Carácter: 1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (ÔÜá Warning: Ne...not be correct.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+ We detected multiple lockfiles and selected the directory of 
+C:\Users\dragn\Downloads\ProyectosAntigravity\CONECTIA\package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if 
+it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\dragn\Downloads\ProyectosAntigravity\CONECTIA\konectia-app\package-lock.json
+
+Ôû▓ Next.js 16.2.3 (Turbopack)
+- Environments: .env.local
+
+ÔÜá The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: 
+https://nextjs.org/docs/messages/middleware-to-proxy
+  Creating an optimized production build ...
+Ô£ô Compiled successfully in 8.3s
+  Running TypeScript ...
+Failed to type check.
+
+./src/services/professionals.ts:4:23
+Type error: Cannot find name 'prisma'.
+
+  [90m2 |[0m
+  [90m3 |[0m [36mexport[0m [36masync[0m [36mfunction[0m getProfessionals(): 
+[33mPromise[0m<[33mProfessional[0m[]> {
+[31m[1m>[0m [90m4 |[0m   [36mconst[0m users = [36mawait[0m prisma.user.findMany({
+  [90m  |[0m                       [31m[1m^[0m
+  [90m5 |[0m     where: { role: [32m"professional"[0m },
+  [90m6 |[0m     include: {
+  [90m7 |[0m       professional: {
+Next.js build worker exited with code: 1 and signal: null

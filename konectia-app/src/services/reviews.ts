@@ -12,18 +12,24 @@ export async function getReviews(professionalId?: string): Promise<Review[]> {
     orderBy: { createdAt: "desc" },
   });
 
-  return reviews.map((rev) => ({
-    id: rev.id,
-    authorInitials: rev.author.name
+  return reviews.map((rev) => {
+    // Safely handle nullable author name to prevent substring-of-null crashes
+    const authorName = rev.author?.name ?? "Usuario Anónimo";
+    const authorInitials = authorName
       .split(" ")
       .map((n) => n[0])
       .join("")
       .toUpperCase()
-      .slice(0, 2),
-    authorName: rev.author.name,
-    rating: rev.rating,
-    text: rev.text,
-    projectType: rev.projectType,
-    date: rev.createdAt.toISOString().split("T")[0],
-  }));
+      .slice(0, 2);
+
+    return {
+      id: rev.id,
+      authorInitials,
+      authorName,
+      rating: rev.rating,
+      text: rev.text,
+      projectType: rev.projectType,
+      date: rev.createdAt.toISOString().split("T")[0], // YYYY-MM-DD
+    } as Review;
+  });
 }

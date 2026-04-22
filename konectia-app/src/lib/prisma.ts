@@ -5,6 +5,7 @@ import { Pool } from 'pg'
 const connectionString = process.env.DATABASE_URL!
 const pool = new Pool({ 
   connectionString,
+  max: 1,
   ssl: { rejectUnauthorized: false }
 })
 const adapter = new PrismaPg(pool)

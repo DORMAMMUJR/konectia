@@ -19,10 +19,10 @@ export async function getProjects(userId?: string): Promise<Project[]> {
     title: proj.title,
     professional: {
       id: proj.professional.id,
-      name: proj.professional.name,
+      name: proj.professional.name || "Usuario",
       avatarUrl: proj.professional.avatarUrl || "/images/featured-provider.png",
       role: proj.professional.role as "professional",
-      location: proj.professional.location,
+      location: proj.professional.location || "Ubicación no especificada",
       isVerified: proj.professional.isVerified,
       verificationLevel: proj.professional.verificationLevel as "premium" | "standard" | "none",
     },
