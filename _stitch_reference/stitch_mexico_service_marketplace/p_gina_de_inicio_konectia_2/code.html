@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KonectIA | Servicios Profesionales de Confianza en México</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#e0e3e5",
+                        "on-tertiary-fixed-variant": "#842500",
+                        "secondary-container": "#2dbcfe",
+                        "on-primary-fixed": "#081c36",
+                        "surface-container": "#ebeef0",
+                        "surface-bright": "#f7fafc",
+                        "tertiary-fixed": "#ffdbd0",
+                        "outline-variant": "#c5c6ce",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#b6c7e9",
+                        "on-secondary-fixed-variant": "#004c6b",
+                        "secondary-fixed": "#c6e7ff",
+                        "primary-container": "#0a1d37",
+                        "inverse-primary": "#b6c7e9",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#7586a5",
+                        "secondary-fixed-dim": "#82cfff",
+                        "tertiary-container": "#3c0c00",
+                        "surface-dim": "#d7dadc",
+                        "on-surface-variant": "#44474d",
+                        "surface-container-high": "#e5e9eb",
+                        "inverse-on-surface": "#eef1f3",
+                        "inverse-surface": "#2d3133",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "background": "#f7fafc",
+                        "surface-tint": "#4e5f7c",
+                        "surface-container-low": "#f1f4f6",
+                        "on-primary-fixed-variant": "#364763",
+                        "outline": "#75777e",
+                        "on-secondary-fixed": "#001e2d",
+                        "on-tertiary-fixed": "#3a0b00",
+                        "primary-fixed": "#d6e3ff",
+                        "surface-container-highest": "#e0e3e5",
+                        "tertiary": "#0a0100",
+                        "surface": "#f7fafc",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb59e",
+                        "on-tertiary-container": "#e7531d",
+                        "secondary": "#00658d",
+                        "on-background": "#181c1e",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#181c1e",
+                        "on-secondary-container": "#004866",
+                        "primary": "#00030a",
+                        "error-container": "#ffdad6",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-effect {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2">
+<img alt="KonectIA Logo" class="h-8 w-auto" data-alt="professional modern tech logo with abstract geometric shape and clean typography in deep navy and cyan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPulAdiTFwlX9l9d8zCNKM9DLemAJ3WWqBDUj6RChJLizi-MhkONBd7vGcouap-xYk9PiD-wJ1XPvrFgC0oZGm8Dcio9nqhXVu5-vpeMVStsd6e8FcpN3pyMbTK5JIQYWYqetCFTwM0dGnNtNRvIVgM_PeGbTRMSi8icNpe3TI1ydD8WWp5qPyF7Hr0X401ZY8mAIjqGtxxZPwtWlJ--7_tGQzNu0NZq4E_TDLStpDxQzgtkfQPBBYhGSDDGp1anUMc9h1ZN4B8tlc"/>
+<span class="text-2xl font-bold tracking-tighter text-slate-900 dark:text-slate-50">KonectIA</span>
+</div>
+<div class="hidden md:flex gap-6">
+<a class="text-cyan-600 dark:text-cyan-400 font-semibold border-b-2 border-cyan-600 dark:border-cyan-400 pb-1" href="#">Directorio</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-cyan-600 transition-colors" href="#">Categorías</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-cyan-600 transition-colors" href="#">Centro de Confianza</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex items-center gap-4 mr-4">
+<button class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-all">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-all">
+<span class="material-symbols-outlined">chat_bubble</span>
+</button>
+</div>
+<button class="bg-primary text-on-primary px-5 py-2 rounded-xl font-semibold scale-95 active:scale-90 transition-transform">Buscar Servicio</button>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[870px] flex items-center overflow-hidden bg-primary-container">
+<!-- Background Texture -->
+<div class="absolute inset-0 z-0 opacity-40">
+<div class="absolute inset-0 bg-gradient-to-br from-primary via-primary-container to-secondary"></div>
+<img alt="Hero background" class="w-full h-full object-cover mix-blend-overlay" data-alt="abstract professional background with deep navy tones, subtle geometric light patterns, and high-tech digital textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN4PteqKR2seQbZwdL_A51ddVvLLZjMXDMF5Yue-yh9fqChBO-VgeyQXY5cXQaJwmNi0HrVCo2YUpeJ-6Q2qUATbzX5D0Gh_YhpZ2eeiBx0lW2-FyDuL17LPT_aInG9vCU9EUOQzGSMxHDlfDBBB-W4eRr08nJwVJbLFVvUB9R_aokBiFm9S2TXdKyrjBUlYN5tqWB3cH66ruFL7j5gHc3dj3DEWpNeQ3caN9K5UxjBwR_Kv43E1GTHJCH3pMZlp3XLSY0vj7N0pUd"/>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7">
+<h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tighter mb-6 leading-tight">
+                        Servicios Profesionales de <span class="text-secondary-container">Confianza</span> en México
+                    </h1>
+<p class="text-xl text-on-primary-container mb-10 max-w-xl">
+                        La primera plataforma institucional que conecta expertos certificados con empresas y particulares bajo los más altos estándares de seguridad y cumplimiento.
+                    </p>
+<!-- Search Bento Box -->
+<div class="bg-surface-container-lowest/10 p-2 rounded-full glass-effect max-w-3xl">
+<div class="flex flex-col md:flex-row items-center gap-2">
+<div class="flex-1 w-full bg-white rounded-full px-6 py-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400">search</span>
+<input class="w-full border-none focus:ring-0 text-slate-900 font-medium" placeholder="¿Qué servicio buscas? (ej. Abogado, Plomero)" type="text"/>
+</div>
+<div class="flex-1 w-full bg-white rounded-full px-6 py-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400">location_on</span>
+<input class="w-full border-none focus:ring-0 text-slate-900 font-medium" placeholder="¿En dónde?" type="text"/>
+</div>
+<button class="w-full md:w-auto bg-secondary-container text-on-secondary-container px-8 py-4 rounded-full font-bold hover:brightness-110 transition-all">
+                                Buscar
+                            </button>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 hidden lg:block">
+<!-- Featured Floating Card -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_20px_40px_rgba(8,28,54,0.12)] border border-white/20 relative">
+<div class="absolute -top-4 -right-4 bg-tertiary-container text-on-tertiary-container px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
+                            Proveedor Destacado
+                        </div>
+<div class="flex items-center gap-4 mb-6">
+<img alt="Proveedor Destacado" class="w-16 h-16 rounded-xl object-cover" data-alt="professional portrait of a smiling female digital consultant in business attire, clean studio lighting, high-end corporate style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2QP9NRuTkR-zn_61wCTesB6SXMzcAPp9Tal8lgaqlpx-Ac0t8zOXvTnMOwN9MMeiWgaSxQ4k5jPy8-XSsOCFXDWZMpOypa93FSgRAZwSXN7bk6TfoK94AGeKTsrLFX8GB5AfJHK0zPJlm8Ikk5B70Z8q_YnvfEiX6Zn9TTJKA6V7kwRNL6xZIoJjMCHPiBXyz77PYxxndlKdNDvPkaB-gAL0iLzAQV3qvvNumXzjg_pnKiYOSf_1NW8WvJb62CjyhbTfkCU4Cr461"/>
+<div>
+<h3 class="text-lg font-bold text-primary">Lic. Ana Gabriela Ruiz</h3>
+<p class="text-sm text-on-surface-variant">Consultoría Fiscal &amp; SAT</p>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="text-xs font-bold text-primary">4.9 (124 reseñas)</span>
+</div>
+</div>
+</div>
+<div class="space-y-3 mb-6">
+<div class="flex items-center gap-2 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary-container">verified_user</span>
+<span>Validación Biométrica OK</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary-container">shield</span>
+<span>Escrow Garantizado</span>
+</div>
+</div>
+<button class="w-full py-3 border-2 border-secondary-container text-secondary-container font-bold rounded-xl hover:bg-secondary-container hover:text-white transition-all">
+                            Ver Perfil Institucional
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Bar -->
+<section class="bg-primary py-8 border-y border-slate-800">
+<div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-between items-center gap-8 md:gap-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary-container">fingerprint</span>
+</div>
+<div>
+<p class="text-xs text-slate-400 font-bold uppercase tracking-tighter">Seguridad</p>
+<p class="text-white font-semibold">Validación Biométrica</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary-container">payments</span>
+</div>
+<div>
+<p class="text-xs text-slate-400 font-bold uppercase tracking-tighter">Protección</p>
+<p class="text-white font-semibold">Pagos en Custodia (Escrow)</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary-container">gavel</span>
+</div>
+<div>
+<p class="text-xs text-slate-400 font-bold uppercase tracking-tighter">Legalidad</p>
+<p class="text-white font-semibold">Cumplimiento SAT</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary-container">workspace_premium</span>
+</div>
+<div>
+<p class="text-xs text-slate-400 font-bold uppercase tracking-tighter">Certificación</p>
+<p class="text-white font-semibold">Aval CONOCER/SEP</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Categories Section -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-2xl">
+<h2 class="text-4xl font-bold text-primary tracking-tighter mb-4">Explora Categorías Profesionales</h2>
+<p class="text-lg text-on-surface-variant">Directorio especializado con expertos verificados por nuestro comité de calidad y cumplimiento institucional.</p>
+</div>
+<a class="text-secondary font-bold flex items-center gap-2 hover:gap-3 transition-all" href="#">
+                        Ver todas las categorías <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Category Card 1 -->
+<div class="group bg-surface-container-lowest p-8 rounded-xl hover:shadow-xl transition-all border-b-4 border-transparent hover:border-secondary-container">
+<div class="w-14 h-14 bg-surface-container rounded-xl flex items-center justify-center mb-6 group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-3xl text-secondary group-hover:text-white">handyman</span>
+</div>
+<h3 class="text-xl font-bold text-primary mb-2">Mantenimiento</h3>
+<p class="text-on-surface-variant text-sm mb-4">Técnicos certificados para el hogar e industria con seguro de responsabilidad civil.</p>
+<span class="text-xs font-bold text-secondary uppercase tracking-widest">1,200 Expertos</span>
+</div>
+<!-- Category Card 2 -->
+<div class="group bg-surface-container-lowest p-8 rounded-xl hover:shadow-xl transition-all border-b-4 border-transparent hover:border-secondary-container">
+<div class="w-14 h-14 bg-surface-container rounded-xl flex items-center justify-center mb-6 group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-3xl text-secondary group-hover:text-white">medical_services</span>
+</div>
+<h3 class="text-xl font-bold text-primary mb-2">Salud</h3>
+<p class="text-on-surface-variant text-sm mb-4">Médicos, fisioterapeutas y especialistas con cédula profesional validada ante SEP.</p>
+<span class="text-xs font-bold text-secondary uppercase tracking-widest">850 Expertos</span>
+</div>
+<!-- Category Card 3 -->
+<div class="group bg-surface-container-lowest p-8 rounded-xl hover:shadow-xl transition-all border-b-4 border-transparent hover:border-secondary-container">
+<div class="w-14 h-14 bg-surface-container rounded-xl flex items-center justify-center mb-6 group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-3xl text-secondary group-hover:text-white">devices</span>
+</div>
+<h3 class="text-xl font-bold text-primary mb-2">Servicios Digitales</h3>
+<p class="text-on-surface-variant text-sm mb-4">Desarrollo, diseño y marketing digital con entregas garantizadas vía smart contract.</p>
+<span class="text-xs font-bold text-secondary uppercase tracking-widest">2,400 Expertos</span>
+</div>
+<!-- Category Card 4 -->
+<div class="group bg-surface-container-lowest p-8 rounded-xl hover:shadow-xl transition-all border-b-4 border-transparent hover:border-secondary-container">
+<div class="w-14 h-14 bg-surface-container rounded-xl flex items-center justify-center mb-6 group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-3xl text-secondary group-hover:text-white">school</span>
+</div>
+<h3 class="text-xl font-bold text-primary mb-2">Educación</h3>
+<p class="text-on-surface-variant text-sm mb-4">Tutores y profesores con metodologías certificadas y evaluaciones de desempeño.</p>
+<span class="text-xs font-bold text-secondary uppercase tracking-widest">560 Expertos</span>
+</div>
+</div>
+</div>
+</section>
+<!-- How it Works (Asymmetrical Layout) -->
+<section class="py-24 bg-white overflow-hidden">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-20">
+<h2 class="text-4xl font-bold text-primary tracking-tighter mb-4">Institucionalizando el Marketplace</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto text-lg">Un proceso riguroso diseñado para proteger a ambas partes en cada transacción.</p>
+</div>
+<!-- Client Side -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-32">
+<div class="order-2 lg:order-1">
+<img alt="Flujo de trabajo cliente" class="rounded-2xl shadow-2xl" data-alt="high-quality mockup of a mobile app showing a secure service booking interface, clean white UI with navy accents, professional and trustworthy feel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAd9dzr6fUJIgkyvGe7s5D3eTHkQhJhcGEaRvOnUfCTVyCktogzHKtIwbdsKnTmxLniLKrPMJXIaAZZwuQr3UUmmy7E73WfF4iKjV_hirxVFmCKF5cX-efFaspBsoG3DFQ3d4cBW3lGxY_inSmiZPLSazBNcTs52fZdq_fvbscY0PipOLErBBet45PcAedC-XMYBVfk5J40qOKAm4KjreRbTXg9PvVt-rQX1o5Qd5CAjv1LGbv1btHs9sqbB4jc8KLMbsZiKNw9d6FL"/>
+</div>
+<div class="order-1 lg:order-2">
+<span class="text-secondary font-bold uppercase tracking-widest text-sm mb-4 block">Para el Cliente</span>
+<h3 class="text-3xl font-bold text-primary mb-8">Contrata con Certeza Total</h3>
+<div class="space-y-8">
+<div class="flex gap-4">
+<div class="text-3xl font-bold text-surface-variant">01</div>
+<div>
+<h4 class="font-bold text-xl mb-2">Busca &amp; Filtra</h4>
+<p class="text-on-surface-variant">Encuentra al profesional ideal basándote en reputación, ubicación y certificaciones oficiales.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="text-3xl font-bold text-surface-variant">02</div>
+<div>
+<h4 class="font-bold text-xl mb-2">Pago en Custodia</h4>
+<p class="text-on-surface-variant">Tu dinero se retiene de forma segura hasta que confirmes la entrega satisfactoria del servicio.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="text-3xl font-bold text-surface-variant">03</div>
+<div>
+<h4 class="font-bold text-xl mb-2">Facturación Automática</h4>
+<p class="text-on-surface-variant">Recibe tu factura CFDI al momento de finalizar el servicio, 100% cumplimiento fiscal.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Professional Side -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<span class="text-on-tertiary-container font-bold uppercase tracking-widest text-sm mb-4 block">Para el Profesional</span>
+<h3 class="text-3xl font-bold text-primary mb-8">Eleva tu Perfil Comercial</h3>
+<div class="space-y-8">
+<div class="flex gap-4">
+<div class="text-3xl font-bold text-surface-variant">01</div>
+<div>
+<h4 class="font-bold text-xl mb-2">Validación Curricular</h4>
+<p class="text-on-surface-variant">Verificamos tu identidad, antecedentes y cédulas ante la SEP y CONOCER.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="text-3xl font-bold text-surface-variant">02</div>
+<div>
+<h4 class="font-bold text-xl mb-2">Gestión de Cobranza</h4>
+<p class="text-on-surface-variant">Olvídate de perseguir pagos. El saldo queda garantizado antes de que inicies el trabajo.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="text-3xl font-bold text-surface-variant">03</div>
+<div>
+<h4 class="font-bold text-xl mb-2">Sello KonectIA</h4>
+<p class="text-on-surface-variant">Posiciónate como un experto de confianza con nuestro respaldo institucional.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<img alt="Dashboard Profesional" class="rounded-2xl shadow-2xl relative z-10" data-alt="sleek professional dashboard showing analytics and project management tools, dark theme with vibrant cyan highlights, minimalist tech aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu-hclJEsl_r1ZmhmACZaC0tmaWVLy5HFp2610M85SADDZ9DoPG9FTlS1HugpLdfCtFqGLp7LHgCCy4zyAMmvo_J_YPr91RfLEArX98RDDgwWV1y2aHXMOchG6hLX5_fR5d2qP_BJ7In34FGT3ECqcoAlDYK-SSO4qGDTl7CR3YgwM6PBLsDYKgJboA-jT8Cb2oNhq7ewIRK7G7QP0nDO7K8tKXFgtRhbxhyJhzpwNJnz4_E0CVzgXRuX6FBjCnzSkLUt49wpZnWI3"/>
+<div class="absolute -bottom-8 -right-8 w-64 h-64 bg-secondary-container/10 rounded-full blur-3xl"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 bg-surface-container">
+<div class="max-w-7xl mx-auto px-6">
+<div class="bg-primary rounded-[2rem] p-12 md:p-20 text-center relative overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+<div class="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-[100px]"></div>
+</div>
+<div class="relative z-10">
+<h2 class="text-4xl md:text-5xl font-bold text-white tracking-tighter mb-8">¿Listo para transformar tu forma de contratar?</h2>
+<p class="text-on-primary-container text-xl mb-12 max-w-2xl mx-auto">Únete a la plataforma que está definiendo el estándar de profesionalismo en el mercado mexicano.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="bg-secondary-container text-on-secondary-container px-10 py-5 rounded-full font-bold text-lg hover:scale-105 transition-transform">Encontrar un Experto</button>
+<button class="border-2 border-white/20 text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-white/10 transition-all">Registrarme como Profesional</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-950 dark:bg-black border-t border-slate-800">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-12 py-16 max-w-7xl mx-auto">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="flex items-center gap-2 justify-center md:justify-start mb-4">
+<span class="text-xl font-bold text-white">KonectIA</span>
+</div>
+<p class="text-slate-400 text-sm max-w-xs">
+                    © 2024 KonectIA. Servicios Profesionales de Calidad Institucional. Cumplimiento SAT.
+                </p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-slate-400 hover:text-white transition-colors text-xs font-medium uppercase tracking-wider" href="#">Legal y Privacidad</a>
+<a class="text-slate-400 hover:text-white transition-colors text-xs font-medium uppercase tracking-wider" href="#">Política de Escrow</a>
+<a class="text-slate-400 hover:text-white transition-colors text-xs font-medium uppercase tracking-wider" href="#">Cumplimiento Fiscal</a>
+<a class="text-slate-400 hover:text-white transition-colors text-xs font-medium uppercase tracking-wider" href="#">Soporte</a>
+<a class="text-slate-400 hover:text-white transition-colors text-xs font-medium uppercase tracking-wider" href="#">Profesionales Verificados</a>
+</div>
+<div class="mt-8 md:mt-0 flex gap-4">
+<div class="bg-slate-900 p-2 rounded-lg">
+<img alt="Logotipo CONOCER" class="h-8 grayscale opacity-60" data-alt="logo of CONOCER Mexico government entity, institutional style, blue and gold colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCikbSgQ4Tl3LUa8d6jTdxjV4MhhPb6bnfvTzHOdic7SIzkcaxMow92fjtRR8UKdYH9bMET7IVCevNwroah9ysa_NQxyMJayl1uCM7uu-vgc71r_oGcQ-eSleR5d506rc9DPJoObAsfgm9Oz6--I8HXKNgU2efR7mT8lzKa2x0Qg4HTAm7IV8O-gzeYKQ9dtk2BHl-rdwGHL9r9xKUmzKg3JZcJHND3gDkiKB8oM3cgfZFaPIXyaZteFokHMw5jCd9sEfiaDDxEWEyK"/>
+</div>
+<div class="bg-slate-900 p-2 rounded-lg">
+<img alt="Logotipo SEP" class="h-8 grayscale opacity-60" data-alt="logo of SEP Mexican ministry of education, institutional government style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPYPGg5Yv0_mXV1hnTVw1jwXcUANYQ93TG9g9n-nk41wadN24YSsFbCl-tAqlQgnApl7XEwZ-1f0H3MvcgJNGJ0f18WO5oTYTQ9mwP5y_oRWs6VrmKS809Up1rHjZq9u54tZ2zlUW-nANtmPpXCCYsWErt1MocVt0VWvaQQJeYPq5jQmHgqLgRTKOt6-jWhB0GaETdKYJ9oFf2NgfKCaT3_DTysGqzgPClyvZtGkPtseuUH3PNbBfVr5KDqjc0hWcw62XTkJyW0j_t"/>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

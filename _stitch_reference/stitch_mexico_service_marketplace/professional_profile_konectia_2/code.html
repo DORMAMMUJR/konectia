@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Professional Profile - KonectIA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#e0e3e5",
+                        "on-tertiary-fixed-variant": "#842500",
+                        "secondary-container": "#2dbcfe",
+                        "on-primary-fixed": "#081c36",
+                        "surface-container": "#ebeef0",
+                        "surface-bright": "#f7fafc",
+                        "tertiary-fixed": "#ffdbd0",
+                        "outline-variant": "#c5c6ce",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#b6c7e9",
+                        "on-secondary-fixed-variant": "#004c6b",
+                        "secondary-fixed": "#c6e7ff",
+                        "primary-container": "#0a1d37",
+                        "inverse-primary": "#b6c7e9",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#7586a5",
+                        "secondary-fixed-dim": "#82cfff",
+                        "tertiary-container": "#3c0c00",
+                        "surface-dim": "#d7dadc",
+                        "on-surface-variant": "#44474d",
+                        "surface-container-high": "#e5e9eb",
+                        "inverse-on-surface": "#eef1f3",
+                        "inverse-surface": "#2d3133",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "background": "#f7fafc",
+                        "surface-tint": "#4e5f7c",
+                        "surface-container-low": "#f1f4f6",
+                        "on-primary-fixed-variant": "#364763",
+                        "outline": "#75777e",
+                        "on-secondary-fixed": "#001e2d",
+                        "on-tertiary-fixed": "#3a0b00",
+                        "primary-fixed": "#d6e3ff",
+                        "surface-container-highest": "#e0e3e5",
+                        "tertiary": "#0a0100",
+                        "surface": "#f7fafc",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb59e",
+                        "on-tertiary-container": "#e7531d",
+                        "secondary": "#00658d",
+                        "on-background": "#181c1e",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#181c1e",
+                        "on-secondary-container": "#004866",
+                        "primary": "#00030a",
+                        "error-container": "#ffdad6",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        .ambient-shadow {
+            box-shadow: 0 20px 40px rgba(8, 28, 54, 0.06);
+        }
+        .signature-gradient {
+            background: radial-gradient(circle at top left, #00030a, #0a1d37);
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-bold tracking-tighter text-slate-900 dark:text-slate-50 font-headline">KonectIA</span>
+<div class="hidden md:flex gap-6">
+<a class="text-slate-600 dark:text-slate-400 hover:text-cyan-600 transition-colors" href="#">Directory</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-cyan-600 transition-colors" href="#">Categories</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-cyan-600 transition-colors" href="#">Trust Center</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-cyan-600 transition-all scale-95 active:scale-90" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-cyan-600 transition-all scale-95 active:scale-90" data-icon="chat_bubble">chat_bubble</span>
+<button class="bg-primary text-on-primary px-5 py-2 rounded-xl font-headline font-semibold text-sm hover:opacity-90 transition-all scale-95 active:scale-90">Find Service</button>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-16 px-6 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Left Column: Profile Content -->
+<div class="lg:col-span-8 space-y-8">
+<!-- Hero Profile Section -->
+<section class="bg-surface-container-lowest p-8 rounded-xl ambient-shadow">
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<div class="relative">
+<img alt="Professional Profile" class="w-40 h-40 rounded-xl object-cover ring-4 ring-surface-container-low" data-alt="portrait of a confident middle-aged hispanic engineer in a clean white shirt, soft studio lighting, professional and trustworthy expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSClK_xwiCkA87QKkC6QfvemHiqdT4EJ1rnrhzQdbnWkrW8Q7G1Xbpg4b77tv2wdGrQVimjZwnyWbivCFHqFcRDNtuBbZoqgYsyPnAU9LflpVcYGQZwyyRhEqWgC5LbZF2BTiZribp7W50-EpqZ3DfI7ZKGK8tWw0d503qVfp9GS-plaOhno866QUuXWEtyMBIpxIJsi9NjEZh6a2KaFHxdLYfHl_7sIfz9X9fWmxAZUNkjiZCkX1vULPU0wRJtbzxCTgStEeynRLU"/>
+<div class="absolute -bottom-3 -right-3 bg-secondary-container p-2 rounded-full border-4 border-white">
+<span class="material-symbols-outlined text-white text-lg" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div class="flex-1 space-y-3">
+<div class="flex items-center gap-3">
+<h1 class="text-4xl font-bold tracking-tight font-headline text-primary">Ing. Ricardo Mendoza</h1>
+<span class="bg-secondary-fixed text-on-secondary-fixed px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Top Rated</span>
+</div>
+<p class="text-xl text-on-surface-variant font-headline">Ingeniero Electricista Certificado</p>
+<div class="flex flex-wrap gap-4 pt-2">
+<div class="flex items-center gap-1 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="location_on">location_on</span>
+                                    Ciudad de México, MX
+                                </div>
+<div class="flex items-center gap-1 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="work">work</span>
+                                    12+ years experience
+                                </div>
+<div class="flex items-center gap-1 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                    4.9 (124 reviews)
+                                </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Badges & Verification Row -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="bg-surface-container-low p-4 rounded-xl flex items-center gap-4">
+<div class="bg-white p-3 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="fingerprint">fingerprint</span>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface-variant uppercase tracking-widest">Biometric Identity</p>
+<p class="text-sm font-semibold">Verified</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl flex items-center gap-4">
+<div class="bg-white p-3 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="card_membership">card_membership</span>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface-variant uppercase tracking-widest">CONOCER</p>
+<p class="text-sm font-semibold">Certified</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl flex items-center gap-4">
+<div class="bg-white p-3 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="account_balance">account_balance</span>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface-variant uppercase tracking-widest">SAT Compliant</p>
+<p class="text-sm font-semibold">Verified Professional</p>
+</div>
+</div>
+</section>
+<!-- Multimedia Portfolio (Bento Style) -->
+<section class="space-y-4">
+<h2 class="text-2xl font-bold font-headline px-2">Project Portfolio</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="col-span-2 row-span-2 rounded-xl overflow-hidden group relative">
+<img alt="Industrial Installation" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="large industrial electrical panel with organized wiring and sophisticated control systems, bright professional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIFixJl4QVzx38oihpuB7vfFw_KBwLyRSmx9bWrxb2ZofmJRY8RnXbEbVLvoqxknzCkyvj7LT43qPTSTGkNa99lGanwilwW08YldiG4p-G1Rj10wONFrdROVaU9ujvVYRp-gnsvqeMmpbPa19qLnCXVU1e3tW9xdjdYw9rg2i8vZgojnfitFBWyAWoMv1QXF9ThSvSE3hoWIkCi722mdJ_M2gHM9n-GJDtRaIgjFUIYRkm_m7fhUpQIT8m70n73mtHowSsaOrSfuZW"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<p class="text-white font-semibold">Industrial Power Grid Setup</p>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden group relative aspect-square">
+<img alt="Smart Home Wiring" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="close up of high-end architectural smart home lighting control panel being installed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9f9cnW7UxntqjxzpOFbByu7-YU8Qx8ZmQO0WoVW34jk63U8914tiL05d7z6NJrM3jPoBjenH72pYF36jIWFN_z5LFSjZ6dkntZLX2cb1Kdj9N8QgoIngjZjNdJeoKQ27ZFJCT6xvxor0AXxmp8PUbPY7pPER2RAjf1Grc1e9PPyg28Hgm0cFF9-LHxdC7xDyiidaS4n_MCHG-_O_iXEdLSaG1Lw5Vhv2BXnitqJfCO0TYSYV46m-iczz_InI0c5itrEUwgaJRqArs"/>
+</div>
+<div class="rounded-xl overflow-hidden group relative aspect-square">
+<img alt="Commercial Maintenance" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="modern corporate office building ceiling with integrated lighting and high-tech electrical infrastructure" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAga0GNhqP6BRdiqaZkLZcw19EwFjxW-skmplzktg3VJczxJ5idpsFwO0Iz9xrr5xNM1CTRisDWwlOmOJspCQoCbEMDo5h2e-BfSbJ3V9YrjdGTxTaeTgGtv6PvyLxN8ak2fdUAI9YCbmZ5IjqA3TH9d1SpgXwx35AuSAV4PWPzJ6vV1hT2556WBM8Ij9iW3-N82-aIQAzrf46K0Vgr_zm5eZ1h-gDQYSy8ZXM-YEdYj3E50mdWVHU3oQCCY-UmCtT_Qt7M-dBf5Qff"/>
+</div>
+<div class="col-span-2 rounded-xl overflow-hidden group relative h-48">
+<img alt="Solar Grid" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="array of commercial solar panels on a clean rooftop under a clear blue sky, professional installation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6hPbKCpEKLS7stmexTNqsTQ-XpXpa_qaNKPGBOe7ttAcCMOTH_-SIEgMKuKU9kxVxyHoY9cm2G5FDvpiiHNGSgvYPlrg-BdASLmzVSo49e-BUIWCELyfPEdoTKpWTZpnGz-Ij2_M2I3eZJ4ae6OTWp67k3sOVBOyWE1YyLQqXkw6DQMdo5513cToccv112-4JiHieQrV5LhzTmfE9EXvZqMYyzmog5GC7wv9nWUkKtKNu-YSvKRcQ3BbpIUS7Dk9M_udsVVY0tG-f"/>
+</div>
+</div>
+</section>
+<!-- Reviews Breakdown -->
+<section class="bg-surface-container-low p-8 rounded-xl space-y-6">
+<div class="flex justify-between items-end">
+<h2 class="text-2xl font-bold font-headline">Client Feedback</h2>
+<div class="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-sm">
+<span class="text-2xl font-bold">4.9</span>
+<div class="flex text-on-tertiary-container">
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<div class="space-y-6">
+<!-- Individual Review -->
+<div class="bg-surface-container-lowest p-6 rounded-xl ambient-shadow border-l-4 border-secondary-container">
+<div class="flex justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-white font-bold text-xs">LM</div>
+<div>
+<p class="font-bold">Lucía Martínez</p>
+<p class="text-xs text-on-surface-variant">Residential Project • Oct 2023</p>
+</div>
+</div>
+<div class="flex text-on-tertiary-container text-sm">
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="text-on-surface-variant italic">"Ricardo was incredibly professional. He identified the load balance issue in our facility that three other electricians missed. His documentation for the SAT compliance was perfect."</p>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl ambient-shadow border-l-4 border-secondary-container">
+<div class="flex justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-white font-bold text-xs">GR</div>
+<div>
+<p class="font-bold">Grupo Refmex</p>
+<p class="text-xs text-on-surface-variant">Industrial Maintenance • Aug 2023</p>
+</div>
+</div>
+<div class="flex text-on-tertiary-container text-sm">
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star_half">star_half</span>
+</div>
+</div>
+<p class="text-on-surface-variant italic">"Outstanding institutional service. Clean work and very reliable scheduling. Highly recommended for commercial contracts."</p>
+</div>
+</div>
+</section>
+<!-- Education & Experience -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-4">
+<h3 class="text-xl font-bold font-headline">Education</h3>
+<div class="space-y-4">
+<div class="flex gap-4">
+<div class="mt-1"><span class="material-symbols-outlined text-secondary" data-icon="school">school</span></div>
+<div>
+<p class="font-bold">UNAM</p>
+<p class="text-sm">B.S. Electrical Engineering</p>
+<p class="text-xs text-on-surface-variant">2006 - 2011</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="mt-1"><span class="material-symbols-outlined text-secondary" data-icon="workspace_premium">workspace_premium</span></div>
+<div>
+<p class="font-bold">ITESM</p>
+<p class="text-sm">Specialization in Industrial Systems</p>
+<p class="text-xs text-on-surface-variant">2013</p>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<h3 class="text-xl font-bold font-headline">Experience</h3>
+<div class="space-y-4">
+<div class="flex gap-4">
+<div class="mt-1"><span class="material-symbols-outlined text-secondary" data-icon="business_center">business_center</span></div>
+<div>
+<p class="font-bold">Independent Contractor</p>
+<p class="text-sm">Lead Technical Consultant</p>
+<p class="text-xs text-on-surface-variant">2018 - Present</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="mt-1"><span class="material-symbols-outlined text-secondary" data-icon="corporate_fare">corporate_fare</span></div>
+<div>
+<p class="font-bold">Siemens México</p>
+<p class="text-sm">Senior Field Engineer</p>
+<p class="text-xs text-on-surface-variant">2012 - 2018</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Request Quote Sidebar -->
+<aside class="lg:col-span-4">
+<div class="sticky top-24 space-y-6">
+<!-- Quote Card -->
+<div class="bg-surface-container-lowest rounded-xl ambient-shadow overflow-hidden">
+<div class="signature-gradient p-6 text-white">
+<p class="text-sm font-label uppercase tracking-widest opacity-80">Starting at</p>
+<h3 class="text-3xl font-bold font-headline">$850 MXN / hr</h3>
+</div>
+<div class="p-6 space-y-6">
+<div class="space-y-4">
+<div>
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-widest block mb-2">Service Type</label>
+<select class="w-full bg-surface-container-low border-none rounded-xl text-sm focus:ring-2 focus:ring-secondary-container">
+<option>Industrial Consultation</option>
+<option>Residential Repair</option>
+<option>Maintenance Plan</option>
+<option>Certification Review</option>
+</select>
+</div>
+<div>
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-widest block mb-2">Message</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-xl text-sm focus:ring-2 focus:ring-secondary-container" placeholder="Describe your project needs..." rows="3"></textarea>
+</div>
+</div>
+<button class="w-full bg-secondary-container text-on-secondary-container py-4 rounded-xl font-headline font-bold text-lg hover:opacity-90 transition-all scale-95 active:scale-90 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="send">send</span>
+                                Request Quote
+                            </button>
+<!-- Security Messaging -->
+<div class="bg-surface-container-low p-4 rounded-xl space-y-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="security" style="font-variation-settings: 'FILL' 1;">security</span>
+<p class="text-xs font-bold uppercase tracking-widest">Escrow Protected</p>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+                                    Your payment is held securely by KonectIA and only released when you confirm the work is completed to your satisfaction. SAT compliant invoicing provided.
+                                </p>
+</div>
+</div>
+</div>
+<!-- Quick Stats -->
+<div class="bg-white p-6 rounded-xl ambient-shadow space-y-4">
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Response Time</span>
+<span class="font-bold">&lt; 2 hours</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Completed Jobs</span>
+<span class="font-bold">342</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Repeat Clients</span>
+<span class="font-bold text-secondary">42%</span>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-slate-950 dark:bg-black w-full border-t border-slate-800">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-12 py-16 max-w-7xl mx-auto">
+<div class="mb-8 md:mb-0">
+<span class="text-xl font-bold text-white font-headline">KonectIA</span>
+<p class="text-slate-400 text-xs mt-2 max-w-xs leading-relaxed">
+                    © 2024 KonectIA. Institutional Quality Professional Services. SAT Compliant.
+                </p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 md:gap-10">
+<a class="text-slate-400 hover:text-white transition-colors text-xs font-label uppercase tracking-wider" href="#">Legal &amp; Privacy</a>
+<a class="text-slate-400 hover:text-white transition-colors text-xs font-label uppercase tracking-wider" href="#">Escrow Policy</a>
+<a class="text-slate-400 hover:text-white transition-colors text-xs font-label uppercase tracking-wider" href="#">Tax Compliance</a>
+<a class="text-slate-400 hover:text-white transition-colors text-xs font-label uppercase tracking-wider" href="#">Support</a>
+<a class="text-slate-400 hover:text-white transition-colors text-xs font-label uppercase tracking-wider" href="#">Verified Professionals</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KonectIA | Centro de Mensajes</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#4e5f7c",
+                    "error": "#ba1a1a",
+                    "on-background": "#181c1e",
+                    "on-tertiary-fixed-variant": "#842500",
+                    "background": "#f7fafc",
+                    "tertiary-fixed-dim": "#ffb59e",
+                    "tertiary-container": "#3c0c00",
+                    "on-primary-container": "#7586a5",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed": "#d6e3ff",
+                    "secondary-fixed-dim": "#82cfff",
+                    "surface-container-highest": "#e0e3e5",
+                    "outline-variant": "#c5c6ce",
+                    "secondary-fixed": "#c6e7ff",
+                    "secondary-container": "#2dbcfe",
+                    "on-error": "#ffffff",
+                    "on-surface": "#181c1e",
+                    "on-primary": "#ffffff",
+                    "primary-fixed-dim": "#b6c7e9",
+                    "on-secondary-container": "#004866",
+                    "on-error-container": "#93000a",
+                    "surface-container": "#ebeef0",
+                    "primary": "#00030a",
+                    "on-tertiary-fixed": "#3a0b00",
+                    "on-surface-variant": "#44474d",
+                    "on-secondary-fixed-variant": "#004c6b",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#e7531d",
+                    "on-primary-fixed": "#081c36",
+                    "surface-dim": "#d7dadc",
+                    "secondary": "#00658d",
+                    "on-secondary": "#ffffff",
+                    "surface": "#f7fafc",
+                    "error-container": "#ffdad6",
+                    "outline": "#75777e",
+                    "tertiary-fixed": "#ffdbd0",
+                    "inverse-surface": "#2d3133",
+                    "inverse-on-surface": "#eef1f3",
+                    "surface-bright": "#f7fafc",
+                    "tertiary": "#0a0100",
+                    "surface-container-low": "#f1f4f6",
+                    "surface-container-high": "#e5e9eb",
+                    "on-secondary-fixed": "#001e2d",
+                    "inverse-primary": "#b6c7e9",
+                    "surface-variant": "#e0e3e5",
+                    "on-primary-fixed-variant": "#364763",
+                    "primary-container": "#0a1d37"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl docked full-width top-0 sticky z-50 shadow-[0_20px_40px_rgba(8,28,54,0.06)]">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-50">KonectIA</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors" href="#">Directory</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors" href="#">Categories</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors" href="#">Services</a>
+<a class="text-cyan-600 dark:text-cyan-400 font-semibold border-b-2 border-cyan-600 dark:border-cyan-400 pb-1" href="#">Messages</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-900 p-2 rounded-full transition-all">notifications</button>
+<button class="material-symbols-outlined text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-900 p-2 rounded-full transition-all">account_circle</button>
+</div>
+</div>
+</header>
+<main class="flex-1 flex max-w-7xl mx-auto w-full overflow-hidden h-[calc(100vh-72px)]">
+<!-- Sidebar: Active Conversations -->
+<aside class="w-80 border-r border-outline-variant/20 bg-surface-container-low flex flex-col">
+<div class="p-6">
+<h2 class="text-title-lg font-semibold mb-4">Mensajes</h2>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-sm">search</span>
+<input class="w-full bg-surface-container-lowest border-none rounded-xl pl-10 py-2 text-body-lg focus:ring-2 focus:ring-secondary/50" placeholder="Buscar profesional..." type="text"/>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto space-y-1 px-3">
+<!-- Active Item -->
+<div class="bg-surface-container-lowest shadow-sm rounded-xl p-4 flex gap-3 cursor-pointer border-l-4 border-secondary">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="portrait of a professional plumber smiling with tools in background, professional lighting, expert clean look" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyNDIaybTZih9Z7jOvARk7nRRW7LA6OVqAVf9rlBuin-HhIrAmLmyErXkyjD2ygmu4zHKoHAQ4Lw5nxYFhqd8S5fI4qm2hQqw-KGTi2NWgkU_ktpyXkITHOOPt3Q4ZDg10bJWGV8Mzad0z9DeH9Lsnw58j1l9X6iIcH-Z7xJbenEGBZaFGOsUh7ZJqW1Yh2Sl_-RekEAAPg5G_9GQ51K4DFgpfs_olJKfaM92UsAABbEdvL-6OFbNoSLD1jY_3Jajy6bZu_B0xja12"/>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<h3 class="font-semibold text-on-surface truncate">Arq. Ricardo Salinas</h3>
+<span class="text-[10px] text-outline">10:45 AM</span>
+</div>
+<p class="text-sm text-secondary font-medium">Envió una propuesta</p>
+</div>
+</div>
+<!-- Inactive Items -->
+<div class="hover:bg-surface-container-high rounded-xl p-4 flex gap-3 cursor-pointer transition-all">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="professional female legal consultant in office environment, sophisticated and trustworthy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlhlNyrjFYbyZLvtgbTbtjhswkHD99ljOAV4cbdl-irTuIFoIFLy2o_lqUrC7DhRCbKwTGthdQDiL1465OuiygujWe3ebMUojO46B5hkcsn8MJxYDnRXHGs-COnlccvT_TkMqKRgcgsLj8_EW-eMppyC46643lwXx4qybw1s3NihJsv93thFsv4AVXEgm-E6COfJQFBxKwqH8CD8Ju9xilfNJWipNUgYgK3uHzUgIMylwRUrlcJZj4cRnB0vE8oVziQBcS16DIgo3P"/>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<h3 class="font-semibold text-on-surface truncate">Lic. Elena Gomez</h3>
+<span class="text-[10px] text-outline">Ayer</span>
+</div>
+<p class="text-sm text-outline truncate">Gracias por la información, quedo atento.</p>
+</div>
+</div>
+<div class="hover:bg-surface-container-high rounded-xl p-4 flex gap-3 cursor-pointer transition-all">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container font-bold">MS</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<h3 class="font-semibold text-on-surface truncate">Mantenimiento Soluciones</h3>
+<span class="text-[10px] text-outline">Lun</span>
+</div>
+<p class="text-sm text-outline truncate">El presupuesto incluye materiales.</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Chat Area -->
+<section class="flex-1 flex flex-col bg-surface-container-lowest">
+<!-- Chat Header -->
+<div class="px-8 py-4 border-b border-outline-variant/20 flex justify-between items-center bg-white/50 backdrop-blur-md">
+<div class="flex items-center gap-4">
+<div class="relative">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="portrait of a professional plumber smiling with tools in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZxVVxgf6-0J_xN7YNmUyUbXWrhauaFfReUzpmrWW1sTwLSRQc5NHs3CQTXjSg4nglfEaldB5Iy6SGGltSu_Cl7teHMPn1ulwEZmcvMgiioLwzH7XKCkLhJT35wd_g2PL_osmiqaGjBWw_aZMW6uJfvEuljBGI_YTxCqQYOQLs5vAoE74VZy_H2uupxo2kpv8aEZ0-kA-ic0Fxs8_vZBC2gDtGCHjNngbzZpyvl7j1QHv4wSQaoA3GTMpfajdVjUn5Bg2bsFQMiEPd"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></span>
+</div>
+<div>
+<h2 class="font-bold text-on-surface">Arq. Ricardo Salinas</h2>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-xs text-secondary font-medium uppercase tracking-wider">Miembro Verificado</span>
+</div>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="p-2 hover:bg-surface-container rounded-full transition-all text-outline">
+<span class="material-symbols-outlined">call</span>
+</button>
+<button class="p-2 hover:bg-surface-container rounded-full transition-all text-outline">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Thread -->
+<div class="flex-1 overflow-y-auto p-8 space-y-6">
+<!-- System Message / Date -->
+<div class="flex justify-center">
+<span class="px-4 py-1 bg-surface-container-low rounded-full text-xs text-outline font-medium">Hoy, 24 de Mayo</span>
+</div>
+<!-- Received Message -->
+<div class="flex items-end gap-3 max-w-[80%]">
+<div class="bg-surface-container-low p-4 rounded-xl rounded-bl-none">
+<p class="text-body-lg text-on-surface">Hola, he revisado los detalles de la fuga en su cocina. Basado en las fotos, he preparado una cotización formal para la reparación integral y cambio de válvulas.</p>
+<span class="text-[10px] text-outline mt-2 block">10:42 AM</span>
+</div>
+</div>
+<!-- The Formal Quotation Card (Propuesta de Servicio) -->
+<div class="flex justify-start">
+<div class="w-full max-w-md bg-white border border-outline-variant/30 rounded-full overflow-hidden shadow-[0_20px_40px_rgba(8,28,54,0.08)]">
+<div class="bg-primary-container p-6 text-white">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="text-xs font-bold uppercase tracking-widest text-secondary-container/80">Propuesta de Servicio</span>
+<h3 class="text-headline-md leading-tight">Reparación Hidráulica Cocina</h3>
+</div>
+<span class="material-symbols-outlined text-secondary-container text-4xl">description</span>
+</div>
+<div class="flex gap-4">
+<div class="bg-white/10 px-3 py-1 rounded-lg backdrop-blur-sm">
+<span class="text-[10px] uppercase block opacity-60">Duración</span>
+<span class="text-sm font-semibold">3 - 5 horas</span>
+</div>
+<div class="bg-white/10 px-3 py-1 rounded-lg backdrop-blur-sm">
+<span class="text-[10px] uppercase block opacity-60">Inicio</span>
+<span class="text-sm font-semibold">Inmediato</span>
+</div>
+</div>
+</div>
+<div class="p-6 space-y-4">
+<div class="space-y-3">
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Mano de Obra Especializada</span>
+<span class="font-medium">$1,200.00 MXN</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Materiales (Válvulas y Sellos)</span>
+<span class="font-medium">$450.00 MXN</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Garantía de Servicio (30 días)</span>
+<span class="font-medium text-secondary">Incluido</span>
+</div>
+<div class="h-px bg-outline-variant/30 my-2"></div>
+<div class="flex justify-between items-center">
+<span class="font-bold text-on-surface">Total del Proyecto</span>
+<span class="text-headline-md font-bold text-primary">$1,650.00 <span class="text-xs font-normal">MXN</span></span>
+</div>
+</div>
+<!-- Escrow Trust Signal -->
+<div class="bg-surface-container-low p-3 rounded-xl flex gap-3 items-center">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">shield_with_heart</span>
+<p class="text-[11px] leading-tight text-on-surface-variant">
+<span class="font-bold block">Protección Escrow KonectIA</span>
+                                    Tu pago se retiene de forma segura y solo se libera al profesional cuando confirmas que el trabajo está terminado satisfactoriamente.
+                                </p>
+</div>
+<button class="w-full py-4 bg-secondary-container hover:bg-secondary text-on-secondary-container hover:text-white font-bold rounded-xl transition-all shadow-lg active:scale-[0.98]">
+                                Aceptar y Pagar
+                            </button>
+</div>
+</div>
+</div>
+<!-- Sent Message -->
+<div class="flex items-end justify-end gap-3 ml-auto max-w-[80%]">
+<div class="bg-primary p-4 rounded-xl rounded-br-none text-white">
+<p class="text-body-lg">Perfecto Ricardo, me parece justo el precio. ¿Podrías comenzar mañana a las 9:00 AM?</p>
+<div class="flex justify-end items-center gap-1 mt-2">
+<span class="text-[10px] opacity-70">10:50 AM</span>
+<span class="material-symbols-outlined text-[14px] text-secondary-container" style="font-variation-settings: 'FILL' 1;">done_all</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Input Area -->
+<div class="p-6 border-t border-outline-variant/20 bg-white">
+<div class="flex items-center gap-4 bg-surface-container-low rounded-full px-6 py-2">
+<button class="material-symbols-outlined text-outline hover:text-primary">attach_file</button>
+<input class="flex-1 bg-transparent border-none focus:ring-0 text-body-lg py-2" placeholder="Escribe un mensaje..." type="text"/>
+<div class="flex items-center gap-2">
+<button class="material-symbols-outlined text-outline hover:text-primary">mood</button>
+<button class="bg-primary text-white p-2 rounded-full flex items-center justify-center hover:scale-105 active:scale-95 transition-transform">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Right Side Panel: Details -->
+<aside class="w-72 hidden xl:flex flex-col border-l border-outline-variant/20 p-6 bg-surface-container-low">
+<h3 class="font-bold text-on-surface-variant mb-6 uppercase tracking-widest text-xs">Información del Proyecto</h3>
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm mb-6">
+<span class="text-xs text-outline block mb-1">Estado del Trabajo</span>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 bg-tertiary-container rounded-full"></span>
+<span class="font-semibold text-on-tertiary-container text-sm">Cotización Pendiente</span>
+</div>
+</div>
+<div class="space-y-6">
+<div>
+<h4 class="text-sm font-bold text-on-surface mb-2">Ubicación</h4>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span class="text-sm">Polanco, CDMX</span>
+</div>
+</div>
+<div>
+<h4 class="text-sm font-bold text-on-surface mb-2">Archivos Compartidos</h4>
+<div class="grid grid-cols-2 gap-2">
+<div class="aspect-square bg-surface-container rounded-lg overflow-hidden border border-outline-variant/20 cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="close up of a leaking kitchen pipe under a sink, real home repair scenario" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0QJR3TWtsis_fMYHsJeA23i-ArpmYakIJjzde-hFJG2KHR50nRUYd-8bQeMDhscqkiAtuCtHt35E4Hmcq5s0pnQF_bksTtnBFV51uiERrKu0hZs72jBzoI3JWCxBuLWmEKyz2v6B7FSzBS56C_dwt1jpwQi9LeTfyurOoVLNET8HvQ2KiGFkd4inBj6gStlfTCiDPjAZNHI-lRpb8t0wYTSF12yB3_aB_VnJJm6XvP6E9ILm9bAsAYABMyY2ejGrzPLn13Tm9Jf2A"/>
+</div>
+<div class="aspect-square bg-surface-container rounded-lg overflow-hidden border border-outline-variant/20 cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="macro photo of plumbing tools and metal valves on a wooden floor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZDMCNGE5q7G2_pPtap-SlyXToEk1vXaLIKg3NQvMXJgodW8l-mFeMH57ykAB40WVBqsC_FCChW7lJDtO_tH8mPXuvT8sbAvFLW_Sa2tg58mzIlRGIa93aMtVvrdNaIqb8C28QaTy71LHV2yS8D1lt7Eyg7y3rsa1OwejkrV3JrOwuJS5P3zOT-PjjBbyU0pkGkNt-dI3SPgHbpGDSXmDkepp57PBZ5MqOnbQLADTy7bGrTFcT4kuV_MNaN_zvvgawAwCCIJHk7yLo"/>
+</div>
+</div>
+</div>
+<div class="pt-6 border-t border-outline-variant/20">
+<button class="w-full py-3 text-sm font-semibold text-error hover:bg-error/5 rounded-xl transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">report</span>
+                        Reportar Incidente
+                    </button>
+</div>
+</div>
+</aside>
+</main>
+<footer class="bg-slate-950 dark:bg-black w-full py-6 mt-auto">
+<div class="w-full px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-slate-500 text-xs font-body">© 2024 KonectIA. The Digital Institution of Professional Services.</p>
+<div class="flex gap-6">
+<a class="text-slate-500 hover:text-slate-300 text-[11px] font-medium transition-colors" href="#">Privacy Policy</a>
+<a class="text-slate-500 hover:text-slate-300 text-[11px] font-medium transition-colors" href="#">Escrow Guarantee</a>
+<a class="text-slate-500 hover:text-slate-300 text-[11px] font-medium transition-colors" href="#">SAT Compliance</a>
+</div>
+</div>
+</footer>
+</body></html>

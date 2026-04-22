@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KonectIA | Service Directory</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#e0e3e5",
+                    "on-tertiary-fixed-variant": "#842500",
+                    "secondary-container": "#2dbcfe",
+                    "on-primary-fixed": "#081c36",
+                    "surface-container": "#ebeef0",
+                    "surface-bright": "#f7fafc",
+                    "tertiary-fixed": "#ffdbd0",
+                    "outline-variant": "#c5c6ce",
+                    "on-primary": "#ffffff",
+                    "primary-fixed-dim": "#b6c7e9",
+                    "on-secondary-fixed-variant": "#004c6b",
+                    "secondary-fixed": "#c6e7ff",
+                    "primary-container": "#0a1d37",
+                    "inverse-primary": "#b6c7e9",
+                    "on-error": "#ffffff",
+                    "on-primary-container": "#7586a5",
+                    "secondary-fixed-dim": "#82cfff",
+                    "tertiary-container": "#3c0c00",
+                    "surface-dim": "#d7dadc",
+                    "on-surface-variant": "#44474d",
+                    "surface-container-high": "#e5e9eb",
+                    "inverse-on-surface": "#eef1f3",
+                    "inverse-surface": "#2d3133",
+                    "surface-container-lowest": "#ffffff",
+                    "error": "#ba1a1a",
+                    "background": "#f7fafc",
+                    "surface-tint": "#4e5f7c",
+                    "surface-container-low": "#f1f4f6",
+                    "on-primary-fixed-variant": "#364763",
+                    "outline": "#75777e",
+                    "on-secondary-fixed": "#001e2d",
+                    "on-tertiary-fixed": "#3a0b00",
+                    "primary-fixed": "#d6e3ff",
+                    "surface-container-highest": "#e0e3e5",
+                    "tertiary": "#0a0100",
+                    "surface": "#f7fafc",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed-dim": "#ffb59e",
+                    "on-tertiary-container": "#e7531d",
+                    "secondary": "#00658d",
+                    "on-background": "#181c1e",
+                    "on-secondary": "#ffffff",
+                    "on-surface": "#181c1e",
+                    "on-secondary-container": "#004866",
+                    "primary": "#00030a",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: #f7fafc; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-bold tracking-tighter text-slate-900 dark:text-slate-50">KonectIA</span>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-cyan-600 dark:text-cyan-400 font-semibold border-b-2 border-cyan-600 dark:border-cyan-400 pb-1" href="#">Directory</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-cyan-600 transition-colors" href="#">Categories</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-cyan-600 transition-colors" href="#">Trust Center</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex items-center bg-surface-container-low px-4 py-2 rounded-xl border-none">
+<span class="material-symbols-outlined text-on-surface-variant mr-2" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48" placeholder="Search services..." type="text"/>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-cyan-600 transition-all cursor-pointer" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-cyan-600 transition-all cursor-pointer" data-icon="chat_bubble">chat_bubble</span>
+<button class="bg-primary text-on-primary px-5 py-2 rounded-xl font-semibold hover:opacity-90 transition-transform active:scale-95">Find Service</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-24 pb-12 px-6 max-w-7xl mx-auto">
+<!-- Breadcrumbs & Search Query Header -->
+<header class="mb-8">
+<nav class="flex items-center gap-2 text-label-md text-on-surface-variant mb-4 tracking-wider uppercase">
+<a class="hover:text-primary" href="#">Home</a>
+<span class="material-symbols-outlined text-xs" data-icon="chevron_right">chevron_right</span>
+<a class="hover:text-primary" href="#">Directory</a>
+<span class="material-symbols-outlined text-xs" data-icon="chevron_right">chevron_right</span>
+<span class="text-primary font-semibold">Search Results</span>
+</nav>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h1 class="text-headline-md font-bold text-primary tracking-tight">Plomeros urgentes en Zapopan</h1>
+<p class="text-on-surface-variant body-lg">14 verified professionals found near your location</p>
+</div>
+<div class="flex items-center gap-2 bg-surface-container px-3 py-2 rounded-lg">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="sort">sort</span>
+<span class="label-md font-medium">Sort by: Recommended</span>
+</div>
+</div>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Sidebar Filters -->
+<aside class="lg:col-span-3 space-y-8 sticky top-28">
+<div class="bg-surface-container-low p-6 rounded-xl space-y-6">
+<h3 class="font-headline font-semibold text-lg text-primary">Filters</h3>
+<!-- Category -->
+<div>
+<label class="block text-label-md font-medium text-on-surface-variant mb-3 uppercase tracking-wider">Category</label>
+<select class="w-full bg-surface-container-lowest border-none rounded-lg focus:ring-2 focus:ring-secondary text-sm">
+<option>Plumbing &amp; Pipes</option>
+<option>Electrical</option>
+<option>HVAC</option>
+<option>General Repair</option>
+</select>
+</div>
+<!-- Price Range -->
+<div>
+<label class="block text-label-md font-medium text-on-surface-variant mb-3 uppercase tracking-wider">Price Range (MXN)</label>
+<input class="w-full h-2 bg-surface-variant rounded-lg appearance-none cursor-pointer accent-secondary" type="range"/>
+<div class="flex justify-between text-xs mt-2 text-on-surface-variant">
+<span>$200</span>
+<span>$5,000+</span>
+</div>
+</div>
+<!-- Rating -->
+<div>
+<label class="block text-label-md font-medium text-on-surface-variant mb-3 uppercase tracking-wider">Minimum Rating</label>
+<div class="space-y-2">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="text-secondary focus:ring-secondary" name="rating" type="radio"/>
+<span class="text-sm group-hover:text-primary transition-colors">4.5+ Stars</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="text-secondary focus:ring-secondary" name="rating" type="radio"/>
+<span class="text-sm group-hover:text-primary transition-colors">4.0+ Stars</span>
+</label>
+</div>
+</div>
+<!-- Verification Level -->
+<div>
+<label class="block text-label-md font-medium text-on-surface-variant mb-3 uppercase tracking-wider">Verification Level</label>
+<div class="space-y-3">
+<div class="flex items-center justify-between p-3 bg-surface-container-lowest rounded-lg border border-transparent hover:border-secondary/20 transition-all cursor-pointer">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-sm font-semibold">Premium</span>
+</div>
+<input class="rounded text-secondary focus:ring-secondary" type="checkbox"/>
+</div>
+<div class="flex items-center justify-between p-3 bg-surface-container-lowest rounded-lg border border-transparent hover:border-secondary/20 transition-all cursor-pointer">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="verified_user">verified_user</span>
+<span class="text-sm font-medium">Standard</span>
+</div>
+<input class="rounded text-secondary focus:ring-secondary" type="checkbox"/>
+</div>
+</div>
+</div>
+<!-- Availability -->
+<div>
+<label class="block text-label-md font-medium text-on-surface-variant mb-3 uppercase tracking-wider">Availability</label>
+<div class="flex flex-wrap gap-2">
+<button class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-semibold">Urgent</button>
+<button class="px-3 py-1 bg-surface-container-lowest text-on-surface-variant rounded-full text-xs font-medium border border-outline-variant/30">Today</button>
+<button class="px-3 py-1 bg-surface-container-lowest text-on-surface-variant rounded-full text-xs font-medium border border-outline-variant/30">Weekend</button>
+</div>
+</div>
+<button class="w-full py-3 bg-primary text-on-primary rounded-xl font-bold mt-4 shadow-lg shadow-primary/10">Apply Filters</button>
+</div>
+</aside>
+<!-- Results List & Map -->
+<section class="lg:col-span-9 space-y-8">
+<!-- Map Integration View -->
+<div class="relative w-full h-80 rounded-2xl overflow-hidden shadow-2xl shadow-primary/5 bg-surface-container">
+<img alt="Interactive map" class="w-full h-full object-cover opacity-60 mix-blend-multiply" data-alt="Modern interactive map interface showing Zapopan district with stylized blue markers indicating professional service locations" data-location="Zapopan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn4CUn0cP2yVFLosg9uWfWZf_ExzqFxpGq9ykyMduOfeqqRETk_APywzB9r5MnYGft4sLqArtJ9JC3F5K5InpEmSX2esuUKPmXKwGzRTqBt-DxZXtkfdnvNqoUf7Od9s_gcR3OjXg8DWH_3bMgE1VAh-8ER5ClCEhuqXBFFqxY8KevaeH66hkNQqG5jc-T_Q0qilpbKkxor35BbidL5JHJg_TeQrFxJ9Pz4lnSZF3J8Lq2sk983tUro-Ii6WpU9WnsgAUorm787gn8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent pointer-events-none"></div>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-4 py-2 rounded-xl shadow-sm border border-white/20">
+<span class="label-md font-bold text-primary">MAP VIEW: ZAPOPAN</span>
+</div>
+<!-- Custom Map Markers Overlay -->
+<div class="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2">
+<div class="bg-secondary text-white p-2 rounded-full shadow-lg animate-pulse">
+<span class="material-symbols-outlined text-sm" data-icon="location_on" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+</div>
+</div>
+<!-- Professional Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Card 1: Premium Professional -->
+<div class="group bg-surface-container-lowest p-6 rounded-2xl transition-all duration-300 hover:shadow-[0_20px_40px_rgba(8,28,54,0.06)] border border-transparent hover:border-secondary/10">
+<div class="flex gap-4 items-start mb-4">
+<div class="relative">
+<img alt="Roberto Mendez" class="w-20 h-20 rounded-xl object-cover shadow-md" data-alt="Professional portrait of a confident male plumber in a clean uniform, warm natural lighting, blurred workshop background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASyKn5p6YHHcUk6CzT0t3uaEKT3dCVUlZZ-qgyFsDiA2hyjRo7MNwUL2aOZ4BZWw5JexRJiWDwj-kHYA8cZjUIIcsCGB2cffizVI-PC6qmMvZsJK1qTcSQvUBPmDE-T11JEPGFewin2M5UQNr1i0mXL4H0_RiNL7aOAnav6I0IR_KCik778otpWhBoXl7kUa9ZXsoXcRAOh-HeAx0SxznXfT-ISwyVLnfDzvO_haYa_8Hk71EfWsyLccyLdRkBWb9CZ0-U73BCzKKy"/>
+<div class="absolute -bottom-2 -right-2 bg-secondary text-white rounded-full p-1 border-2 border-white">
+<span class="material-symbols-outlined text-xs" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h4 class="font-headline font-bold text-primary text-lg">Roberto Méndez</h4>
+<div class="flex items-center gap-1 text-on-tertiary-container font-bold">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm">4.9</span>
+</div>
+</div>
+<p class="text-sm text-secondary font-semibold uppercase tracking-wider mb-2">Master Plumber • Premium</p>
+<div class="flex items-center gap-4 text-xs text-on-surface-variant font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs" data-icon="task_alt">task_alt</span> 142 Jobs</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs" data-icon="history">history</span> 8y Exp.</span>
+</div>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant line-clamp-2 mb-6">Expert en sistemas hidroneumáticos y fugas críticas. Respuesta rápida en toda el área de Zapopan. Certificado por marcas líderes...</p>
+<div class="flex items-center gap-3 pt-4 border-t border-surface-container">
+<button class="flex-1 py-2 bg-secondary-container text-on-secondary-container font-bold rounded-lg text-sm transition-transform active:scale-95">Message</button>
+<button class="flex-1 py-2 bg-primary text-on-primary font-bold rounded-lg text-sm transition-transform active:scale-95">Hire Now</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-surface-container-lowest p-6 rounded-2xl transition-all duration-300 hover:shadow-[0_20px_40px_rgba(8,28,54,0.06)] border border-transparent hover:border-secondary/10">
+<div class="flex gap-4 items-start mb-4">
+<div class="relative">
+<img alt="Lucia Gutierrez" class="w-20 h-20 rounded-xl object-cover shadow-md" data-alt="Professional woman in business casual attire, smiling, brightly lit office background, focus on professional competence" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLBvS9CeLdmmPlychd6i7dWg3tPWBRmkq8KFeR2lu5LmtN0pbIRwyRGYGSz9BCpxp69T53NkSIC4KA9vLUT0EH_vVbto2n6TAaoURDpMgSdxNFmSWlNhxPRR1txLJqFF47y73W-pp2CqAuvFu_-59Nyo9badk7qfNJ4LWVBl2w0vsxu7ftlgrnIlhwouChc54fxQ6cd6tY9DiXO6YQXnzRKDyrML2iMWgfnKBCQmYztHKjGd9EkMVfwZExZJ9HA21qDhfsf_H_1sHt"/>
+<div class="absolute -bottom-2 -right-2 bg-surface-container-highest text-on-surface-variant rounded-full p-1 border-2 border-white">
+<span class="material-symbols-outlined text-xs" data-icon="verified_user">verified_user</span>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h4 class="font-headline font-bold text-primary text-lg">Lucía Gutiérrez</h4>
+<div class="flex items-center gap-1 text-on-tertiary-container font-bold">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm">4.7</span>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant font-semibold uppercase tracking-wider mb-2">Instalaciones Sanitarias • Standard</p>
+<div class="flex items-center gap-4 text-xs text-on-surface-variant font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs" data-icon="task_alt">task_alt</span> 89 Jobs</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs" data-icon="history">history</span> 5y Exp.</span>
+</div>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant line-clamp-2 mb-6">Especialista en remodelaciones de baños y cocinas. Trabajo garantizado y presupuestos sin compromiso en la zona norte.</p>
+<div class="flex items-center gap-3 pt-4 border-t border-surface-container">
+<button class="flex-1 py-2 bg-secondary-container text-on-secondary-container font-bold rounded-lg text-sm transition-transform active:scale-95">Message</button>
+<button class="flex-1 py-2 bg-primary text-on-primary font-bold rounded-lg text-sm transition-transform active:scale-95">Hire Now</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-surface-container-lowest p-6 rounded-2xl transition-all duration-300 hover:shadow-[0_20px_40px_rgba(8,28,54,0.06)] border border-transparent hover:border-secondary/10">
+<div class="flex gap-4 items-start mb-4">
+<div class="relative">
+<img alt="Jorge Hernandez" class="w-20 h-20 rounded-xl object-cover shadow-md" data-alt="Experienced professional male artisan in his 50s, smiling kindly, soft outdoor lighting, clean service uniform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmrH7-3H9i9Ehhgyivx35-EyXfuDxvw3yIt9m0emags_T1QbeDTywzynNMQN-I0d0w0N60gDMmvS_x-z6tXQvBerFwtL0cUjp0o4Hnd9VwPTDOCwxY9Jrn0XuusiSfW5IRVwIA91Y6f7LqmMrxjr-kHOVg3m37A6nAS_Gd0VCOjljCn22_LoTTYwuzXJpr7x-BPgjhYsr1hqlKRRkXLbOcbVDuoxHmb4k9GvE-reFmdEiqMX0IGCAZjHhJ8BrF1YvPBvOH_e-tSgAk"/>
+<div class="absolute -bottom-2 -right-2 bg-secondary text-white rounded-full p-1 border-2 border-white">
+<span class="material-symbols-outlined text-xs" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h4 class="font-headline font-bold text-primary text-lg">Jorge Hernández</h4>
+<div class="flex items-center gap-1 text-on-tertiary-container font-bold">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm">5.0</span>
+</div>
+</div>
+<p class="text-sm text-secondary font-semibold uppercase tracking-wider mb-2">Industrial Plumbing • Premium</p>
+<div class="flex items-center gap-4 text-xs text-on-surface-variant font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs" data-icon="task_alt">task_alt</span> 210 Jobs</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs" data-icon="history">history</span> 15y Exp.</span>
+</div>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant line-clamp-2 mb-6">Servicio institucional para comercios y residencias de alto nivel. Especialista en calderas y sistemas de presión constante.</p>
+<div class="flex items-center gap-3 pt-4 border-t border-surface-container">
+<button class="flex-1 py-2 bg-secondary-container text-on-secondary-container font-bold rounded-lg text-sm transition-transform active:scale-95">Message</button>
+<button class="flex-1 py-2 bg-primary text-on-primary font-bold rounded-lg text-sm transition-transform active:scale-95">Hire Now</button>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group bg-surface-container-lowest p-6 rounded-2xl transition-all duration-300 hover:shadow-[0_20px_40px_rgba(8,28,54,0.06)] border border-transparent hover:border-secondary/10">
+<div class="flex gap-4 items-start mb-4">
+<div class="relative">
+<img alt="Sandra Ortiz" class="w-20 h-20 rounded-xl object-cover shadow-md" data-alt="Young professional woman looking at camera with a slight smile, neutral corporate background, sharp high-quality image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5XQ4B5al6jh73LBVIy_f7XwTlwpXc66u2GTcppF_Id3jPx5nIK4tFDBLpl5E_hZX-HKM5Lfpfz770yM3dKBam-8PwFON3eWh_G2qb2ZuWs5hR8VOYHLL6CHUBWrcMic_vGBw42J-PUSCQV49mnGSDVSdABtxa6T-CCfNOZCe4h-NiWjrk-ShEV3ygdqt_57AYKQ7LqVwpWj_wPHYegoe_T3LSQ-M1XHbJtXjKLXrRVLwvRKUEQc0XQa2Ex0puSPAB2ftwB3BcnNPY"/>
+<div class="absolute -bottom-2 -right-2 bg-surface-container-highest text-on-surface-variant rounded-full p-1 border-2 border-white">
+<span class="material-symbols-outlined text-xs" data-icon="verified_user">verified_user</span>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h4 class="font-headline font-bold text-primary text-lg">Sandra Ortiz</h4>
+<div class="flex items-center gap-1 text-on-tertiary-container font-bold">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm">4.8</span>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant font-semibold uppercase tracking-wider mb-2">Domestic Maintenance • Standard</p>
+<div class="flex items-center gap-4 text-xs text-on-surface-variant font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs" data-icon="task_alt">task_alt</span> 65 Jobs</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs" data-icon="history">history</span> 3y Exp.</span>
+</div>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant line-clamp-2 mb-6">Mantenimiento preventivo y correctivo. Rapidez y honestidad. Atención personalizada para departamentos en Zapopan Centro.</p>
+<div class="flex items-center gap-3 pt-4 border-t border-surface-container">
+<button class="flex-1 py-2 bg-secondary-container text-on-secondary-container font-bold rounded-lg text-sm transition-transform active:scale-95">Message</button>
+<button class="flex-1 py-2 bg-primary text-on-primary font-bold rounded-lg text-sm transition-transform active:scale-95">Hire Now</button>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex justify-center items-center gap-2 pt-8">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container text-primary font-bold transition-all hover:bg-secondary hover:text-white">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-white text-on-surface-variant font-medium hover:bg-surface-container transition-all">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-white text-on-surface-variant font-medium hover:bg-surface-container transition-all">3</button>
+<span class="px-2">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-white text-on-surface-variant font-medium hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-950 dark:bg-black border-t border-slate-800">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-12 py-16 max-w-7xl mx-auto gap-8">
+<div class="space-y-4 text-center md:text-left">
+<span class="text-xl font-bold text-white tracking-tighter">KonectIA</span>
+<p class="text-slate-400 text-xs max-w-xs leading-relaxed uppercase tracking-wider">
+                    © 2024 KonectIA. Institutional Quality Professional Services. SAT Compliant.
+                </p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-slate-400 hover:text-white transition-colors label-md tracking-wider uppercase" href="#">Legal &amp; Privacy</a>
+<a class="text-slate-400 hover:text-white transition-colors label-md tracking-wider uppercase" href="#">Escrow Policy</a>
+<a class="text-slate-400 hover:text-white transition-colors label-md tracking-wider uppercase" href="#">Tax Compliance</a>
+<a class="text-slate-400 hover:text-white transition-colors label-md tracking-wider uppercase" href="#">Support</a>
+<a class="text-slate-400 hover:text-white transition-colors label-md tracking-wider uppercase" href="#">Verified Professionals</a>
+</div>
+</div>
+</footer>
+</body></html>

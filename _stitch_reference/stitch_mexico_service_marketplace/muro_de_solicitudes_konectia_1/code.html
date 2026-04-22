@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#842500",
+                        "tertiary-fixed-dim": "#ffb59e",
+                        "surface-variant": "#e0e3e5",
+                        "error-container": "#ffdad6",
+                        "on-background": "#181c1e",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#82cfff",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#081c36",
+                        "primary-fixed-dim": "#b6c7e9",
+                        "on-secondary-fixed": "#001e2d",
+                        "tertiary-fixed": "#ffdbd0",
+                        "inverse-primary": "#b6c7e9",
+                        "tertiary": "#0a0100",
+                        "surface-container-high": "#e5e9eb",
+                        "on-primary-fixed-variant": "#364763",
+                        "on-primary-container": "#7586a5",
+                        "secondary-container": "#2dbcfe",
+                        "inverse-surface": "#2d3133",
+                        "surface-container": "#ebeef0",
+                        "background": "#f7fafc",
+                        "outline-variant": "#c5c6ce",
+                        "surface-tint": "#4e5f7c",
+                        "on-tertiary-fixed": "#3a0b00",
+                        "primary-container": "#0a1d37",
+                        "primary": "#00030a",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#004c6b",
+                        "on-error-container": "#93000a",
+                        "surface-bright": "#f7fafc",
+                        "surface-dim": "#d7dadc",
+                        "on-surface": "#181c1e",
+                        "inverse-on-surface": "#eef1f3",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-surface-variant": "#44474d",
+                        "on-tertiary-container": "#e7531d",
+                        "tertiary-container": "#3c0c00",
+                        "secondary-fixed": "#c6e7ff",
+                        "secondary": "#00658d",
+                        "on-secondary": "#ffffff",
+                        "outline": "#75777e",
+                        "surface-container-low": "#f1f4f6",
+                        "primary-fixed": "#d6e3ff",
+                        "on-secondary-container": "#004866",
+                        "surface": "#f7fafc"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .font-headline { font-family: 'Manrope', sans-serif; }
+        .glass-header {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- SideNavBar Anchor -->
+<aside class="h-screen w-64 fixed left-0 top-0 border-r-0 bg-slate-50 dark:bg-[#00030a] shadow-[0_20px_40px_rgba(8,28,54,0.06)] flex flex-col py-6 z-50">
+<div class="px-6 mb-8">
+<h1 class="text-xl font-bold text-[#0A1D37] dark:text-white">KonectIA Pro</h1>
+<p class="text-xs text-on-primary-container font-medium opacity-80">Premium Consultant</p>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<!-- Active Tab: Requests (as per page intent) -->
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-[#0A1D37] dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope font-semibold text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#2dbcfe] font-bold border-r-4 border-[#2dbcfe] bg-white/50 dark:bg-white/5 transition-colors rounded-l-xl font-manrope text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="campaign" style="font-variation-settings: 'FILL' 1;">campaign</span>
+<span>Requests</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-[#0A1D37] dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope font-semibold text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="work">work</span>
+<span>Jobs</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-[#0A1D37] dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope font-semibold text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span>Earnings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-[#0A1D37] dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope font-semibold text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+<span>Calendar</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-[#0A1D37] dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors rounded-xl font-manrope font-semibold text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="px-6 mt-6">
+<button class="w-full py-3 px-4 bg-primary-container text-on-primary rounded-xl font-bold text-sm shadow-lg active:translate-y-0.5 transition-all">
+                Post a Request
+            </button>
+</div>
+<div class="px-4 mt-auto space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-[#0A1D37] transition-colors font-manrope text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span>Support</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-error transition-colors font-manrope text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span>Sign Out</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 min-h-screen">
+<!-- TopNavBar Anchor -->
+<header class="sticky top-0 z-40 w-full bg-white/80 dark:bg-[#00030a]/80 backdrop-blur-md flex justify-between items-center px-8 h-20">
+<div class="flex items-center gap-2">
+<span class="text-2xl font-bold tracking-tighter text-[#0A1D37] dark:text-white">KonectIA</span>
+<span class="text-xs font-bold uppercase tracking-widest text-secondary-container bg-secondary-container/10 px-2 py-1 rounded">Muro</span>
+</div>
+<div class="flex items-center gap-6">
+<!-- Search Bar -->
+<div class="relative w-96">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+<input class="w-full bg-surface-container-low border-none rounded-full py-2.5 pl-11 pr-4 text-sm focus:ring-2 focus:ring-secondary-container/50 transition-all" placeholder="Buscar solicitudes profesionales..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:opacity-80 transition-opacity relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<button class="text-on-surface-variant hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+</button>
+<div class="h-10 w-10 rounded-full bg-primary-container overflow-hidden border-2 border-white shadow-sm">
+<img alt="Profile" data-alt="close-up portrait of a professional man in a tailored suit with a friendly expression and sharp studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_Z81Z1hY3sVc-_L9cfPSaVEY4_8t-anuSxl4_Halsh6kMcgXLPfklFWMF7Qgiktpxhxz_NEZtC1QXCy696wnb-ai1W26ciMFabKr2QMTxWmDz56L901oxtgFInCvIpbsakxOPmY7o33TCMEdgLMeTwPhBIOkpVEdswGCgWT83h7qOX1dRx_p0nuEbMMMOJujVK6KhaW1VPUqphs3-YDjaVB8tq4Gd56GMDLA1FRo_EWzQnm1nz_Ux_DqBJRXSr-2TCXHUfn8Cg14e"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Page Canvas -->
+<section class="p-8 max-w-7xl mx-auto">
+<!-- Hero / Filter Section -->
+<div class="mb-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h2 class="text-4xl font-extrabold text-primary mb-2 tracking-tight">Muro de Solicitudes</h2>
+<p class="text-on-surface-variant text-lg">Explora nuevas oportunidades y expande tu red profesional.</p>
+</div>
+<div class="flex gap-2">
+<button class="flex items-center gap-2 px-6 py-2.5 bg-surface-container-highest text-on-surface rounded-full font-semibold text-sm hover:bg-surface-dim transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="tune">tune</span>
+                            Filtros Avanzados
+                        </button>
+<button class="flex items-center gap-2 px-6 py-2.5 bg-primary text-on-primary rounded-full font-semibold text-sm active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-sm" data-icon="sort">sort</span>
+                            Más Recientes
+                        </button>
+</div>
+</div>
+<!-- Category Chips (Asymmetric Layout) -->
+<div class="flex flex-wrap gap-3 mt-8">
+<span class="px-5 py-2 rounded-full bg-secondary-container text-on-secondary-container font-semibold text-sm shadow-sm cursor-pointer">Todas</span>
+<span class="px-5 py-2 rounded-full bg-surface-container-low text-on-surface-variant font-medium text-sm hover:bg-white transition-colors cursor-pointer border border-transparent hover:border-outline-variant/20">Hogar y Reparaciones</span>
+<span class="px-5 py-2 rounded-full bg-surface-container-low text-on-surface-variant font-medium text-sm hover:bg-white transition-colors cursor-pointer border border-transparent hover:border-outline-variant/20">Mascotas</span>
+<span class="px-5 py-2 rounded-full bg-surface-container-low text-on-surface-variant font-medium text-sm hover:bg-white transition-colors cursor-pointer border border-transparent hover:border-outline-variant/20">Educación</span>
+<span class="px-5 py-2 rounded-full bg-surface-container-low text-on-surface-variant font-medium text-sm hover:bg-white transition-colors cursor-pointer border border-transparent hover:border-outline-variant/20">Legal</span>
+<span class="px-5 py-2 rounded-full bg-surface-container-low text-on-surface-variant font-medium text-sm hover:bg-white transition-colors cursor-pointer border border-transparent hover:border-outline-variant/20">Consultoría</span>
+</div>
+</div>
+<!-- Bento Feed Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Request Card 1 -->
+<div class="bg-surface-container-lowest rounded-full-0 rounded-xl p-8 shadow-[0_20px_40px_rgba(8,28,54,0.06)] hover:translate-y-[-4px] transition-all flex flex-col border border-white/50">
+<div class="flex justify-between items-start mb-6">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container">
+<img alt="Client" data-alt="professional headshot of a woman with a confident smile in a bright airy office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKSnLM0Tw8qib4_eIulsN-vM2z__sMA7jkO73bIMEcZ8ye3FnFOUhxUiXMGXZfSUdkzHYrT6I5WwOW1ONX9sz6wZ7WQfU3kXWzFBl8ps-z_FlZBhF38GOXVM4gd_UQHpoqv-0_G5WnxhwNgoWM8y-x4ueFDOlSMQnlaXgsfkPggCPZe9g0URUwUZOZmhJJEUqFSN-1RU9jxwmsAn44OQBdrpg7JQV6O0Uhb1a261S_oRcdRdLJD8R2eXYAEytvWkH0ebQCi-C5SKdm"/>
+</div>
+<div>
+<p class="font-bold text-primary leading-tight">Sofía Martínez</p>
+<p class="text-xs text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span>
+                                    Polanco, CDMX
+                                </p>
+</div>
+</div>
+<span class="bg-secondary-container/10 text-secondary font-bold text-[10px] px-2 py-1 rounded tracking-tighter uppercase">Urgente</span>
+</div>
+<h3 class="text-xl font-bold text-primary mb-3 leading-snug">Reparación de filtración urgente</h3>
+<p class="text-on-surface-variant text-sm mb-6 flex-1 line-clamp-3 leading-relaxed">
+                        Necesito un plomero certificado para arreglar una fuga importante en el baño principal. El agua está filtrando al piso de abajo. Se requiere atención inmediata hoy mismo.
+                    </p>
+<div class="pt-6 border-t border-outline-variant/20 mt-auto">
+<div class="flex justify-between items-center mb-6">
+<div>
+<p class="text-[10px] uppercase tracking-wider text-on-surface-variant font-bold">Presupuesto Estimado</p>
+<p class="text-xl font-extrabold text-primary">$2,500 - $4,000 MXN</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40" data-icon="trending_up">trending_up</span>
+</div>
+<button class="w-full bg-primary text-on-primary py-3.5 rounded-xl font-bold hover:shadow-lg active:scale-95 transition-all text-sm">
+                            Enviar Propuesta
+                        </button>
+</div>
+</div>
+<!-- Request Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0_20px_40px_rgba(8,28,54,0.06)] hover:translate-y-[-4px] transition-all flex flex-col border border-white/50">
+<div class="flex justify-between items-start mb-6">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container">
+<img alt="Client" data-alt="portrait of a man with spectacles looking thoughtful and professional in a creative studio environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwG5K5KAgVT-6VHj0F_bt1Di18yepCTEwB3aUH0Pm_XWhABd3UlWnzmG071TQDMnN1FuPHOPFJXt3ZGxelWk06KYZYMbkewOQ6Mh-lmRDQzwIaCVoOQyW7-yBp6FNKG8hXWyONbzAmHBbdzVhw_n8IAsRqmhB7XIP3E_q275y-4FhEAQcOESxxX330eCGXutqnXwDlLcbCxZeLQhkqdIp04hp9H2NkU4UA1njJrs4Wg2V8BO1aMHS-q_G2EXAmzERG1Tdo4jtrNtN1"/>
+</div>
+<div>
+<p class="font-bold text-primary leading-tight">Ricardo G.</p>
+<p class="text-xs text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span>
+                                    Santa Fe, CDMX
+                                </p>
+</div>
+</div>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-bold text-[10px] px-2 py-1 rounded tracking-tighter uppercase">Nuevos</span>
+</div>
+<h3 class="text-xl font-bold text-primary mb-3 leading-snug">Cuidar a mis perros (Fin de semana)</h3>
+<p class="text-on-surface-variant text-sm mb-6 flex-1 line-clamp-3 leading-relaxed">
+                        Busco a alguien con experiencia previa y referencias para cuidar a dos Golden Retrievers durante el fin de semana del 15 de Octubre. Deben ser paseados 3 veces al día.
+                    </p>
+<div class="pt-6 border-t border-outline-variant/20 mt-auto">
+<div class="flex justify-between items-center mb-6">
+<div>
+<p class="text-[10px] uppercase tracking-wider text-on-surface-variant font-bold">Presupuesto Estimado</p>
+<p class="text-xl font-extrabold text-primary">$1,200 MXN / día</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40" data-icon="pets">pets</span>
+</div>
+<button class="w-full bg-primary text-on-primary py-3.5 rounded-xl font-bold hover:shadow-lg active:scale-95 transition-all text-sm">
+                            Enviar Propuesta
+                        </button>
+</div>
+</div>
+<!-- Request Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0_20px_40px_rgba(8,28,54,0.06)] hover:translate-y-[-4px] transition-all flex flex-col border border-white/50">
+<div class="flex justify-between items-start mb-6">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container">
+<img alt="Client" data-alt="professional portrait of a young woman with a warm approachable look against a neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZbCNjyLFbxjDQflsFQfNWeb14iVjkNyjJptHFOkj5usHTioCQozi223ACmhGUSbc3IIweznEKRrfcEt-b9ECy8zTEA7WxJ2jQhxWXXnYzXruce7hvPKH9PdN_w9_VX3mU-_RX6vdaCM5Pr_rZ-1V8zB3L8hyBbZ_T8_PPjr_pCBK9K3RbQEKxpbEVRkPxhXNqpYmm1LDP9mXXFTqDcGouv2cdzPVF86483TLAO_VJsFICZhydmCnfK3TH2J2q1WobCNbqDPGCmhdG"/>
+</div>
+<div>
+<p class="font-bold text-primary leading-tight">Dra. Elena Ruiz</p>
+<p class="text-xs text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span>
+                                    Condesa, CDMX
+                                </p>
+</div>
+</div>
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-sm" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Verificado</span>
+</div>
+</div>
+<h3 class="text-xl font-bold text-primary mb-3 leading-snug">Clases de regularización matemáticas</h3>
+<p class="text-on-surface-variant text-sm mb-6 flex-1 line-clamp-3 leading-relaxed">
+                        Solicito profesor de matemáticas para nivel preparatoria (Cálculo Integral). Las sesiones pueden ser presenciales o vía remota. Se requiere plan de estudio semanal.
+                    </p>
+<div class="pt-6 border-t border-outline-variant/20 mt-auto">
+<div class="flex justify-between items-center mb-6">
+<div>
+<p class="text-[10px] uppercase tracking-wider text-on-surface-variant font-bold">Presupuesto Estimado</p>
+<p class="text-xl font-extrabold text-primary">$450 MXN / hr</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40" data-icon="school">school</span>
+</div>
+<button class="w-full bg-primary text-on-primary py-3.5 rounded-xl font-bold hover:shadow-lg active:scale-95 transition-all text-sm">
+                            Enviar Propuesta
+                        </button>
+</div>
+</div>
+<!-- Request Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0_20px_40px_rgba(8,28,54,0.06)] hover:translate-y-[-4px] transition-all flex flex-col border border-white/50">
+<div class="flex justify-between items-start mb-6">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container">
+<img alt="Client" data-alt="confident professional man in casual business attire smiling against a modern architectural background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8f8kk4RqD41iJ0tuXikZqh7-NO6Mp7aIxtDoUW0kJ7DdjTv20CCVrHQf1PjCgrVbYNM4AB4HBz7sm-ZwL5llH7-o5mxSdSa8HdA7HQ81DhG7qvKEHdtcT8hkHFfB3aI6k13xzsr32wSfEm96NMvHqay9KcleSGXq93KxQTdEGd4g5wnvfHhcxM2aRB91OMrYLHwB3fPERArhyy2_K0opy4JcYchmuw5WGuweQ6r7UYcushF_qqD6HzrGVxJWsbptZ5xBIGCwKV4um"/>
+</div>
+<div>
+<p class="font-bold text-primary leading-tight">Marco Antonio</p>
+<p class="text-xs text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span>
+                                    Del Valle, CDMX
+                                </p>
+</div>
+</div>
+</div>
+<h3 class="text-xl font-bold text-primary mb-3 leading-snug">Instalación de paneles solares</h3>
+<p class="text-on-surface-variant text-sm mb-6 flex-1 line-clamp-3 leading-relaxed">
+                        Busco proveedor integral para cotizar e instalar sistema de paneles solares en casa habitación. Interés en eficiencia energética y trámites ante CFE.
+                    </p>
+<div class="pt-6 border-t border-outline-variant/20 mt-auto">
+<div class="flex justify-between items-center mb-6">
+<div>
+<p class="text-[10px] uppercase tracking-wider text-on-surface-variant font-bold">Presupuesto Estimado</p>
+<p class="text-xl font-extrabold text-primary">$45,000 - $60,000 MXN</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40" data-icon="solar_power">solar_power</span>
+</div>
+<button class="w-full bg-primary text-on-primary py-3.5 rounded-xl font-bold hover:shadow-lg active:scale-95 transition-all text-sm">
+                            Enviar Propuesta
+                        </button>
+</div>
+</div>
+<!-- Request Card 5 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0_20px_40px_rgba(8,28,54,0.06)] hover:translate-y-[-4px] transition-all flex flex-col border border-white/50">
+<div class="flex justify-between items-start mb-6">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container">
+<img alt="Client" data-alt="professional woman executive looking engaged and focused in a corporate office environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5XnOipwvwJzb9vFMrmvOtQkFE6XgS3x9W0M_GhpUTT3FVC96hzGia5dmkhM5SEr_e4IRlAz95QedyQ6vDkDkQrdhC1-Mqz_lwznYpzmW84V-MvYc6BwUQZclwAlb9mS41V-G2Vx56nMZp4N0SKHdCGXirCMmtKk4odeSeu4Lccq5OZto31d6EbyaNnf4-Ku5gYyNiAxzlRPXFIiFQvMJWX_DvCHf_gcIReB8XjqcncgLih9FhRyG1-XAgEcu3cXu62XucLVekmu0H"/>
+</div>
+<div>
+<p class="font-bold text-primary leading-tight">Laura Montes</p>
+<p class="text-xs text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span>
+                                    Reforma, CDMX
+                                </p>
+</div>
+</div>
+</div>
+<h3 class="text-xl font-bold text-primary mb-3 leading-snug">Asesoría contable para PyME</h3>
+<p class="text-on-surface-variant text-sm mb-6 flex-1 line-clamp-3 leading-relaxed">
+                        Necesitamos regularizar la situación fiscal de una pequeña empresa de diseño. Buscamos contador con experiencia en el régimen simplificado de confianza.
+                    </p>
+<div class="pt-6 border-t border-outline-variant/20 mt-auto">
+<div class="flex justify-between items-center mb-6">
+<div>
+<p class="text-[10px] uppercase tracking-wider text-on-surface-variant font-bold">Presupuesto Estimado</p>
+<p class="text-xl font-extrabold text-primary">$3,000 MXN / mes</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40" data-icon="account_balance">account_balance</span>
+</div>
+<button class="w-full bg-primary text-on-primary py-3.5 rounded-xl font-bold hover:shadow-lg active:scale-95 transition-all text-sm">
+                            Enviar Propuesta
+                        </button>
+</div>
+</div>
+<!-- Empty CTA / Ad Slot -->
+<div class="bg-gradient-to-br from-primary-container to-primary rounded-xl p-8 shadow-[0_20px_40px_rgba(8,28,54,0.12)] flex flex-col justify-center items-center text-center">
+<div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="add_circle" style="font-variation-settings: 'FILL' 1;">add_circle</span>
+</div>
+<h3 class="text-2xl font-bold text-white mb-4">¿No encuentras lo que buscas?</h3>
+<p class="text-on-primary-container text-sm mb-8 px-4 opacity-90">Crea tu propia solicitud y deja que los mejores profesionales te contacten directamente.</p>
+<button class="bg-secondary-container text-on-secondary-container px-8 py-3 rounded-full font-extrabold text-sm hover:scale-105 active:scale-95 transition-all">
+                        Publicar Nueva Solicitud
+                    </button>
+</div>
+</div>
+<!-- Trust Indicator Bar -->
+<div class="mt-20 py-12 border-t border-outline-variant/10">
+<p class="text-center text-[10px] uppercase tracking-[0.2em] font-bold text-on-surface-variant mb-8">Empresas e Instituciones que confían en KonectIA</p>
+<div class="flex flex-wrap justify-center items-center gap-16 opacity-40 grayscale">
+<span class="text-2xl font-bold tracking-tighter">FINTECH MX</span>
+<span class="text-2xl font-bold tracking-tighter">GLOBAL CORP</span>
+<span class="text-2xl font-bold tracking-tighter">CITY SERVICIOS</span>
+<span class="text-2xl font-bold tracking-tighter">PRIME CONSULTING</span>
+<span class="text-2xl font-bold tracking-tighter">TRUST BANK</span>
+</div>
+</div>
+</section>
+</main>
+</body></html>

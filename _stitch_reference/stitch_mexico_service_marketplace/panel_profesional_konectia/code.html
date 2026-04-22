@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KonectIA Pro Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#842500",
+                    "tertiary-fixed-dim": "#ffb59e",
+                    "surface-variant": "#e0e3e5",
+                    "error-container": "#ffdad6",
+                    "on-background": "#181c1e",
+                    "error": "#ba1a1a",
+                    "secondary-fixed-dim": "#82cfff",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed": "#081c36",
+                    "primary-fixed-dim": "#b6c7e9",
+                    "on-secondary-fixed": "#001e2d",
+                    "tertiary-fixed": "#ffdbd0",
+                    "inverse-primary": "#b6c7e9",
+                    "tertiary": "#0a0100",
+                    "surface-container-high": "#e5e9eb",
+                    "on-primary-fixed-variant": "#364763",
+                    "on-primary-container": "#7586a5",
+                    "secondary-container": "#2dbcfe",
+                    "inverse-surface": "#2d3133",
+                    "surface-container": "#ebeef0",
+                    "background": "#f7fafc",
+                    "outline-variant": "#c5c6ce",
+                    "surface-tint": "#4e5f7c",
+                    "on-tertiary-fixed": "#3a0b00",
+                    "primary-container": "#0a1d37",
+                    "primary": "#00030a",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed-variant": "#004c6b",
+                    "on-error-container": "#93000a",
+                    "surface-bright": "#f7fafc",
+                    "surface-dim": "#d7dadc",
+                    "on-surface": "#181c1e",
+                    "inverse-on-surface": "#eef1f3",
+                    "on-primary": "#ffffff",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-surface-variant": "#44474d",
+                    "on-tertiary-container": "#e7531d",
+                    "tertiary-container": "#3c0c00",
+                    "secondary-fixed": "#c6e7ff",
+                    "secondary": "#00658d",
+                    "on-secondary": "#ffffff",
+                    "outline": "#75777e",
+                    "surface-container-low": "#f1f4f6",
+                    "primary-fixed": "#d6e3ff",
+                    "on-secondary-container": "#004866",
+                    "surface": "#f7fafc"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .font-manrope { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        .asymmetric-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 2rem;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased">
+<!-- SideNavBar -->
+<aside class="h-screen w-64 fixed left-0 top-0 border-r-0 bg-slate-50 dark:bg-[#00030a] shadow-[0_20px_40px_rgba(8,28,54,0.06)] flex flex-col py-6 z-50">
+<div class="px-6 mb-10">
+<h1 class="text-xl font-bold text-[#0A1D37] dark:text-white">KonectIA Pro</h1>
+<div class="flex items-center mt-6 p-3 bg-white/50 dark:bg-white/5 rounded-xl">
+<img alt="Professional Profile Picture" class="w-10 h-10 rounded-full object-cover" data-alt="professional headshot of a smiling consultant in a modern office with soft cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3FRApUSWGO76TY5EqvxgPkZLYU5Eujo2j5sPY-QrxXKafv7JgVaYv_vNT4erfAnS2i8aPS9lDWGBFf4mlDaL0B2G7kqOXiOhtCge_WJ-cHl8iZf_NA7KZcDp48bylyglxPZOdszFeMroQ4n-rLSXD1d91Z_FZCscCAXO4bQAbGHqGnkfxMvwhbm3tkeyqX7Zhx8oTjxT56ShmsvxyGaJhknRBhFol1a2UWrWb2oIdhAw6cS1cfvOQD9g10_R4FHQTVfcbbC4xuN2q"/>
+<div class="ml-3 overflow-hidden">
+<p class="font-manrope font-semibold text-sm text-[#0A1D37] dark:text-white truncate">Premium Consultant</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Verificado</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1 px-4">
+<a class="flex items-center px-4 py-3 text-[#2dbcfe] font-bold border-r-4 border-[#2dbcfe] bg-white/50 dark:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="dashboard">dashboard</span>
+<span class="font-manrope text-sm">Dashboard</span>
+</a>
+<a class="flex items-center px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-[#0A1D37] dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="campaign">campaign</span>
+<span class="font-manrope text-sm">Requests</span>
+</a>
+<a class="flex items-center px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-[#0A1D37] dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="work">work</span>
+<span class="font-manrope text-sm">Jobs</span>
+</a>
+<a class="flex items-center px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-[#0A1D37] dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="payments">payments</span>
+<span class="font-manrope text-sm">Earnings</span>
+</a>
+<a class="flex items-center px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-[#0A1D37] dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="calendar_today">calendar_today</span>
+<span class="font-manrope text-sm">Calendar</span>
+</a>
+<a class="flex items-center px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-[#0A1D37] dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="settings">settings</span>
+<span class="font-manrope text-sm">Settings</span>
+</a>
+</nav>
+<div class="px-4 py-6 mt-auto border-t border-[#ebeef0] dark:border-[#0a1d37]">
+<a class="flex items-center px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-[#0A1D37] dark:hover:text-white transition-colors mb-1" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="help">help</span>
+<span class="font-manrope text-sm">Support</span>
+</a>
+<a class="flex items-center px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-error transition-colors" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="logout">logout</span>
+<span class="font-manrope text-sm">Sign Out</span>
+</a>
+</div>
+</aside>
+<!-- TopNavBar -->
+<header class="sticky top-0 z-40 w-full glass-header flex justify-between items-center px-8 h-20 ml-64 max-w-[calc(100%-16rem)]">
+<div class="flex items-center">
+<span class="text-2xl font-bold tracking-tighter text-[#0A1D37] dark:text-white">KonectIA</span>
+</div>
+<div class="flex items-center space-x-6">
+<div class="relative group">
+<span class="material-symbols-outlined text-slate-600 hover:opacity-80 cursor-pointer transition-all active:translate-y-0.5" data-icon="notifications">notifications</span>
+<span class="absolute -top-1 -right-1 w-2 h-2 bg-secondary-container rounded-full"></span>
+</div>
+<span class="material-symbols-outlined text-slate-600 hover:opacity-80 cursor-pointer transition-all active:translate-y-0.5" data-icon="chat_bubble">chat_bubble</span>
+<span class="material-symbols-outlined text-slate-600 hover:opacity-80 cursor-pointer transition-all active:translate-y-0.5" data-icon="account_circle">account_circle</span>
+</div>
+</header>
+<!-- Main Content -->
+<main class="ml-64 p-8 min-h-screen">
+<div class="max-w-7xl mx-auto space-y-12">
+<!-- Header Section -->
+<section class="flex justify-between items-end">
+<div>
+<h2 class="text-display-lg font-bold text-primary tracking-tight font-headline">Panel de Control</h2>
+<p class="text-on-surface-variant body-lg">Bienvenido de nuevo, revisa tus métricas de hoy.</p>
+</div>
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold font-headline flex items-center shadow-lg hover:opacity-90 transition-all active:scale-95">
+<span class="material-symbols-outlined mr-2" data-icon="add">add</span>
+                    Post a Request
+                </button>
+</section>
+<!-- Key Stats: Bento Grid Style -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Ganancias Big Card -->
+<div class="md:col-span-2 bg-primary-container p-8 rounded-xl text-on-primary flex flex-col justify-between relative overflow-hidden h-[240px]">
+<div class="z-10">
+<p class="label-md opacity-70 uppercase tracking-widest mb-2">Ganancias Acumuladas</p>
+<h3 class="text-5xl font-bold font-headline">$142,500.00 <span class="text-secondary-container text-xl">MXN</span></h3>
+<div class="mt-6 flex items-center text-secondary-container">
+<span class="material-symbols-outlined mr-1" data-icon="trending_up">trending_up</span>
+<span class="font-bold">+12.5% este mes</span>
+</div>
+</div>
+<!-- Abstract Background Graphic -->
+<div class="absolute bottom-0 right-0 w-64 h-64 bg-secondary-container/10 rounded-full -mr-20 -mb-20 blur-3xl"></div>
+<div class="absolute top-0 right-10 w-48 h-48 bg-white/5 rounded-full -mt-20 -mr-20"></div>
+</div>
+<!-- Stats Stack -->
+<div class="space-y-6">
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_20px_40px_rgba(8,28,54,0.06)] border border-outline-variant/10">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-secondary-container text-3xl" data-icon="assignment_turned_in">assignment_turned_in</span>
+<span class="text-sm font-semibold text-secondary px-2 py-1 bg-secondary-fixed rounded-lg">Activos</span>
+</div>
+<p class="mt-4 label-md text-on-surface-variant">Trabajos Activos</p>
+<p class="text-3xl font-bold font-headline text-primary">08</p>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_20px_40px_rgba(8,28,54,0.06)] border border-outline-variant/10">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-on-tertiary-container text-3xl" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-semibold text-on-tertiary-container px-2 py-1 bg-tertiary-fixed rounded-lg">Elite</span>
+</div>
+<p class="mt-4 label-md text-on-surface-variant">Rating Profesional</p>
+<p class="text-3xl font-bold font-headline text-primary">4.92 / 5.0</p>
+</div>
+</div>
+</section>
+<!-- Asymmetric Grid for Solicitudes and Progress -->
+<div class="asymmetric-grid">
+<!-- Nuevas solicitudes de cotización -->
+<section>
+<div class="flex justify-between items-center mb-6">
+<h3 class="headline-md font-bold text-primary font-headline">Nuevas solicitudes de cotización</h3>
+<a class="text-secondary font-bold text-sm hover:underline" href="#">Ver todas</a>
+</div>
+<div class="space-y-4">
+<!-- Request Card -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_20px_40px_rgba(8,28,54,0.06)] group hover:translate-y-[-4px] transition-all cursor-pointer">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="architecture">architecture</span>
+</div>
+<div>
+<h4 class="font-bold text-lg text-primary">Consultoría Estratégica IT</h4>
+<p class="text-xs text-on-surface-variant">Solicitado por: Grupo Financiero MX</p>
+</div>
+</div>
+<span class="bg-secondary-fixed text-on-secondary-fixed-variant text-xs font-bold px-3 py-1 rounded-full">NUEVO</span>
+</div>
+<p class="text-sm text-on-surface-variant line-clamp-2 mb-4 leading-relaxed">
+                                Necesitamos una auditoría completa de seguridad para nuestra infraestructura cloud antes del próximo trimestre.
+                            </p>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/10">
+<div class="flex items-center text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-sm mr-1" data-icon="schedule">schedule</span>
+                                    Hace 2 horas
+                                </div>
+<div class="flex items-center text-sm font-bold text-primary">
+                                    $45k - $60k MXN
+                                </div>
+</div>
+</div>
+<!-- Request Card -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_20px_40px_rgba(8,28,54,0.06)] group hover:translate-y-[-4px] transition-all cursor-pointer">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="code">code</span>
+</div>
+<div>
+<h4 class="font-bold text-lg text-primary">Desarrollo E-commerce Pro</h4>
+<p class="text-xs text-on-surface-variant">Solicitado por: Artisan Foods</p>
+</div>
+</div>
+<span class="bg-surface-container-high text-on-surface-variant text-xs font-bold px-3 py-1 rounded-full">REVISADO</span>
+</div>
+<p class="text-sm text-on-surface-variant line-clamp-2 mb-4 leading-relaxed">
+                                Buscamos desarrollador senior para integración de pasarela de pagos personalizada y dashboard de inventario.
+                            </p>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/10">
+<div class="flex items-center text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-sm mr-1" data-icon="schedule">schedule</span>
+                                    Hace 5 horas
+                                </div>
+<div class="flex items-center text-sm font-bold text-primary">
+                                    $25k - $30k MXN
+                                </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trabajos en curso -->
+<section>
+<div class="flex justify-between items-center mb-6">
+<h3 class="headline-md font-bold text-primary font-headline">Trabajos en curso</h3>
+</div>
+<div class="bg-surface-container-low rounded-xl p-6 space-y-6">
+<!-- Active Job Progress -->
+<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/10">
+<div class="flex justify-between mb-2">
+<span class="text-sm font-bold text-primary">Rediseño UI/UX FinTech</span>
+<span class="text-sm font-bold text-secondary">75%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-secondary-container h-full w-3/4 rounded-full"></div>
+</div>
+<p class="text-xs text-on-surface-variant mt-3">Próximo hito: Entrega de prototipos finales</p>
+</div>
+<!-- Active Job Progress -->
+<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/10">
+<div class="flex justify-between mb-2">
+<span class="text-sm font-bold text-primary">Mantenimiento AWS Cluster</span>
+<span class="text-sm font-bold text-secondary">40%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-secondary-container h-full w-[40%] rounded-full"></div>
+</div>
+<p class="text-xs text-on-surface-variant mt-3">Próximo hito: Pruebas de carga</p>
+</div>
+<!-- Mini Stats for In Progress -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-primary p-4 rounded-xl text-center">
+<p class="text-white/60 text-xs font-semibold">POR ENTREGAR</p>
+<p class="text-white text-xl font-bold">03</p>
+</div>
+<div class="bg-secondary-container p-4 rounded-xl text-center">
+<p class="text-on-secondary-container/70 text-xs font-semibold">EN REVISIÓN</p>
+<p class="text-on-secondary-container text-xl font-bold">02</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Calendario y Disponibilidad Section -->
+<section class="bg-surface-container-low rounded-2xl p-8 overflow-hidden relative">
+<div class="relative z-10 flex flex-col md:flex-row gap-12">
+<!-- Mini Calendar -->
+<div class="w-full md:w-1/3">
+<div class="flex justify-between items-center mb-6">
+<h3 class="title-lg font-bold text-primary font-headline">Calendario</h3>
+<div class="flex space-x-2">
+<button class="p-1 hover:bg-surface-container-high rounded"><span class="material-symbols-outlined text-sm" data-icon="chevron_left">chevron_left</span></button>
+<button class="p-1 hover:bg-surface-container-high rounded"><span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span></button>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm">
+<div class="grid grid-cols-7 gap-2 mb-4 text-center text-[10px] font-bold text-on-surface-variant uppercase tracking-tighter">
+<div>Lu</div><div>Ma</div><div>Mi</div><div>Ju</div><div>Vi</div><div>Sa</div><div>Do</div>
+</div>
+<div class="grid grid-cols-7 gap-2 text-center text-sm">
+<div class="p-2 text-outline">28</div><div class="p-2 text-outline">29</div><div class="p-2 text-outline">30</div><div class="p-2 text-outline">31</div>
+<div class="p-2 font-semibold">1</div><div class="p-2 font-semibold">2</div><div class="p-2 font-semibold">3</div>
+<div class="p-2 font-semibold">4</div><div class="p-2 font-semibold bg-secondary-container text-white rounded-lg">5</div><div class="p-2 font-semibold">6</div>
+<div class="p-2 font-semibold">7</div><div class="p-2 font-semibold bg-secondary-fixed text-on-secondary-container rounded-lg">8</div><div class="p-2 font-semibold">9</div><div class="p-2 font-semibold">10</div>
+<div class="p-2 font-semibold">11</div><div class="p-2 font-semibold">12</div><div class="p-2 font-semibold">13</div><div class="p-2 font-semibold">14</div><div class="p-2 font-semibold">15</div><div class="p-2 font-semibold">16</div><div class="p-2 font-semibold">17</div>
+</div>
+</div>
+</div>
+<!-- Availability & Schedule -->
+<div class="flex-1 space-y-8">
+<div>
+<div class="flex items-center justify-between mb-4">
+<h3 class="title-lg font-bold text-primary font-headline">Disponibilidad</h3>
+<div class="flex items-center cursor-pointer">
+<span class="mr-3 text-sm font-semibold text-secondary">Activo para cotizar</span>
+<div class="w-12 h-6 bg-secondary-container rounded-full relative flex items-center px-1">
+<div class="w-4 h-4 bg-white rounded-full translate-x-6"></div>
+</div>
+</div>
+</div>
+<p class="body-lg text-on-surface-variant max-w-lg">Configura tus horarios para recibir solicitudes en tiempo real. Actualmente tienes disponibilidad total.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/10 flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary-container" data-icon="videocam">videocam</span>
+<div>
+<p class="text-xs font-bold text-on-surface-variant">Próxima Reunión</p>
+<p class="text-sm font-semibold">Sync: Fintech App (14:00)</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/10 flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary-container" data-icon="flag">flag</span>
+<div>
+<p class="text-xs font-bold text-on-surface-variant">Deadline hoy</p>
+<p class="text-sm font-semibold">Envío de Facturas (18:00)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Institutional Decoration -->
+<div class="absolute right-0 top-0 h-full w-1/4 opacity-10 pointer-events-none">
+<img alt="Decorative tech pattern" class="h-full w-full object-cover" data-alt="abstract close up of high-tech circuit board and futuristic connection nodes with blue neon light glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmBZTn255RGTg8k4dwCUcMN6xjw6rm3f2ZPWHfPq7qn9m_lJC9b3rQsajOkbfkfqjhOLsJQwu65h9CvkZ89keRTAQ2LX29tUjtePCtobEpbyafNmwp3HPXw7gSkm2bVmcVtRZ05UyySVp1YNniGLLCG-WhVMWTmwIsKcHPQw3ow5iVKsUutGHPFBYP1IiZnVoCbZLVqqcRWDlrGB8GdZpL7xk-xSPrh2854vuMSJMsMCK_AZMmqyv1LIwl8TkDXQYvlvGlnJdyp0go"/>
+</div>
+</section>
+<!-- Institutional Trust Footer Area -->
+<footer class="pt-12 border-t border-outline-variant/20">
+<div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 opacity-40">
+<p class="label-md text-on-surface-variant">© 2024 KonectIA Professional Services</p>
+<div class="flex gap-8">
+<span class="font-bold text-sm tracking-widest uppercase">Verified Partner</span>
+<span class="font-bold text-sm tracking-widest uppercase">Secure Payments</span>
+<span class="font-bold text-sm tracking-widest uppercase">Escrow Protection</span>
+</div>
+</div>
+</footer>
+</div>
+</main>
+</body></html>

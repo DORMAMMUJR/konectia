@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dashboard Institucional - KonectIA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "surface-tint": "#4e5f7c",
+                "error": "#ba1a1a",
+                "on-background": "#181c1e",
+                "on-tertiary-fixed-variant": "#842500",
+                "background": "#f7fafc",
+                "tertiary-fixed-dim": "#ffb59e",
+                "tertiary-container": "#3c0c00",
+                "on-primary-container": "#7586a5",
+                "on-tertiary": "#ffffff",
+                "primary-fixed": "#d6e3ff",
+                "secondary-fixed-dim": "#82cfff",
+                "surface-container-highest": "#e0e3e5",
+                "outline-variant": "#c5c6ce",
+                "secondary-fixed": "#c6e7ff",
+                "secondary-container": "#2dbcfe",
+                "on-error": "#ffffff",
+                "on-surface": "#181c1e",
+                "on-primary": "#ffffff",
+                "primary-fixed-dim": "#b6c7e9",
+                "on-secondary-container": "#004866",
+                "on-error-container": "#93000a",
+                "surface-container": "#ebeef0",
+                "primary": "#00030a",
+                "on-tertiary-fixed": "#3a0b00",
+                "on-surface-variant": "#44474d",
+                "on-secondary-fixed-variant": "#004c6b",
+                "surface-container-lowest": "#ffffff",
+                "on-tertiary-container": "#e7531d",
+                "on-primary-fixed": "#081c36",
+                "surface-dim": "#d7dadc",
+                "secondary": "#00658d",
+                "on-secondary": "#ffffff",
+                "surface": "#f7fafc",
+                "error-container": "#ffdad6",
+                "outline": "#75777e",
+                "tertiary-fixed": "#ffdbd0",
+                "inverse-surface": "#2d3133",
+                "inverse-on-surface": "#eef1f3",
+                "surface-bright": "#f7fafc",
+                "tertiary": "#0a0100",
+                "surface-container-low": "#f1f4f6",
+                "surface-container-high": "#e5e9eb",
+                "on-secondary-fixed": "#001e2d",
+                "inverse-primary": "#b6c7e9",
+                "surface-variant": "#e0e3e5",
+                "on-primary-fixed-variant": "#364763",
+                "primary-container": "#0a1d37"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "fontFamily": {
+                "headline": ["Manrope"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<aside class="fixed left-0 top-0 h-full flex flex-col p-4 bg-slate-50 dark:bg-slate-950 h-screen w-64 border-r border-slate-200 dark:border-slate-800 transition-all duration-200 ease-in-out">
+<div class="mb-8 px-4">
+<span class="text-lg font-bold text-slate-900 dark:text-slate-50 tracking-tight">KonectIA</span>
+<div class="mt-4 flex items-center gap-3 p-2 rounded-xl bg-slate-200/50 dark:bg-slate-800/50">
+<div class="w-10 h-10 rounded-full bg-primary-container overflow-hidden">
+<img alt="User Profile Avatar" class="w-full h-full object-cover" data-alt="Professional portrait of a male business executive in a sharp navy suit with neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCx77GlUJGynfSE4yKLaSI32MT_3JX6fnFfwhRfQ6rCr036nICpQlBmgjeUlsGPz-wlQP6pCFOiRKPcVwK6Sh7TIxEJnOOwZQ8rF48pdSfHlploJJ3_pyS0klY-n53PHcZgsXqehSvl0-JNHUGtp9BuMDB0ioGDOvlqD5eqFcMUZpxSRvPnZexVo0ObHR9BCbhqwSxRxuCEFwZqi2x3-K8Z3fBMWG04jXvFoRvGuWxgNbgxvgH4Ou14ZDOoC6K59Frpjcc35Ze-Y-UX"/>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-semibold text-slate-900 dark:text-slate-50">Institutional Panel</span>
+<span class="text-[10px] text-slate-500 dark:text-slate-400">Verified Member</span>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 bg-white dark:bg-slate-900 text-cyan-600 dark:text-cyan-400 shadow-sm rounded-lg px-4 py-3 hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 px-4 py-3 rounded-lg hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined">work</span>
+<span class="text-sm font-medium">Projects</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 px-4 py-3 rounded-lg hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined">request_quote</span>
+<span class="text-sm font-medium">Quotes</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 px-4 py-3 rounded-lg hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<span class="text-sm font-medium">Wallet</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 px-4 py-3 rounded-lg hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+</nav>
+<div class="mt-auto space-y-1">
+<button class="w-full mb-4 bg-primary text-on-primary py-3 rounded-xl font-semibold text-sm shadow-lg hover:opacity-90 transition-opacity">
+                Post a Project
+            </button>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 px-4 py-3 rounded-lg hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="text-sm font-medium">Support</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 px-4 py-3 rounded-lg hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="text-sm font-medium">Logout</span>
+</a>
+</div>
+</aside>
+<main class="ml-64 p-8 min-h-screen">
+<header class="flex justify-between items-center mb-10">
+<div>
+<h1 class="text-3xl font-bold tracking-tight text-primary">Panel de Control</h1>
+<p class="text-on-surface-variant mt-1">Bienvenido de nuevo, Director de Operaciones.</p>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-surface-container transition-colors relative">
+<span class="material-symbols-outlined text-on-surface-variant">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-on-tertiary-container rounded-full"></span>
+</button>
+<div class="h-8 w-[1px] bg-outline-variant/30"></div>
+<span class="text-sm font-medium text-on-surface-variant">12 Mayo, 2024</span>
+</div>
+</header>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_20px_40px_rgba(8,28,54,0.06)] flex items-center justify-between group hover:bg-primary transition-all duration-300">
+<div>
+<p class="text-label-md text-on-surface-variant group-hover:text-primary-fixed uppercase tracking-wider">Trabajos Activos</p>
+<h3 class="text-2xl font-bold mt-1 group-hover:text-on-primary">12</h3>
+</div>
+<div class="w-12 h-12 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary group-hover:bg-white/10 group-hover:text-white">
+<span class="material-symbols-outlined">analytics</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_20px_40px_rgba(8,28,54,0.06)] flex items-center justify-between group hover:bg-primary transition-all duration-300">
+<div>
+<p class="text-label-md text-on-surface-variant group-hover:text-primary-fixed uppercase tracking-wider">Historial de Pagos</p>
+<h3 class="text-2xl font-bold mt-1 group-hover:text-on-primary">$45,280</h3>
+</div>
+<div class="w-12 h-12 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary group-hover:bg-white/10 group-hover:text-white">
+<span class="material-symbols-outlined">payments</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_20px_40px_rgba(8,28,54,0.06)] flex items-center justify-between group hover:bg-primary transition-all duration-300 border-2 border-transparent hover:border-secondary-container/30">
+<div>
+<p class="text-label-md text-on-surface-variant group-hover:text-primary-fixed uppercase tracking-wider">Mensajes Nuevos</p>
+<h3 class="text-2xl font-bold mt-1 group-hover:text-on-primary">5</h3>
+</div>
+<div class="w-12 h-12 rounded-full bg-on-tertiary-container/10 flex items-center justify-center text-on-tertiary-container group-hover:bg-white/10 group-hover:text-white">
+<span class="material-symbols-outlined">chat_bubble</span>
+</div>
+</div>
+</div>
+<section class="mb-10">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-xl font-bold text-primary">Proyectos en Curso</h2>
+<button class="text-secondary font-semibold text-sm flex items-center gap-1 hover:underline">
+                    Ver todos <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_20px_40px_rgba(8,28,54,0.06)] flex flex-col md:flex-row">
+<div class="w-full md:w-48 h-48 md:h-auto shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Modern office interior with large windows and clean glass surfaces reflecting digital data charts" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgwn69NtFezv6ngIGeh3A1SEzN1cKdGozT-tB9ESEbgFTJeeurJBC2jIhk5S5o7MQZ4HggkExVoK7GnFudB2HlyJM_3vU-Oykn-_HQbG_zcsQijjptmmPCt_uq_toRJtV5R5WMAdlkO5gkj4fvjPUa0YZHdbtdxPJbQou-NX3JwarQByDvBZoAzKpYwmCdwPOXIXlSWHzDZSCiIIoAwTNDinej8XcOqhOxiaKSEsCJqsQPhTJr81BQrXnBwvVzCNQCaPmzuRr9Hm4x"/>
+<div class="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-xs" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-[10px] font-bold text-primary uppercase">Activo</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between bg-white">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-lg font-bold text-primary">Auditoría Financiera Q2</h3>
+<span class="text-label-md font-bold text-secondary">65%</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mb-4">
+<div class="bg-secondary h-1.5 rounded-full w-[65%]"></div>
+</div>
+<div class="flex items-center gap-3 mb-4">
+<div class="w-8 h-8 rounded-full bg-slate-200 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Professional female accountant looking focused in a brightly lit modern office space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATE4QzTliW8PX0X8oIkzkQbszM0Fz1ea2EzznUWW1bfUVaX2ym4THcUaKjUHziVuuHR8LLdvPipsK-zzL7nE0ywy_5HdeysgKEBEPm8U18vYwjnG0BJuiIMcaPtkRPC3mv07XCyD_y3fG_AXuqUuBHHzpsrOsjv_5XFxKEAriJL89aj8wy5_S7qCMMxRgm0yd-hOPeCOdM44epBi5s8mvuAa1AxUztDppsypPw3K18MLoRaGcahgW0qYefHRe0hXT7Jd6Fr_n8oRxW"/>
+</div>
+<div>
+<p class="text-xs font-semibold">Lic. Sofia Méndez</p>
+<p class="text-[10px] text-on-surface-variant">Consultora Senior</p>
+</div>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 bg-secondary-container text-on-secondary-container py-2.5 rounded-lg text-xs font-bold hover:brightness-95 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">chat</span> Mensajes
+                            </button>
+<button class="flex-1 bg-surface-container-low text-primary py-2.5 rounded-lg text-xs font-bold hover:bg-surface-container transition-all flex items-center justify-center gap-2 border border-outline-variant/20">
+<span class="material-symbols-outlined text-sm">payments</span> Detalles
+                            </button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_20px_40px_rgba(8,28,54,0.06)] flex flex-col md:flex-row">
+<div class="w-full md:w-48 h-48 md:h-auto shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Professional tax documentation and calculator on a wooden desk with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgMGTXB_KZIA6vqQJce3aG6g7yIt5VZv1W6-7-nkp5nlUktjVkSKAB76ZurIc2T227ZaW6G5s8nTLwomhvXXj5dkFZUJSQmDFGam1RXd_ig9yegniLM-Osia6IG7YVSwU_QtgV_sVbpJ6yaKVAwcxKHK7dDRLNG5v5aPTSMFozMcpaq8I4_h0RrclO85fV3DAh5J5F5KDFvFYDtHku-k0n94ZgeU8aUAvfw43KApxycwZTikwbPFIRvUyP9mhxxZG16E2huY7r4bgD"/>
+<div class="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-on-tertiary-container text-xs" style="font-variation-settings: 'FILL' 1;">schedule</span>
+<span class="text-[10px] font-bold text-primary uppercase">Pendiente</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between bg-white">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-lg font-bold text-primary">Cumplimiento SAT 2024</h3>
+<span class="text-label-md font-bold text-on-tertiary-container">20%</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mb-4">
+<div class="bg-on-tertiary-container h-1.5 rounded-full w-[20%]"></div>
+</div>
+<div class="flex items-center gap-3 mb-4">
+<div class="w-8 h-8 rounded-full bg-slate-200 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Professional male tax lawyer smiling confidently in a corporate boardroom setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw8ChPBpk9SL8sihIUBv3kvXv6iQo-9t7xQ34tnE96we5atQvFmiLE_TfrjANO528O-btkqh0174fCDeJYh-DcUeN5ks5VyAbq5PvyxdAoenGmIkhjCdbkCew73-IxCWR_-dtHvqS4TkORiZVrxxxyJS6jdPNe-VjbS9gNs9Yj4BfFC4KoS55kGygdhawuDvNIGIKIqL5zM4hi9K-tXR-4lXsoL0WqDYlRcP1N-elzF2rNJgK_sqsvuVMJz4vdElKl3ce730CCL5Vd"/>
+</div>
+<div>
+<p class="text-xs font-semibold">Dr. Ricardo Salinas</p>
+<p class="text-[10px] text-on-surface-variant">Especialista Fiscal</p>
+</div>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 bg-secondary-container text-on-secondary-container py-2.5 rounded-lg text-xs font-bold hover:brightness-95 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">chat</span> Mensajes
+                            </button>
+<button class="flex-1 bg-surface-container-low text-primary py-2.5 rounded-lg text-xs font-bold hover:bg-surface-container transition-all flex items-center justify-center gap-2 border border-outline-variant/20">
+<span class="material-symbols-outlined text-sm">payments</span> Detalles
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<div class="lg:col-span-2 bg-surface-container-low rounded-xl p-6">
+<h2 class="text-xl font-bold text-primary mb-6">Actividad de Pagos</h2>
+<div class="space-y-4">
+<div class="bg-surface-container-lowest p-4 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+<div>
+<p class="text-sm font-semibold text-primary">Pago Recibido - Proyecto Auditoría</p>
+<p class="text-xs text-on-surface-variant">10 Mayo, 2024 • ID: #KT-89021</p>
+</div>
+</div>
+<span class="text-sm font-bold text-primary">+$12,500.00</span>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+<span class="material-symbols-outlined">history</span>
+</div>
+<div>
+<p class="text-sm font-semibold text-primary">Escrow Liberado - Consultoría Legal</p>
+<p class="text-xs text-on-surface-variant">08 Mayo, 2024 • ID: #KT-89018</p>
+</div>
+</div>
+<span class="text-sm font-bold text-primary">+$8,200.00</span>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-orange-600">
+<span class="material-symbols-outlined">pending</span>
+</div>
+<div>
+<p class="text-sm font-semibold text-primary">Pago Pendiente - Registro de Marca</p>
+<p class="text-xs text-on-surface-variant">Ayer • ID: #KT-89045</p>
+</div>
+</div>
+<span class="text-sm font-bold text-on-tertiary-container">$3,400.00</span>
+</div>
+</div>
+</div>
+<div class="bg-primary-container text-white rounded-xl p-8 relative overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary-container/20 rounded-full -mr-16 -mt-16 blur-3xl"></div>
+<div>
+<h3 class="text-xl font-bold mb-2">Garantía Escrow</h3>
+<p class="text-primary-fixed-dim text-sm leading-relaxed">Sus fondos están protegidos institucionalmente hasta que usted apruebe la entrega final del servicio.</p>
+</div>
+<div class="mt-8">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-secondary-container">shield</span>
+<span class="text-xs font-semibold uppercase tracking-widest text-secondary-container">Protección KonectIA</span>
+</div>
+<button class="w-full bg-white text-primary font-bold py-3 rounded-lg text-sm hover:bg-opacity-90 transition-all">
+                            Saber más sobre Escrow
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="ml-64 bg-slate-950 text-slate-300 w-full py-12 border-t border-slate-800">
+<div class="w-full px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div>
+<span class="text-white font-bold text-xl block mb-2">KonectIA</span>
+<p class="text-sm font-normal">© 2024 KonectIA. The Digital Institution of Professional Services.</p>
+</div>
+<div class="flex flex-wrap gap-6 md:justify-end">
+<a class="text-slate-500 hover:text-slate-300 transition-opacity text-sm font-medium" href="#">Privacy Policy</a>
+<a class="text-slate-500 hover:text-slate-300 transition-opacity text-sm font-medium" href="#">Terms of Service</a>
+<a class="text-slate-500 hover:text-slate-300 transition-opacity text-sm font-medium" href="#">Escrow Guarantee</a>
+<a class="text-slate-500 hover:text-slate-300 transition-opacity text-sm font-medium" href="#">SAT Compliance</a>
+</div>
+</div>
+</footer>
+</body></html>

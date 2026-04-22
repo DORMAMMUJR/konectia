@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KonectIA AI Assistant - Support Chat</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#081c36",
+                    "background": "#f7fafc",
+                    "surface-container": "#ebeef0",
+                    "surface-tint": "#4e5f7c",
+                    "secondary-fixed": "#c6e7ff",
+                    "on-surface": "#181c1e",
+                    "tertiary-fixed": "#ffdbd0",
+                    "on-primary-fixed-variant": "#364763",
+                    "tertiary": "#0a0100",
+                    "primary-fixed": "#d6e3ff",
+                    "on-secondary-container": "#004866",
+                    "on-error-container": "#93000a",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#2d3133",
+                    "surface-container-highest": "#e0e3e5",
+                    "secondary-container": "#2dbcfe",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#e5e9eb",
+                    "error-container": "#ffdad6",
+                    "primary": "#00030a",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#3c0c00",
+                    "on-error": "#ffffff",
+                    "on-primary-container": "#7586a5",
+                    "on-background": "#181c1e",
+                    "tertiary-fixed-dim": "#ffb59e",
+                    "on-surface-variant": "#44474d",
+                    "surface-variant": "#e0e3e5",
+                    "primary-fixed-dim": "#b6c7e9",
+                    "on-tertiary-fixed": "#3a0b00",
+                    "surface-container-low": "#f1f4f6",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#eef1f3",
+                    "on-secondary-fixed": "#001e2d",
+                    "secondary": "#00658d",
+                    "surface": "#f7fafc",
+                    "secondary-fixed-dim": "#82cfff",
+                    "outline-variant": "#c5c6ce",
+                    "error": "#ba1a1a",
+                    "surface-bright": "#f7fafc",
+                    "inverse-primary": "#b6c7e9",
+                    "surface-dim": "#d7dadc",
+                    "outline": "#75777e",
+                    "on-tertiary-container": "#e7531d",
+                    "on-tertiary-fixed-variant": "#842500",
+                    "primary-container": "#0a1d37",
+                    "on-secondary-fixed-variant": "#004c6b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.chat-blur-bg {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDCWSvnRpb2mC9BtyRGZSgF7XCI0ioJ3r_596koUB6ZEMykIuhrBNXItM8qSlyDJA3lUOrCelyYTum0baq_y56kJ1oafKzQbMiWt98mDMeKdUmnvpS566V3dEAqrMU_86L9SWqZSZi48suMVnbJIyBxqVk5y90RrBDo-P7PZdZgQUw-N7xl_ObwPvgCBPq58hbOmpxS3gxowLXsz0mDt7iuR93SuQ3CPtizUhdHUDoR--YDX-DqjZqrevcg64nfBV1A9J5a3wTxNzai);
+    background-size: cover;
+    background-position: center
+    }
+.glass-panel {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px)
+    }</style>
+</head>
+<body class="bg-background font-body text-on-surface antialiased overflow-hidden">
+<!-- Background Layer (The Blurred Platform) -->
+<div class="fixed inset-0 chat-blur-bg brightness-75 scale-105" data-alt="modern professional office lobby with high ceilings and clean architectural lines in a corporate fintech setting soft focus background">
+<div class="absolute inset-0 bg-primary-container/40 backdrop-blur-sm"></div>
+</div>
+<!-- Navigation Shell (Suppressed as per task intent for focused journey) -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-slate-900 dark:text-slate-50 font-headline">KonectIA</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-slate-600">notifications</span>
+<img alt="User profile avatar" class="w-8 h-8 rounded-full object-cover ring-2 ring-secondary-container/20" data-alt="professional portrait of a business executive in a dark suit with a clean neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdLiE6N-9v030LGobGA-caMN4vqhsa7LTgXpR8RWzRXZge8t49TfwkG23w_6q_4MkYvF3dyQhox7YlngXJYfHsvUiFpq8H-eRPPL7rLRctkiqcuhAEI7KjH-HHoIx5CWND6Ozf8-b8uvJrcmwHGLGiJ2VS0QMntk_WIb_bPShcTvlO7WRmqz4mxP3zPzeqVikeWZnshmgeTnPvSSGEVMysrxPPlOI1iicTZVZB2w_OamVpO0AZevd0-1f2FjLvJ-hJCAIWe8BSocCr"/>
+</div>
+</div>
+</header>
+<!-- Main Chat Overlay Container -->
+<main class="relative h-screen flex items-center justify-center px-4 pt-20 pb-10">
+<!-- Chat Window -->
+<div class="w-full max-w-2xl h-[870px] bg-surface-container-lowest rounded-xl shadow-[0_20px_40px_rgba(8,28,54,0.12)] flex flex-col overflow-hidden relative border border-outline-variant/10">
+<!-- Chat Header -->
+<div class="p-6 border-b border-surface-container flex items-center justify-between bg-surface-container-low">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary-container rounded-full flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<div>
+<h1 class="font-headline font-semibold text-lg text-primary tracking-tight">KonectIA AI Assistant</h1>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+<span class="text-label-md font-medium text-on-surface-variant uppercase tracking-wider text-[10px]">Institutional Support Active</span>
+</div>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Message History -->
+<div class="flex-1 overflow-y-auto p-6 space-y-6 bg-surface-bright">
+<!-- System/Time Marker -->
+<div class="flex justify-center">
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant text-[11px] font-medium rounded-full uppercase tracking-widest">Today</span>
+</div>
+<!-- AI Message -->
+<div class="flex gap-4 max-w-[85%]">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-sm text-secondary-container" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<div class="space-y-2">
+<div class="bg-surface-container-low p-4 rounded-r-xl rounded-bl-xl text-on-surface leading-relaxed shadow-sm">
+                            Hello! I am your KonectIA Digital Assistant. I can help you find verified professionals, explain our escrow security, or assist with account verification. How may I serve you today?
+                        </div>
+<span class="text-[10px] text-on-surface-variant font-medium px-1">09:41 AM</span>
+</div>
+</div>
+<!-- User Message -->
+<div class="flex flex-row-reverse gap-4 max-w-[85%] ml-auto">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-sm text-on-secondary-container">person</span>
+</div>
+<div class="space-y-2 text-right">
+<div class="bg-primary text-on-primary p-4 rounded-l-xl rounded-br-xl leading-relaxed shadow-sm">
+                            I'm interested in how the escrow payment works for a plumbing project. Is my money safe?
+                        </div>
+<span class="text-[10px] text-on-surface-variant font-medium px-1">09:42 AM</span>
+</div>
+</div>
+<!-- AI Message (Detailed) -->
+<div class="flex gap-4 max-w-[90%]">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-sm text-secondary-container" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<div class="space-y-3">
+<div class="bg-surface-container-low p-4 rounded-r-xl rounded-bl-xl text-on-surface leading-relaxed shadow-sm">
+                            Your security is our institutional priority. Here is how our **SAT-Compliant Escrow** protects you:
+                            <ul class="mt-3 space-y-2 list-none">
+<li class="flex gap-2 items-start">
+<span class="material-symbols-outlined text-secondary text-sm mt-1">verified_user</span>
+<span>Funds are held in a secure, neutral account until you authorize release.</span>
+</li>
+<li class="flex gap-2 items-start">
+<span class="material-symbols-outlined text-secondary text-sm mt-1">verified_user</span>
+<span>Payment is only released when the professional completes the agreed milestones.</span>
+</li>
+<li class="flex gap-2 items-start">
+<span class="material-symbols-outlined text-secondary text-sm mt-1">verified_user</span>
+<span>In case of disputes, our Trust Center provides mediation services.</span>
+</li>
+</ul>
+</div>
+<span class="text-[10px] text-on-surface-variant font-medium px-1">09:42 AM</span>
+</div>
+</div>
+<!-- Suggested Actions -->
+<div class="flex flex-wrap gap-2 pt-4">
+<button class="px-4 py-2 bg-surface-container-lowest border border-secondary-container/30 text-secondary text-label-md font-semibold rounded-full hover:bg-secondary-fixed transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">payments</span>
+                        How does escrow work?
+                    </button>
+<button class="px-4 py-2 bg-surface-container-lowest border border-secondary-container/30 text-secondary text-label-md font-semibold rounded-full hover:bg-secondary-fixed transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">shield_person</span>
+                        Verify my account
+                    </button>
+<button class="px-4 py-2 bg-surface-container-lowest border border-secondary-container/30 text-secondary text-label-md font-semibold rounded-full hover:bg-secondary-fixed transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">plumbing</span>
+                        Find a plumber
+                    </button>
+</div>
+</div>
+<!-- Input Area -->
+<div class="p-6 bg-surface-container-low border-t border-surface-container">
+<div class="flex items-center gap-4 bg-surface-container-lowest rounded-xl p-2 border border-outline-variant/30 focus-within:border-secondary transition-colors">
+<button class="p-2 text-on-surface-variant hover:text-secondary transition-colors">
+<span class="material-symbols-outlined">add_circle</span>
+</button>
+<input class="flex-1 bg-transparent border-none focus:ring-0 text-body-lg text-on-surface placeholder:text-outline/60 px-0" placeholder="Type your message to KonectIA Support..." type="text"/>
+<div class="flex items-center gap-2 pr-2">
+<button class="p-2 text-on-surface-variant hover:text-secondary transition-colors">
+<span class="material-symbols-outlined">mic</span>
+</button>
+<button class="w-10 h-10 bg-primary text-on-primary rounded-lg flex items-center justify-center hover:bg-primary-container transition-all active:scale-95">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+<p class="mt-4 text-[10px] text-center text-on-surface-variant font-medium uppercase tracking-widest opacity-60">
+                    Secured by KonectIA Institutional Quality Escrow System
+                </p>
+</div>
+</div>
+</main>
+<!-- Footer Shell -->
+<footer class="fixed bottom-0 w-full bg-slate-950 text-white z-40 border-t border-slate-800">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-12 py-6 max-w-7xl mx-auto">
+<div class="text-xl font-bold font-headline">KonectIA</div>
+<p class="text-[10px] font-label tracking-wider uppercase opacity-60 mt-4 md:mt-0">
+                © 2024 KonectIA. Institutional Quality Professional Services. SAT Compliant.
+            </p>
+<div class="flex gap-6 mt-4 md:mt-0">
+<a class="text-[10px] font-label tracking-wider uppercase text-slate-400 hover:text-white transition-colors" href="#">Tax Compliance</a>
+<a class="text-[10px] font-label tracking-wider uppercase text-slate-400 hover:text-white transition-colors" href="#">Escrow Policy</a>
+</div>
+</div>
+</footer>
+</body></html>

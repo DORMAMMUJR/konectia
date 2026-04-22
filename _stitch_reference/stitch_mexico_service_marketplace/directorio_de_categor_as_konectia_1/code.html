@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Directorio de Categorías | KonectIA</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#4e5f7c",
+                    "error": "#ba1a1a",
+                    "on-background": "#181c1e",
+                    "on-tertiary-fixed-variant": "#842500",
+                    "background": "#f7fafc",
+                    "tertiary-fixed-dim": "#ffb59e",
+                    "tertiary-container": "#3c0c00",
+                    "on-primary-container": "#7586a5",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed": "#d6e3ff",
+                    "secondary-fixed-dim": "#82cfff",
+                    "surface-container-highest": "#e0e3e5",
+                    "outline-variant": "#c5c6ce",
+                    "secondary-fixed": "#c6e7ff",
+                    "secondary-container": "#2dbcfe",
+                    "on-error": "#ffffff",
+                    "on-surface": "#181c1e",
+                    "on-primary": "#ffffff",
+                    "primary-fixed-dim": "#b6c7e9",
+                    "on-secondary-container": "#004866",
+                    "on-error-container": "#93000a",
+                    "surface-container": "#ebeef0",
+                    "primary": "#00030a",
+                    "on-tertiary-fixed": "#3a0b00",
+                    "on-surface-variant": "#44474d",
+                    "on-secondary-fixed-variant": "#004c6b",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#e7531d",
+                    "on-primary-fixed": "#081c36",
+                    "surface-dim": "#d7dadc",
+                    "secondary": "#00658d",
+                    "on-secondary": "#ffffff",
+                    "surface": "#f7fafc",
+                    "error-container": "#ffdad6",
+                    "outline": "#75777e",
+                    "tertiary-fixed": "#ffdbd0",
+                    "inverse-surface": "#2d3133",
+                    "inverse-on-surface": "#eef1f3",
+                    "surface-bright": "#f7fafc",
+                    "tertiary": "#0a0100",
+                    "surface-container-low": "#f1f4f6",
+                    "surface-container-high": "#e5e9eb",
+                    "on-secondary-fixed": "#001e2d",
+                    "inverse-primary": "#b6c7e9",
+                    "surface-variant": "#e0e3e5",
+                    "on-primary-fixed-variant": "#364763",
+                    "primary-container": "#0a1d37"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top Navigation Shell -->
+<header class="bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl docked full-width top-0 sticky z-50 shadow-[0_20px_40px_rgba(8,28,54,0.06)]">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-50">
+                KonectIA
+            </div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors" href="#">Directory</a>
+<a class="text-cyan-600 dark:text-cyan-400 font-semibold border-b-2 border-cyan-600 dark:border-cyan-400 pb-1" href="#">Categories</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors" href="#">Services</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors" href="#">Messages</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 text-on-surface-variant hover:bg-slate-50 dark:hover:bg-slate-900 rounded-full transition-all scale-95 active:scale-100">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-slate-50 dark:hover:bg-slate-900 rounded-full transition-all scale-95 active:scale-100">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 py-12">
+<!-- Hero Section -->
+<section class="mb-16">
+<div class="relative overflow-hidden rounded-full bg-primary-container p-12 md:p-20 flex flex-col md:flex-row items-center gap-12">
+<div class="relative z-10 max-w-2xl">
+<span class="inline-block bg-secondary-container text-on-secondary-container text-xs font-bold tracking-widest px-3 py-1 rounded-lg mb-6">EXPLORAR</span>
+<h1 class="text-5xl md:text-6xl font-extrabold text-white leading-tight mb-6 tracking-tight">
+                        Encuentra la Institución <br/>
+<span class="text-secondary-fixed">Adecuada para Ti.</span>
+</h1>
+<p class="text-primary-fixed-dim text-lg md:text-xl leading-relaxed mb-8 max-w-lg">
+                        Accede a nuestro directorio de expertos verificados bajo los más altos estándares de calidad y cumplimiento institucional.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="px-8 py-4 bg-secondary-container text-on-secondary-container font-semibold rounded-xl hover:translate-x-1 transition-transform flex items-center gap-2">
+                            Explorar Servicios
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="absolute right-0 top-0 w-full h-full opacity-20 pointer-events-none">
+<div class="absolute inset-0 bg-gradient-to-br from-primary via-transparent to-secondary"></div>
+</div>
+<img class="hidden lg:block w-96 h-96 object-cover rounded-full shadow-2xl ml-auto border-8 border-white/5" data-alt="Sophisticated interior of a modern library with clean architectural lines and soft natural light reflecting off marble surfaces" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7dJmRbnCVXjb709VL5254o69yEAcQq-YxMUPccjn_Se52jTcFoTkaYST67rHv3935UCKsWF_dRBDTCqA3JRHfGdt2GBwNDHRniQsspxkNGrwyicGiVZBrls3WSynkvOWHS0hBZfOO253meSu-8NgkWkifVC5zp_eK5kDL_wLH0WHnXdzDoPs2Q3ORzSVQVbIOrtcF0nbaGLTAgYml82cC4oSRDegb2V3DjCDuVtApNrlK9m4ez9ygsbE9-SpJFmErcblEKyKJke6W"/>
+</div>
+</section>
+<!-- Category Bento Grid -->
+<section>
+<div class="flex flex-col md:flex-row justify-between items-end mb-10 gap-4">
+<div>
+<h2 class="text-3xl font-bold text-primary tracking-tight mb-2">Categorías de Servicio</h2>
+<p class="text-on-surface-variant">Soluciones profesionales segmentadas por especialidad técnica y académica.</p>
+</div>
+<div class="bg-surface-container-low p-1 rounded-xl flex gap-1">
+<button class="px-4 py-2 bg-white shadow-sm rounded-lg text-sm font-medium text-secondary">Cuadrícula</button>
+<button class="px-4 py-2 text-sm font-medium text-on-surface-variant hover:bg-white/50 rounded-lg">Lista</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+<!-- Category Card 1 (Large / Featured) -->
+<div class="md:col-span-2 md:row-span-2 group relative overflow-hidden rounded-full bg-white shadow-[0_20px_40px_rgba(8,28,54,0.06)] hover:shadow-[0_30px_60px_rgba(8,28,54,0.1)] transition-all duration-300">
+<div class="absolute inset-0 z-0 scale-100 group-hover:scale-110 transition-transform duration-700">
+<img class="w-full h-full object-cover" data-alt="Professional electrician wearing protective gear working on a complex circuit board in a modern facility with blue lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFODz_2NBUaCXDKMRaQWlvojwStOM6m2Y5NRgTsMawckcRU6l7c152Wxg5Zp--UhskM2jWIlv6Sf1uYIznUJZ6cBPg5HEoTpvzsnkV2CXNdYi9Ig3T4k4fZ5y1GezDdOQ9ZbPsVKGw9m72fdFtpll7gp6YTN0WEcypZMYzCNcc3SCPMDTe4hEnzQPLqUd9mxEozluLzCR7TFo84YnorXFi8XpJ15xI742GfM5TkKjN6fLqELMJ7annQK47jL4pFpb8TL2YAeWL0loE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/40 to-transparent opacity-80"></div>
+</div>
+<div class="relative z-10 h-full p-8 flex flex-col justify-end">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-secondary-fixed text-3xl">construction</span>
+<span class="bg-white/20 backdrop-blur-md text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-tighter">Popular</span>
+</div>
+<h3 class="text-3xl font-bold text-white mb-2">Mantenimiento y Oficios</h3>
+<p class="text-slate-300 mb-6 max-w-sm">Servicios especializados para infraestructuras residenciales e industriales con garantía de ejecución.</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-white font-semibold">1,240 Expertos Verificados</span>
+</div>
+<button class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center group-hover:rotate-45 transition-transform duration-300">
+<span class="material-symbols-outlined">north_east</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Category Card 2 -->
+<div class="group bg-surface-container-lowest rounded-full p-6 shadow-[0_20px_40px_rgba(8,28,54,0.06)] flex flex-col border border-transparent hover:border-secondary-container/30 transition-all">
+<div class="w-14 h-14 bg-surface-container-low rounded-xl flex items-center justify-center mb-6 text-secondary group-hover:bg-secondary-container group-hover:text-on-secondary-container transition-colors">
+<span class="material-symbols-outlined text-3xl">health_and_safety</span>
+</div>
+<h3 class="text-xl font-bold text-primary mb-2">Salud y Bienestar</h3>
+<p class="text-sm text-on-surface-variant mb-auto leading-relaxed">Consultoría médica, fisioterapia y especialistas en salud integral con cédula profesional.</p>
+<div class="mt-8 pt-4 border-t border-surface-container flex items-center justify-between">
+<span class="text-xs font-bold text-secondary">856 Expertos</span>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</div>
+</div>
+<!-- Category Card 3 -->
+<div class="group bg-surface-container-lowest rounded-full p-6 shadow-[0_20px_40px_rgba(8,28,54,0.06)] flex flex-col border border-transparent hover:border-secondary-container/30 transition-all">
+<div class="w-14 h-14 bg-surface-container-low rounded-xl flex items-center justify-center mb-6 text-secondary group-hover:bg-secondary-container group-hover:text-on-secondary-container transition-colors">
+<span class="material-symbols-outlined text-3xl">computer</span>
+</div>
+<h3 class="text-xl font-bold text-primary mb-2">Servicios Digitales</h3>
+<p class="text-sm text-on-surface-variant mb-auto leading-relaxed">Desarrollo de software, marketing digital y transformación tecnológica para negocios.</p>
+<div class="mt-8 pt-4 border-t border-surface-container flex items-center justify-between">
+<span class="text-xs font-bold text-secondary">2,105 Expertos</span>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</div>
+</div>
+<!-- Category Card 4 -->
+<div class="group bg-surface-container-lowest rounded-full p-6 shadow-[0_20px_40px_rgba(8,28,54,0.06)] flex flex-col border border-transparent hover:border-secondary-container/30 transition-all">
+<div class="w-14 h-14 bg-surface-container-low rounded-xl flex items-center justify-center mb-6 text-secondary group-hover:bg-secondary-container group-hover:text-on-secondary-container transition-colors">
+<span class="material-symbols-outlined text-3xl">school</span>
+</div>
+<h3 class="text-xl font-bold text-primary mb-2">Educación</h3>
+<p class="text-sm text-on-surface-variant mb-auto leading-relaxed">Tutorías académicas, capacitación corporativa y enseñanza de idiomas certificados.</p>
+<div class="mt-8 pt-4 border-t border-surface-container flex items-center justify-between">
+<span class="text-xs font-bold text-secondary">642 Expertos</span>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</div>
+</div>
+<!-- Category Card 5 -->
+<div class="group bg-surface-container-lowest rounded-full p-6 shadow-[0_20px_40px_rgba(8,28,54,0.06)] flex flex-col border border-transparent hover:border-secondary-container/30 transition-all">
+<div class="w-14 h-14 bg-surface-container-low rounded-xl flex items-center justify-center mb-6 text-secondary group-hover:bg-secondary-container group-hover:text-on-secondary-container transition-colors">
+<span class="material-symbols-outlined text-3xl">balance</span>
+</div>
+<h3 class="text-xl font-bold text-primary mb-2">Legal y Fiscal</h3>
+<p class="text-sm text-on-surface-variant mb-auto leading-relaxed">Asesoría jurídica, contabilidad y cumplimiento fiscal para personas físicas y morales.</p>
+<div class="mt-8 pt-4 border-t border-surface-container flex items-center justify-between">
+<span class="text-xs font-bold text-secondary">420 Expertos</span>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</div>
+</div>
+<!-- Category Card 6 (Visual Focus) -->
+<div class="md:col-span-2 group relative overflow-hidden rounded-full bg-primary h-64 shadow-[0_20px_40px_rgba(8,28,54,0.06)]">
+<img class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500" data-alt="High-end corporate gala dinner with elegant table settings, crystal glassware, and ambient warm lighting in a grand hall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGXjlHSyrEpOKluRkebtP_zVz5GO_nb8K7Y2mPptHWVxui8Im08avIKXw3ELLa1QxgFwXQUEU7z5zYHWpz677IPUGZ_1dgihs3sZ3peKRv3uzjnEO9mC5OI5nCH7FPn1EhFHzd6idrfEHxqUPul36rVlJwc0aTotm1R_2NV9u6juGrjpIA6QaxkHEFiXIj7Gq-0Y4gPhj3zYh-Ls1ZZeSrjws-IE_1U0uMrZH25KuRfXI4yw-OEnyTyt1EqVJRyVlB3NAJSqVuBRjW"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary via-transparent to-transparent"></div>
+<div class="relative z-10 h-full p-8 flex flex-col justify-center">
+<h3 class="text-2xl font-bold text-white mb-2">Eventos y Producción</h3>
+<p class="text-slate-300 text-sm max-w-xs mb-6">Planificación logística y técnica para eventos de alto impacto institucional.</p>
+<div class="flex items-center gap-4">
+<span class="text-secondary-fixed font-bold">312 Expertos</span>
+<button class="px-4 py-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white text-xs rounded-lg transition-colors">Ver Directorio</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Bar -->
+<section class="mt-24 py-12 border-t border-surface-container-high text-center">
+<h4 class="text-xs font-bold tracking-[0.2em] text-on-surface-variant/60 uppercase mb-8">Avalado por Instituciones Profesionales</h4>
+<div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-40">
+<span class="text-xl font-bold">CONCANACO</span>
+<span class="text-xl font-bold">SAT COMPLIANCE</span>
+<span class="text-xl font-bold">ISO 9001</span>
+<span class="text-xl font-bold">MEXICO TECH</span>
+<span class="text-xl font-bold">AMVO</span>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-slate-950 text-slate-300 w-full py-12 border-t border-slate-800">
+<div class="w-full px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-7xl mx-auto">
+<div>
+<div class="text-white font-bold text-2xl mb-4">KonectIA</div>
+<p class="text-slate-500 max-w-sm mb-6 font-medium">© 2024 KonectIA. The Digital Institution of Professional Services. Innovando el mercado laboral profesional.</p>
+<div class="flex gap-4">
+<a class="text-slate-500 hover:text-white transition-opacity" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-slate-500 hover:text-white transition-opacity" href="#"><span class="material-symbols-outlined">hub</span></a>
+<a class="text-slate-500 hover:text-white transition-opacity" href="#"><span class="material-symbols-outlined">assured_workload</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="flex flex-col gap-3">
+<a class="text-slate-500 hover:text-slate-300 transition-opacity" href="#">Privacy Policy</a>
+<a class="text-slate-500 hover:text-slate-300 transition-opacity" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-3">
+<a class="text-slate-500 hover:text-slate-300 transition-opacity" href="#">Escrow Guarantee</a>
+<a class="text-slate-500 hover:text-slate-300 transition-opacity text-white underline" href="#">SAT Compliance</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
