@@ -15,7 +15,7 @@ export default function ProjectProgressUpdater({ projectId, currentProgress }: P
   const handleUpdate = (newProgress: number) => {
     if (newProgress < 0) newProgress = 0;
     if (newProgress > 100) newProgress = 100;
-    
+
     setError(null);
     startTransition(async () => {
       try {
@@ -31,9 +31,8 @@ export default function ProjectProgressUpdater({ projectId, currentProgress }: P
       <div className="flex items-center gap-2">
         <div className="flex-1 bg-surface-container rounded-full h-2 min-w-[80px]">
           <div
-            className={`h-2 rounded-full transition-all ${
-              currentProgress === 100 ? "bg-green-500" : "bg-secondary-container"
-            }`}
+            className={`h-2 rounded-full transition-all ${currentProgress === 100 ? "bg-green-500" : "bg-secondary-container"
+              }`}
             style={{ width: `${currentProgress}%` }}
           ></div>
         </div>
@@ -60,7 +59,7 @@ export default function ProjectProgressUpdater({ projectId, currentProgress }: P
           <span className="material-symbols-outlined text-[14px]">add</span>
         </button>
       </div>
-      
+
       {error && (
         <span className="text-[10px] text-error leading-tight">{error}</span>
       )}
