@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { getProjects } from "@/services/projects";
 import { getPayments } from "@/services/payments";
+import ProjectProgressUpdater from "@/components/dashboard/ProjectProgressUpdater";
 import { auth } from "@/lib/auth";
 import { redirect } from "next/navigation";
 
@@ -86,6 +87,7 @@ export default async function ProfessionalDashboardPage() {
                         <th className="font-bold py-3 pr-4">Proyecto</th>
                         <th className="font-bold py-3 px-4">Cliente</th>
                         <th className="font-bold py-3 px-4">Pago (MXN)</th>
+                        <th className="font-bold py-3 px-4 w-32">Progreso</th>
                         <th className="font-bold py-3 pl-4 text-right">Estatus</th>
                       </tr>
                     </thead>
@@ -105,8 +107,16 @@ export default async function ProfessionalDashboardPage() {
                           <td className="py-4 px-4 font-semibold text-sm">
                             $1,650
                           </td>
-                          <td className="py-4 pl-4 text-right">
-                             <span className="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">En Curso</span>
+                          <td className="py-4 px-4 align-top">
+                            <ProjectProgressUpdater 
+                              projectId={project.id} 
+                              currentProgress={project.progress} 
+                            />
+                          </td>
+                          <td className="py-4 pl-4 text-right align-top">
+                             <span className="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">
+                               {project.status === 'completed' ? 'Completado' : 'En Curso'}
+                             </span>
                           </td>
                         </tr>
                       ))}
