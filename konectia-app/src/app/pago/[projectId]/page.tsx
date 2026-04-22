@@ -6,7 +6,7 @@ import { getProjects } from "@/services/projects";
 import { notFound } from "next/navigation";
 
 export const metadata = {
-  title: "Pago en Custodia | KonectIA Escrow",
+  title: "Pago en Custodia | INTECNIA Escrow",
 };
 
 export default async function PagoPage({ params }: { params: Promise<{ projectId: string }> }) {
@@ -100,7 +100,7 @@ export default async function PagoPage({ params }: { params: Promise<{ projectId
                      </span>
                    </div>
                    <div>
-                     <p className="text-sm font-bold text-green-900 mb-1">Garantía de Satisfacción KonectIA</p>
+                     <p className="text-sm font-bold text-green-900 mb-1">Garantía de Satisfacción INTECNIA</p>
                      <p className="text-xs text-green-800 leading-relaxed">
                        Si el trabajo no se realiza según los términos acordados, el 100% de los fondos en Escrow serán devueltos a tu cuenta.
                      </p>

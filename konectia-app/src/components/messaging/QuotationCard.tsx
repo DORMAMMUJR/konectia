@@ -77,7 +77,7 @@ export default function QuotationCard({ quotation }: { quotation: Quotation }) {
           </span>
           <p className="text-[10px] sm:text-[11px] leading-tight text-on-surface-variant">
             <span className="font-bold block mb-0.5 text-on-surface">
-              Protección Escrow KonectIA
+              Protección Escrow INTECNIA
             </span>
             Tu pago se retiene de forma segura y solo se libera al profesional
             cuando confirmas que el trabajo está terminado satisfactoriamente.

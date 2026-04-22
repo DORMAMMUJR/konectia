@@ -25,13 +25,13 @@ export default function TopNav() {
           <Link href="/" className="flex items-center gap-2 mr-6">
             <Image
               src="/images/logo.png"
-              alt="KonectIA Logo"
+              alt="INTECNIA Logo"
               width={32}
               height={32}
               className="h-8 w-auto"
             />
             <span className="text-2xl font-bold tracking-tighter text-primary font-[var(--font-headline)]">
-              KonectIA
+              INTECNIA
             </span>
           </Link>
           

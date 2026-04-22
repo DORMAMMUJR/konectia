@@ -20,7 +20,7 @@ export default function ClientDashboardSidebar() {
           Panel de Cliente
         </h2>
         <p className="text-xs text-on-surface-variant font-medium mt-1">
-          KonectIA Seguro
+          INTECNIA Seguro
         </p>
       </div>
 

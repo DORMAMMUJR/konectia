@@ -4,12 +4,17 @@ import { getRequests } from "@/services/requests";
 import Image from "next/image";
 import Link from "next/link";
 import type { ServiceRequest } from "@/types";
+import { auth } from "@/lib/auth";
+import { redirect } from "next/navigation";
 
 export const metadata = {
-  title: "Muro de Solicitudes | KonectIA Pro",
+  title: "Muro de Solicitudes | INTECNIA Pro",
 };
 
 export default async function SolicitudesPage() {
+  const session = await auth();
+  if (!session?.user) redirect("/login");
+
   const requests = await getRequests();
 
   return (

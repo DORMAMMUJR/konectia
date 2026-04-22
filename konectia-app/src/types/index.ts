@@ -1,5 +1,5 @@
 /* ============================================
-   KonectIA TypeScript Type Definitions
+   INTECNIA TypeScript Type Definitions
    Models the future database schema
    ============================================ */
 

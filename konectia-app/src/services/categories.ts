@@ -1,10 +1,16 @@
+import { prisma } from "@/lib/prisma";
 import type { Category } from "@/types";
-import mockCategories from "./mocks/categories.json";
 
-// HOY: JSON local con latencia simulada
-// MAÑANA: return fetch('https://api.konectia.mx/categories')
 export async function getCategories(): Promise<Category[]> {
-  return new Promise((resolve) => {
-    setTimeout(() => resolve(mockCategories as Category[]), 800);
+  const categories = await prisma.category.findMany({
+    orderBy: { name: "asc" },
   });
+
+  return categories.map((cat) => ({
+    id: cat.id,
+    name: cat.name,
+    description: cat.description,
+    icon: cat.icon,
+    expertCount: cat.expertCount,
+  }));
 }

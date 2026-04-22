@@ -5,9 +5,9 @@ import type { Category } from "@/types";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Categorías Profesionales | KonectIA",
+  title: "Categorías Profesionales | INTECNIA",
   description:
-    "Explora todas las categorías de servicios profesionales verificados disponibles en KonectIA.",
+    "Explora todas las categorías de servicios profesionales verificados disponibles en INTECNIA.",
 };
 
 export default async function CategoriasPage() {

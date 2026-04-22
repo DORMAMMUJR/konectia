@@ -15,11 +15,11 @@ export default function Footer() {
         <div className="text-center md:text-left">
           <div className="flex items-center gap-2 justify-center md:justify-start mb-4">
             <span className="text-xl font-bold text-white font-[var(--font-headline)]">
-              KonectIA
+              INTECNIA
             </span>
           </div>
           <p className="text-slate-400 text-sm max-w-xs">
-            © {new Date().getFullYear()} KonectIA. Servicios Profesionales de
+            © {new Date().getFullYear()} INTECNIA. Servicios Profesionales de
             Calidad Institucional. Cumplimiento SAT.
           </p>
         </div>

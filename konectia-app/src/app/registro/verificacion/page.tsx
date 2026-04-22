@@ -3,7 +3,7 @@ import Footer from "@/components/layout/Footer";
 import Image from "next/image";
 
 export const metadata = {
-  title: "Verificación de Identidad | KonectIA",
+  title: "Verificación de Identidad | INTECNIA",
 };
 
 export default function VerificacionPage() {

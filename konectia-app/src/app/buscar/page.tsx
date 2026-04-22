@@ -8,7 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Directorio de Servicios | KonectIA",
+  title: "Directorio de Servicios | INTECNIA",
   description:
     "Encuentra profesionales verificados en tu zona. Plomeros, electricistas, consultores y más.",
 };

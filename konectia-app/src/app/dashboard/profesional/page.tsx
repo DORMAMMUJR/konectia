@@ -4,14 +4,22 @@ import Image from "next/image";
 import Link from "next/link";
 import { getProjects } from "@/services/projects";
 import { getPayments } from "@/services/payments";
+import { auth } from "@/lib/auth";
+import { redirect } from "next/navigation";
 
 export const metadata = {
-  title: "Panel de Profesional | KonectIA Pro",
+  title: "Panel de Profesional | INTECNIA Pro",
 };
 
 export default async function ProfessionalDashboardPage() {
-  const projects = await getProjects();
-  const payments = await getPayments();
+  const session = await auth();
+  if (!session?.user) redirect("/login");
+
+  const userId = session.user.id;
+  const userName = session.user.name?.split(" ")[0] || "Profesional";
+
+  const projects = await getProjects(userId);
+  const payments = await getPayments(userId);
 
   return (
     <>
@@ -29,7 +37,7 @@ export default async function ProfessionalDashboardPage() {
               </span>
             </h1>
             <p className="text-on-surface-variant text-sm sm:text-base">
-              Hola, Roberto. Tienes 1 nuevo mensaje y 3 nuevas solicitudes en tu zona.
+              Hola, {userName}. Tienes 1 nuevo mensaje y 3 nuevas solicitudes en tu zona.
             </p>
           </div>
           

@@ -18,7 +18,7 @@ export default function DashboardSidebar() {
     <aside className="w-64 flex-shrink-0 border-r border-slate-200 bg-slate-50 dark:bg-[#00030a] hidden md:flex flex-col py-6 sticky top-[72px] h-[calc(100vh-72px)] overflow-y-auto">
       <div className="px-6 mb-8">
         <h2 className="text-xl font-bold text-primary dark:text-white font-[var(--font-headline)]">
-          KonectIA Pro
+          INTECNIA Pro
         </h2>
         <p className="text-xs text-on-surface-variant font-medium">
           Premium Consultant

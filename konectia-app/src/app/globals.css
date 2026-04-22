@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ============================================
-   KonectIA Design System — Material Design 3
+   INTECNIA Design System — Material Design 3
    ============================================ */
 
 @theme inline {
@@ -26,7 +26,7 @@
   --color-on-secondary-fixed: #091a30;
   --color-on-secondary-fixed-variant: #112540;
 
-  /* Tertiary / Accent (Naranja KonectIA) */
+  /* Tertiary / Accent (Naranja INTECNIA) */
   --color-tertiary: #FF7A1A;
   --color-tertiary-container: #e56507;
   --color-on-tertiary: #ffffff;

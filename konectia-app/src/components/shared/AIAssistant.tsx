@@ -41,7 +41,7 @@ export default function AIAssistant() {
                 <span className="material-symbols-outlined text-sm">smart_toy</span>
               </div>
               <div>
-                 <h3 className="font-bold text-sm font-[var(--font-headline)]">KonectIA Core</h3>
+                 <h3 className="font-bold text-sm font-[var(--font-headline)]">INTECNIA Core</h3>
                  <p className="text-[10px] opacity-80 uppercase tracking-widest">Asistente Virtual</p>
               </div>
             </div>
@@ -56,7 +56,7 @@ export default function AIAssistant() {
                    <span className="material-symbols-outlined text-[12px]">smart_toy</span>
                  </div>
                  <div className="bg-surface-container-low p-3 rounded-2xl rounded-tl-none text-sm text-on-surface">
-                   Hola, soy el asistente de KonectIA. ¿Buscas a un profesional en específico o tienes dudas sobre cómo funciona nuestro sistema de Escrow?
+                   Hola, soy el asistente de INTECNIA. ¿Buscas a un profesional en específico o tienes dudas sobre cómo funciona nuestro sistema de Escrow?
                  </div>
              </div>
              

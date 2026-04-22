@@ -38,7 +38,7 @@ const proSteps: HowItWorksStep[] = [
   },
   {
     number: "03",
-    title: "Sello KonectIA",
+    title: "Sello INTECNIA",
     description:
       "Posiciónate como un experto de confianza con nuestro respaldo institucional.",
   },

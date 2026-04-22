@@ -3,13 +3,19 @@ import ConversationList from "@/components/messaging/ConversationList";
 import QuotationCard from "@/components/messaging/QuotationCard";
 import { getConversations } from "@/services/conversations";
 import Image from "next/image";
+import { auth } from "@/lib/auth";
+import { redirect } from "next/navigation";
 
 export const metadata = {
-  title: "Mensajes | KonectIA",
+  title: "Mensajes | INTECNIA",
 };
 
 export default async function MensajesPage() {
-  const conversations = await getConversations();
+  const session = await auth();
+  if (!session?.user) redirect("/login");
+  
+  const userId = session.user.id;
+  const conversations = await getConversations(userId);
 
   const activeConv = conversations[0]; // Assuming the first is active
   

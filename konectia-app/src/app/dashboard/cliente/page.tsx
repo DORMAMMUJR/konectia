@@ -4,14 +4,22 @@ import Image from "next/image";
 import Link from "next/link";
 import { getProjects } from "@/services/projects";
 import { getPayments } from "@/services/payments";
+import { auth } from "@/lib/auth";
+import { redirect } from "next/navigation";
 
 export const metadata = {
-  title: "Panel de Cliente | KonectIA",
+  title: "Panel de Cliente | INTECNIA",
 };
 
 export default async function ClientDashboardPage() {
-  const projects = await getProjects();
-  const payments = await getPayments();
+  const session = await auth();
+  if (!session?.user) redirect("/login");
+
+  const userId = session.user.id;
+  const userName = session.user.name?.split(" ")[0] || "Cliente";
+
+  const projects = await getProjects(userId);
+  const payments = await getPayments(userId);
 
   return (
     <>
@@ -22,7 +30,7 @@ export default async function ClientDashboardPage() {
           {/* Header */}
           <div className="mb-8">
             <h1 className="text-2xl sm:text-3xl font-extrabold text-primary mb-2 font-[var(--font-headline)]">
-              Bienvenido, Carlos
+              Bienvenido, {userName}
             </h1>
             <p className="text-on-surface-variant text-sm sm:text-base">
               Aquí puedes gestionar tus proyectos activos, pagos en Escrow y facturas.
@@ -91,7 +99,7 @@ export default async function ClientDashboardPage() {
                     Los fondos depositados en nuestras cuentas de custodia (Escrow) solo son liberados cuando tú apruebas formalmente la entrega final del proyecto.
                   </p>
                   <button className="bg-white/10 hover:bg-white/20 backdrop-blur-md px-6 py-2.5 rounded-xl font-bold text-sm transition-colors border border-white/20">
-                    Leer más sobre la protección KonectIA
+                    Leer más sobre la protección INTECNIA
                   </button>
                 </div>
               </section>

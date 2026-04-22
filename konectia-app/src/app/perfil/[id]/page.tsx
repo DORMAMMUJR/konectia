@@ -18,9 +18,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const pro = await getProfessionalById(id);
-  if (!pro) return { title: "Profesional no encontrado | KonectIA" };
+  if (!pro) return { title: "Profesional no encontrado | INTECNIA" };
   return {
-    title: `${pro.name} — ${pro.title} | KonectIA`,
+    title: `${pro.name} — ${pro.title} | INTECNIA`,
     description: `${pro.specialty}. ${pro.completedJobs} trabajos completados. Rating ${pro.rating}/5.`,
   };
 }
@@ -269,7 +269,7 @@ export default async function PerfilPage({ params }: { params: Promise<{ id: str
                       </p>
                     </div>
                     <p className="text-xs text-on-surface-variant leading-relaxed">
-                      Tu pago es retenido de forma segura por KonectIA y solo
+                      Tu pago es retenido de forma segura por INTECNIA y solo
                       se libera cuando confirmas que el trabajo se completó a
                       tu satisfacción. Facturación SAT incluida.
                     </p>

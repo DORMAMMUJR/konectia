@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import AIAssistant from "@/components/shared/AIAssistant";
+import Providers from "./providers";
 import "./globals.css";
 
 const inter = Inter({
@@ -17,7 +18,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "KonectIA | Servicios Profesionales de Confianza en México",
+  title: "INTECNIA | Servicios Profesionales de Confianza en México",
   description:
     "La primera plataforma institucional que conecta expertos certificados con empresas y particulares bajo los más altos estándares de seguridad y cumplimiento.",
   keywords: [
@@ -45,8 +46,10 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col antialiased bg-surface text-on-surface">
-        {children}
-        <AIAssistant />
+        <Providers>
+          {children}
+          <AIAssistant />
+        </Providers>
       </body>
     </html>
   );
