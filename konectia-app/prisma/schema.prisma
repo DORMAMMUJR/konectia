@@ -1,0 +1,222 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ============================================
+// INTECNIA — Database Schema
+// ============================================
+
+model User {
+  id                String        @id @default(uuid())
+  name              String?
+  email             String?       @unique
+  emailVerified     DateTime?
+  image             String?
+  passwordHash      String?
+  avatarUrl         String?
+  role              String        @default("guest") // "client" | "professional" | "guest"
+  location          String?
+  isVerified        Boolean       @default(false)
+  verificationLevel String        @default("none") // "premium" | "standard" | "none"
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+
+  accounts          Account[]
+  sessions          Session[]
+  professional      Professional?
+
+  // Relations
+  clientRequests     ServiceRequest[]  @relation("ClientRequests")
+  clientProjects     Project[]         @relation("ClientProjects")
+  professionalProjects Project[]       @relation("ProfessionalProjects")
+  conversationsA     Conversation[]    @relation("ConversationsA")
+  conversationsB     Conversation[]    @relation("ConversationsB")
+  authoredReviews    Review[]          @relation("AuthoredReviews")
+}
+
+model Account {
+  id                 String  @id @default(uuid())
+  userId             String
+  type               String
+  provider           String
+  providerAccountId  String
+  refresh_token      String?  @db.Text
+  access_token       String?  @db.Text
+  expires_at         Int?
+  token_type         String?
+  scope              String?
+  id_token           String?  @db.Text
+  session_state      String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(uuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Professional {
+  id               String              @id @default(uuid())
+  userId           String              @unique
+  user             User                @relation(fields: [userId], references: [id])
+  title            String
+  specialty        String
+  rating           Float               @default(0)
+  reviewCount      Int                 @default(0)
+  hourlyRate       Int
+  yearsExperience  Int                 @default(0)
+  completedJobs    Int                 @default(0)
+  recurringClients Int                 @default(0)
+  responseTime     String              @default("1h")
+
+  badges           VerificationBadge[]
+  education        Education[]
+  experience       WorkExperience[]
+  portfolio        PortfolioItem[]
+  reviews          Review[]
+}
+
+model VerificationBadge {
+  id             String       @id @default(uuid())
+  professionalId String
+  professional   Professional @relation(fields: [professionalId], references: [id], onDelete: Cascade)
+  type           String       // "biometric" | "conocer" | "sat"
+  label          String
+  sublabel       String
+  status         String       // "verified" | "pending" | "unverified"
+  icon           String
+}
+
+model Education {
+  id             String       @id @default(uuid())
+  professionalId String
+  professional   Professional @relation(fields: [professionalId], references: [id], onDelete: Cascade)
+  institution    String
+  degree         String
+  year           String
+}
+
+model WorkExperience {
+  id             String       @id @default(uuid())
+  professionalId String
+  professional   Professional @relation(fields: [professionalId], references: [id], onDelete: Cascade)
+  company        String
+  position       String
+  period         String
+}
+
+model PortfolioItem {
+  id             String       @id @default(uuid())
+  professionalId String
+  professional   Professional @relation(fields: [professionalId], references: [id], onDelete: Cascade)
+  title          String
+  imageUrl       String
+  span           String?      // "large" | "normal" | "wide"
+}
+
+// ============================================
+// Marketplace Models
+// ============================================
+
+model Category {
+  id          String           @id @default(uuid())
+  name        String           @unique
+  description String
+  icon        String
+  expertCount Int              @default(0)
+  requests    ServiceRequest[]
+}
+
+model ServiceRequest {
+  id          String   @id @default(uuid())
+  clientId    String
+  client      User     @relation("ClientRequests", fields: [clientId], references: [id])
+  title       String
+  description String
+  budgetMin   Int
+  budgetMax   Int
+  budgetUnit  String   @default("fixed") // "fixed" | "hourly" | "daily" | "monthly"
+  urgency     String   @default("standard") // "urgent" | "new" | "standard"
+  categoryId  String
+  category    Category @relation(fields: [categoryId], references: [id])
+  categoryIcon String  @default("handyman")
+  location    String
+  createdAt   DateTime @default(now())
+}
+
+model Project {
+  id             String    @id @default(uuid())
+  title          String
+  clientId       String
+  client         User      @relation("ClientProjects", fields: [clientId], references: [id])
+  professionalId String
+  professional   User      @relation("ProfessionalProjects", fields: [professionalId], references: [id])
+  progress       Int       @default(0)
+  status         String    @default("pending") // "active" | "pending" | "completed"
+  imageUrl       String?
+  payments       Payment[]
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+model Payment {
+  id            String   @id @default(uuid())
+  projectId     String
+  project       Project  @relation(fields: [projectId], references: [id])
+  description   String
+  amount        Int
+  status        String   @default("pending") // "received" | "released" | "pending"
+  transactionId String   @default(uuid())
+  date          DateTime @default(now())
+}
+
+// ============================================
+// Messaging Models
+// ============================================
+
+model Conversation {
+  id           String    @id @default(uuid())
+  participantA String
+  userA        User      @relation("ConversationsA", fields: [participantA], references: [id])
+  participantB String
+  userB        User      @relation("ConversationsB", fields: [participantB], references: [id])
+  messages     Message[]
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+}
+
+model Message {
+  id             String       @id @default(uuid())
+  conversationId String
+  conversation   Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  senderId       String
+  content        String
+  type           String       @default("text") // "text" | "quotation" | "system"
+  createdAt      DateTime     @default(now())
+}
+
+// ============================================
+// Review Model
+// ============================================
+
+model Review {
+  id             String       @id @default(uuid())
+  professionalId String
+  professional   Professional @relation(fields: [professionalId], references: [id])
+  authorId       String
+  author         User         @relation("AuthoredReviews", fields: [authorId], references: [id])
+  rating         Int
+  text           String
+  projectType    String
+  createdAt      DateTime     @default(now())
+}

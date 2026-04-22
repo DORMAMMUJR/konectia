@@ -1,6 +1,4 @@
 {
-  "buildCommand": "cd konectia-app && npm install && npm run build",
-  "outputDirectory": "konectia-app/.next",
-  "installCommand": "cd konectia-app && npm install",
+  "rootDirectory": "konectia-app",
   "framework": "nextjs"
 }
