@@ -1,4 +1,3 @@
 {
-  "rootDirectory": "konectia-app",
-  "framework": "nextjs"
+  "cleanUrls": true
 }
